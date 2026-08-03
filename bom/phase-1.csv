@@ -1,0 +1,30 @@
+category,item,status,priority,notes
+3D printing,Bambu Lab P1S AMS,Owned,Required,Primary printer for robot parts
+3D printing,PLA filament,Owned,Required,General printing and test parts
+3D printing,PETG filament,Owned,Recommended,Tougher parts and tool handles
+3D printing,99.9% isopropyl alcohol,Purchased,Required,Print-bed and electronics cleaning
+3D printing,Deburring tool,Purchased,Required,Cleans printed holes and edges
+Mechanical,M2/M3/M4/M5 screw assortment,Purchased,Required,Check exact M2 and M3 lengths against official BOM
+Mechanical,M3 brass heat-set inserts,Purchased,Required,Used for strong threads in printed parts
+Mechanical,Metric hex bit set,Purchased,Required,Important sizes: 1.5 mm; 2.0 mm; 2.5 mm; 3.0 mm
+Mechanical,3D-printed hex-bit handle,Planned,Recommended,Print a screwdriver or T-handle for the hex bits
+Mechanical,Digital calipers,Purchased,Required,Measure prints; holes; bearings; screws; tolerances
+Mechanical,Flush cutters,Purchased,Required,Print cleanup; cable ties; component leads
+Mechanical,Long nose pliers,Purchased,Required,Small hardware and wire handling
+Electronics,Temperature-controlled soldering station,Purchased,Required,For connectors and basic wiring
+Electronics,Solder,Purchased,Required,For wire and connector work
+Electronics,Brass tip cleaner,Purchased,Recommended,Maintains soldering tip
+Electronics,Helping hands,Purchased,Recommended,Holds wires and connectors during soldering
+Electronics,Solder sucker,Purchased,Recommended,Desoldering and rework
+Electronics,Desoldering wick,Purchased,Recommended,Cleans pads and removes solder bridges
+Electronics,No-clean rosin flux pens,Purchased,Recommended,Use electronics-safe flux only
+Electronics,Wire stripper,Purchased,Required,Strips insulation without damaging wire strands
+Consumables,Heat shrink assortment,Purchased,Required,Insulation and strain relief
+Consumables,22 AWG silicone wire kit,Purchased,Required,General-purpose robotics wiring
+Optional,Digital multimeter,Check,High,Buy if not already owned
+Optional,Silicone soldering mat,Optional,Medium,Protects desk and organizes small parts
+Optional,Blue threadlocker,Optional,Medium,Useful once vibration becomes an issue
+Optional,Velcro cable ties,Optional,Medium,Cable management
+Optional,Magnetic parts tray,Optional,Low,Convenient for tiny screws
+Optional,ESD tweezers,Optional,Low,Helpful for small hardware and electronics
+Later,Perfboard or prototype PCB kit,Deferred,Low,Useful for custom circuits but not needed for stock build

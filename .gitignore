@@ -1,0 +1,49 @@
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Editors
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# JavaScript
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build outputs and scratch space
+build/
+dist/
+out/
+tmp/
+scratch/
+exports/
+
+# Logs
+*.log
+
+# Large local-only media exports
+*.mp4
+*.mov
+*.avi
+
+# Keep project photos and CAD files intentional.
+# Do not ignore image, STL, STEP, or 3MF files globally.
