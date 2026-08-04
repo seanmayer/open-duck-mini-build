@@ -32,15 +32,18 @@ The next milestone is Phase 2: sourcing the actual robot hardware such as servos
 ├── docs/
 │   ├── build-log.md
 │   ├── phase-1-workshop.md
+│   ├── printing-progress.md
 │   └── roadmap.md
 ├── photos/
-│   └── phase-1-tools/
+│   ├── phase-1-tools/
+│   └── printing/
 └── scripts/
 ```
 
 ## Documentation
 
 - [Phase 1 Workshop Setup](docs/phase-1-workshop.md)
+- [Printing Progress Tracker](docs/printing-progress.md)
 - [Build Log](docs/build-log.md)
 - [Roadmap](docs/roadmap.md)
 - [Phase 1 BOM Checklist](bom/phase-1.csv)
