@@ -19,6 +19,24 @@ Next:
 - Review the official Open Duck Mini BOM.
 - Build a Phase 2 shopping list for servos, electronics, power, bearings, and remaining hardware.
 
+## 2026-08-05 - Phase 1 Inventory Photos
+
+Status: Phase 1 physical inventory photographed and added to the repository.
+
+What changed:
+
+- Added photos for the soldering station, wire stripper, calipers, heat-set inserts, screw assortment, solder, desoldering tools, tweezers, heat shrink, silicone wire, and cable ties.
+- Updated the Phase 1 workshop notes with the exact purchased items visible in the inventory photos.
+- Expanded the Phase 1 checklist so it can be used as a more accurate local inventory.
+
+What I learned:
+
+- The workshop is now ready for printing, fitting, soldering, and basic electrical prep.
+
+Next:
+
+- Begin printing low-risk PLA parts and record progress in `docs/printing-progress.md`.
+
 ## Entry Template
 
 ```markdown
