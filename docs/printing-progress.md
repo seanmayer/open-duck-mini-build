@@ -30,7 +30,7 @@ The upstream guide lists both `foot_bottom_pla.stl` and `foot_bottom_tpu.stl`.
 
 - [ ] `knee_to_ankle_left_sheet.stl` x4
 - [ ] `knee_to_ankle_right_sheet.stl` x4
-- [ ] `leg_spacer.stl` x4
+- [x] `leg_spacer.stl` x4
 - [ ] `left_roll_to_pitch.stl` x1
 - [ ] `right_roll_to_pitch.stl` x1
 - [ ] `roll_motor_bottom.stl` x2
@@ -79,6 +79,37 @@ The upstream guide lists both `foot_bottom_pla.stl` and `foot_bottom_tpu.stl`.
 ## Daily Print Notes
 
 Use this section to add a short entry each time I print, reprint, or test-fit parts.
+
+### 2026-08-06
+
+Printed:
+
+- `leg_spacer.stl` x4
+
+Settings:
+
+- Material: PLA
+- Layer height: Not recorded
+- Infill: 15%
+- Supports: Not recorded
+- Plate: Not recorded
+- Estimated print time: Not recorded
+
+Result:
+
+- Completed all four leg spacers.
+
+Fit check:
+
+- Pending screw and assembly fit check.
+
+Photos:
+
+- [leg-spacers-2026-08-06.jpeg](../photos/printing/legs/leg-spacers-2026-08-06.jpeg)
+
+Next:
+
+- Check hole fit and surface cleanup, then continue with the next small leg or foot part.
 
 ```markdown
 ### YYYY-MM-DD

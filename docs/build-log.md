@@ -37,6 +37,28 @@ Next:
 
 - Begin printing low-risk PLA parts and record progress in `docs/printing-progress.md`.
 
+## 2026-08-06 - First Leg Spacers Printed
+
+Status: First Open Duck Mini printed parts completed.
+
+What changed:
+
+- Printed all four `leg_spacer.stl` parts.
+- Added the leg spacer photo to `photos/printing/legs/`.
+- Marked `leg_spacer.stl` complete in the printing progress tracker.
+
+What I learned:
+
+- The project has moved from workshop setup into real robot part production.
+
+Problems:
+
+- Print settings beyond PLA and 15% infill were not recorded for this batch.
+
+Next:
+
+- Check the leg spacer holes and cleanup quality before printing the next batch.
+
 ## Entry Template
 
 ```markdown
