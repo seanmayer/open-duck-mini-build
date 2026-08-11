@@ -21,9 +21,9 @@ The upstream guide lists both `foot_bottom_pla.stl` and `foot_bottom_tpu.stl`.
 
 ## Feet
 
-- [ ] `foot_top.stl` x2
-- [ ] `foot_side.stl` x2
-- [ ] `foot_bottom_pla.stl` x2
+- [x] `foot_top.stl` x2
+- [x] `foot_side.stl` x2
+- [x] `foot_bottom_pla.stl` x2
 - [ ] `foot_bottom_tpu.stl` x2 - optional, TPU at 40% infill
 
 ## Legs
@@ -79,6 +79,41 @@ The upstream guide lists both `foot_bottom_pla.stl` and `foot_bottom_tpu.stl`.
 ## Daily Print Notes
 
 Use this section to add a short entry each time I print, reprint, or test-fit parts.
+
+### 2026-08-11
+
+Printed:
+
+- `foot_side.stl` x2
+- `foot_top.stl` x2
+- `foot_bottom_pla.stl` x2
+
+Settings:
+
+- Material: PLA
+- Layer height: Not recorded
+- Infill: 15%
+- Supports: Not recorded
+- Plate: Not recorded
+- Estimated print time: Not recorded
+
+Result:
+
+- Completed the first full PLA foot print batch.
+
+Fit check:
+
+- Pending dry fit with screws and adjoining foot parts.
+
+Photos:
+
+- [foot-side-2026-08-11.jpeg](../photos/printing/feet/foot-side-2026-08-11.jpeg)
+- [foot-top-2026-08-11.jpeg](../photos/printing/feet/foot-top-2026-08-11.jpeg)
+- [foot-bottom-pla-2026-08-11.jpeg](../photos/printing/feet/foot-bottom-pla-2026-08-11.jpeg)
+
+Next:
+
+- Dry fit the PLA foot parts and check screw-hole cleanup before moving back to the leg parts.
 
 ### 2026-08-06
 

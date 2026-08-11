@@ -59,6 +59,30 @@ Next:
 
 - Check the leg spacer holes and cleanup quality before printing the next batch.
 
+## 2026-08-11 - PLA Foot Parts Printed
+
+Status: First full foot batch printed in PLA.
+
+What changed:
+
+- Printed `foot_side.stl` x2.
+- Printed `foot_top.stl` x2.
+- Printed `foot_bottom_pla.stl` x2.
+- Added foot print photos to `photos/printing/feet/`.
+- Marked the PLA foot parts complete in the printing progress tracker.
+
+What I learned:
+
+- The feet can now be dry-fitted before deciding whether TPU foot bottoms are needed later.
+
+Problems:
+
+- Print settings beyond PLA and 15% infill were not recorded for this batch.
+
+Next:
+
+- Dry fit the printed foot parts, clean up holes if needed, and continue with the next leg components.
+
 ## Entry Template
 
 ```markdown
