@@ -28,8 +28,8 @@ The upstream guide lists both `foot_bottom_pla.stl` and `foot_bottom_tpu.stl`.
 
 ## Legs
 
-- [ ] `knee_to_ankle_left_sheet.stl` x4
-- [ ] `knee_to_ankle_right_sheet.stl` x4
+- [x] `knee_to_ankle_left_sheet.stl` x4
+- [x] `knee_to_ankle_right_sheet.stl` x4
 - [x] `leg_spacer.stl` x4
 - [ ] `left_roll_to_pitch.stl` x1
 - [ ] `right_roll_to_pitch.stl` x1
@@ -80,6 +80,38 @@ The upstream guide lists both `foot_bottom_pla.stl` and `foot_bottom_tpu.stl`.
 
 Use this section to add a short entry each time I print, reprint, or test-fit parts.
 
+### 2026-08-12 - Knee-To-Ankle Sheets
+
+Printed:
+
+- `knee_to_ankle_left_sheet.stl` x4
+- `knee_to_ankle_right_sheet.stl` x4
+
+Settings:
+
+- Material: PLA
+- Layer height: Not recorded
+- Infill: 15%
+- Supports: Not recorded
+- Plate: Not recorded
+- Estimated print time: Not recorded
+
+Result:
+
+- Completed the full left and right knee-to-ankle sheet batch.
+
+Fit check:
+
+- Pending cleanup and dry fit with leg spacers, motor mounts, and hardware.
+
+Photos:
+
+- [knee-to-ankle-sheets-2026-08-12.jpeg](../photos/printing/legs/knee-to-ankle-sheets-2026-08-12.jpeg)
+
+Next:
+
+- Print `roll_motor_bottom.stl` x2 and `roll_motor_top.stl` x2, then test the leg subassembly fit.
+
 ### 2026-08-12
 
 Printed:
@@ -111,7 +143,7 @@ Photos:
 
 Next:
 
-- Keep the feet assembled for reference, then continue with the next leg components.
+- Keep the feet assembled for reference; knee-to-ankle sheets completed later the same day.
 
 ### 2026-08-11
 

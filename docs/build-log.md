@@ -105,6 +105,29 @@ Next:
 
 - Keep the feet as a reference assembly and continue printing the next leg components.
 
+## 2026-08-12 - Knee-To-Ankle Sheets Printed
+
+Status: Main knee-to-ankle sheet batch completed.
+
+What changed:
+
+- Printed `knee_to_ankle_left_sheet.stl` x4.
+- Printed `knee_to_ankle_right_sheet.stl` x4.
+- Added the leg sheet photo to `photos/printing/legs/`.
+- Marked both knee-to-ankle sheet entries complete in the printing progress tracker.
+
+What I learned:
+
+- The leg print batch is now moving beyond small test pieces into the repeated structural parts.
+
+Problems:
+
+- Fit check with the leg spacers, motor mounts, and hardware is still pending.
+
+Next:
+
+- Print `roll_motor_bottom.stl` x2 and `roll_motor_top.stl` x2, then start checking the leg subassembly fit.
+
 ## Entry Template
 
 ```markdown
