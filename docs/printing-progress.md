@@ -80,6 +80,39 @@ The upstream guide lists both `foot_bottom_pla.stl` and `foot_bottom_tpu.stl`.
 
 Use this section to add a short entry each time I print, reprint, or test-fit parts.
 
+### 2026-08-12
+
+Printed:
+
+- No new printed parts.
+
+Settings:
+
+- Material: PLA foot parts from the previous batch
+- Layer height: Not recorded
+- Infill: 15%
+- Supports: Not recorded
+- Plate: Not recorded
+- Estimated print time: Not applicable
+
+Result:
+
+- Dry-fitted the PLA foot assemblies without the optional TPU bottoms.
+- TPU foot bottoms remain deferred for a later grip upgrade.
+
+Fit check:
+
+- Foot parts lined up well enough for a dry fit with screws.
+- Final fit check still depends on adding the TPU bottoms, foot switches, and motors later.
+
+Photos:
+
+- [foot-dry-fit-without-tpu-2026-08-12.jpeg](../photos/printing/feet/foot-dry-fit-without-tpu-2026-08-12.jpeg)
+
+Next:
+
+- Keep the feet assembled for reference, then continue with the next leg components.
+
 ### 2026-08-11
 
 Printed:
@@ -103,7 +136,7 @@ Result:
 
 Fit check:
 
-- Pending dry fit with screws and adjoining foot parts.
+- Dry fit completed on 2026-08-12 without the optional TPU bottoms.
 
 Photos:
 
@@ -113,7 +146,7 @@ Photos:
 
 Next:
 
-- Dry fit the PLA foot parts and check screw-hole cleanup before moving back to the leg parts.
+- Continue with the next leg components.
 
 ### 2026-08-06
 

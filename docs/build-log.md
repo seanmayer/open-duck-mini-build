@@ -83,6 +83,28 @@ Next:
 
 - Dry fit the printed foot parts, clean up holes if needed, and continue with the next leg components.
 
+## 2026-08-12 - Feet Dry Fit
+
+Status: PLA feet dry-fitted without TPU bottoms.
+
+What changed:
+
+- Dry-fitted the printed `foot_side.stl`, `foot_top.stl`, and `foot_bottom_pla.stl` parts.
+- Added the dry-fit photo to `photos/printing/feet/`.
+- Updated the printing tracker to record that TPU bottoms are still deferred for later.
+
+What I learned:
+
+- The printed PLA foot parts line up well enough to assemble as a dry fit.
+
+Problems:
+
+- TPU bottoms, foot switches, and motors are still missing, so this is not the final foot assembly.
+
+Next:
+
+- Keep the feet as a reference assembly and continue printing the next leg components.
+
 ## Entry Template
 
 ```markdown
