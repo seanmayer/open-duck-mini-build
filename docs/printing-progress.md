@@ -43,8 +43,8 @@ The upstream guide lists both `foot_bottom_pla.stl` and `foot_bottom_tpu.stl`.
 
 ## Neck
 
-- [ ] `neck_left_sheet.stl` x1
-- [ ] `neck_right_sheet.stl` x1
+- [x] `neck_left_sheet.stl` x1
+- [x] `neck_right_sheet.stl` x1
 
 ## Head
 
@@ -80,6 +80,41 @@ The upstream guide lists both `foot_bottom_pla.stl` and `foot_bottom_tpu.stl`.
 
 Use this section to add a short entry each time I print, reprint, or test-fit parts.
 
+### 2026-08-14 - Neck Sheets
+
+Printed:
+
+- `neck_left_sheet.stl` x1
+- `neck_right_sheet.stl` x1
+
+Settings:
+
+- Material: PLA
+- Layer height: Not recorded
+- Infill: 15%
+- Supports: Not recorded
+- Plate: Not recorded
+- Estimated print time: Not recorded
+
+Result:
+
+- Completed the left and right neck sheets.
+- The prints have some rough areas around the holes and cut-outs.
+- Screw holes were checked and should work for now.
+
+Fit check:
+
+- Marked usable for now, but final assembly should confirm the neck sheets sit flat and hold screws cleanly.
+- Reprint only if the later neck/head fit check shows looseness, cracking, or poor alignment.
+
+Photos:
+
+- [neck-sheets-fit-check-required-2026-08-14.jpeg](../photos/printing/neck/neck-sheets-fit-check-required-2026-08-14.jpeg)
+
+Next:
+
+- Print `head_pitch_to_yaw.stl` x1 and `head_yaw_to_roll.stl` x1.
+
 ### 2026-08-14 - Roll-To-Pitch Parts
 
 Printed:
@@ -112,7 +147,7 @@ Photos:
 
 Next:
 
-- Print `neck_left_sheet.stl` x1 and `neck_right_sheet.stl` x1.
+- Neck sheets completed later on 2026-08-14; print the first head linkage parts next.
 
 ### 2026-08-14 - Trunk Top And Bottom
 

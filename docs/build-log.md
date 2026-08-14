@@ -201,6 +201,30 @@ Next:
 
 - Print `neck_left_sheet.stl` x1 and `neck_right_sheet.stl` x1.
 
+## 2026-08-14 - Neck Sheets Printed
+
+Status: Neck sheets printed and screw holes checked.
+
+What changed:
+
+- Printed `neck_left_sheet.stl` x1.
+- Printed `neck_right_sheet.stl` x1.
+- Added the neck sheet photo to `photos/printing/neck/`.
+- Marked both neck sheet entries complete in the printing progress tracker.
+- Updated README progress to include the neck sheets.
+
+What I learned:
+
+- These parts are not perfect cosmetically, but the screw holes were checked and should work for now.
+
+Problems:
+
+- Rough areas around some holes and cut-outs should be watched during final neck/head fit checking.
+
+Next:
+
+- Print `head_pitch_to_yaw.stl` x1 and `head_yaw_to_roll.stl` x1.
+
 ## Entry Template
 
 ```markdown
