@@ -33,8 +33,8 @@ The upstream guide lists both `foot_bottom_pla.stl` and `foot_bottom_tpu.stl`.
 - [x] `leg_spacer.stl` x4
 - [ ] `left_roll_to_pitch.stl` x1
 - [ ] `right_roll_to_pitch.stl` x1
-- [ ] `roll_motor_bottom.stl` x2
-- [ ] `roll_motor_top.stl` x2
+- [x] `roll_motor_bottom.stl` x2
+- [x] `roll_motor_top.stl` x2
 
 ## Trunk
 
@@ -80,6 +80,43 @@ The upstream guide lists both `foot_bottom_pla.stl` and `foot_bottom_tpu.stl`.
 
 Use this section to add a short entry each time I print, reprint, or test-fit parts.
 
+### 2026-08-13 - Roll Motor Mounts
+
+Printed:
+
+- `roll_motor_top.stl` x2
+- `roll_motor_bottom.stl` x2
+
+Settings:
+
+- Material: PLA
+- Layer height: Not recorded
+- Infill: 15%
+- Supports: Used for `roll_motor_bottom.stl`
+- Plate: Not recorded
+- Estimated print time: Not recorded
+
+Result:
+
+- Completed the roll motor top pair.
+- Completed the roll motor bottom pair after re-orienting/reprinting.
+- Support removal was rough on `roll_motor_bottom.stl`, but the cleaned parts look usable for fit-checking.
+
+Fit check:
+
+- Pending dry fit with knee-to-ankle sheets, leg spacers, and hardware.
+
+Photos:
+
+- [roll-motor-top-2026-08-13.jpeg](../photos/printing/legs/roll-motor-top-2026-08-13.jpeg)
+- [roll-motor-bottom-before-cleanup-2026-08-13.jpeg](../photos/printing/legs/roll-motor-bottom-before-cleanup-2026-08-13.jpeg)
+- [roll-motor-bottom-after-cleanup-2026-08-13.jpeg](../photos/printing/legs/roll-motor-bottom-after-cleanup-2026-08-13.jpeg)
+- [roll-motor-bottom-side-view-2026-08-13.jpeg](../photos/printing/legs/roll-motor-bottom-side-view-2026-08-13.jpeg)
+
+Next:
+
+- Print `left_roll_to_pitch.stl` x1 and `right_roll_to_pitch.stl` x1 to finish the current leg print group.
+
 ### 2026-08-12 - Knee-To-Ankle Sheets
 
 Printed:
@@ -110,7 +147,7 @@ Photos:
 
 Next:
 
-- Print `roll_motor_bottom.stl` x2 and `roll_motor_top.stl` x2, then test the leg subassembly fit.
+- Roll motor top and bottom parts completed on 2026-08-13; print the roll-to-pitch parts next.
 
 ### 2026-08-12
 

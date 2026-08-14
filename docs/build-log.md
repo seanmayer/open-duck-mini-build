@@ -128,6 +128,30 @@ Next:
 
 - Print `roll_motor_bottom.stl` x2 and `roll_motor_top.stl` x2, then start checking the leg subassembly fit.
 
+## 2026-08-13 - Roll Motor Mounts Printed
+
+Status: Roll motor top and bottom parts printed.
+
+What changed:
+
+- Printed `roll_motor_top.stl` x2.
+- Printed `roll_motor_bottom.stl` x2 after orientation/support issues on earlier attempts.
+- Added roll motor print and cleanup photos to `photos/printing/legs/`.
+- Marked both roll motor entries complete in the printing progress tracker.
+- Updated README progress to include the new printed parts.
+
+What I learned:
+
+- `roll_motor_bottom.stl` needs careful orientation and gentle support removal because the geometry is easy to damage.
+
+Problems:
+
+- Support removal was rough on `roll_motor_bottom.stl`; the parts still need fit-checking before final use.
+
+Next:
+
+- Print `left_roll_to_pitch.stl` x1 and `right_roll_to_pitch.stl` x1.
+
 ## Entry Template
 
 ```markdown

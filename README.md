@@ -18,32 +18,32 @@ Useful upstream links:
 
 Phase 1 workshop setup is complete enough to move forward. The build is now in the printing and fit-check stage.
 
-Printed so far: PLA feet, leg spacers, and knee-to-ankle sheets. The PLA feet have been dry-fitted without the optional TPU bottoms.
+Printed so far: PLA feet, leg spacers, knee-to-ankle sheets, and roll motor mounts. The PLA feet have been dry-fitted without the optional TPU bottoms.
 
 The next milestone is finishing the remaining leg prints, then sourcing the actual robot hardware such as servos, Raspberry Pi, IMU, servo controller, batteries, bearings, and wiring.
 
 ## Project Progress
 
-Updated: 2026-08-12
+Updated: 2026-08-13
 
 Progress is tracked as a practical build estimate rather than an exact percentage. Printing progress is counted from the required printed part quantities in [docs/printing-progress.md](docs/printing-progress.md). Optional TPU foot bottoms are not counted in the required print total yet.
 
 ```text
-Overall build progress   [##--------] 18%
-Printing progress        [####------] 37%  18 / 49 required printed parts
+Overall build progress   [##--------] 20%
+Printing progress        [####------] 45%  22 / 49 required printed parts
 ```
 
 | Area | Progress | Status |
 | --- | ---: | --- |
 | Workshop setup | 100% | Core tools, soldering setup, fasteners, inserts, wire, and consumables are ready. |
-| 3D printing and fit checks | 37% | Feet, leg spacers, and knee-to-ankle sheets are printed; PLA feet have been dry-fitted. |
+| 3D printing and fit checks | 45% | Feet, leg spacers, knee-to-ankle sheets, and roll motor mounts are printed; PLA feet have been dry-fitted. |
 | Hardware sourcing | 0% | Robot-specific servos, controller, Raspberry Pi, IMU, power parts, and sensors still need sourcing. |
 | Mechanical assembly | 5% | Early dry fitting has started; final assembly waits on servos, switches, TPU bottoms, and remaining parts. |
 | Electronics and power | 0% | Not started. |
 | Calibration and first motion | 0% | Not started. |
 | Software and runtime experiments | 0% | Not started. |
 
-Current next step: print `roll_motor_bottom.stl` x2 and `roll_motor_top.stl` x2, then start checking the leg subassembly fit.
+Current next step: print `left_roll_to_pitch.stl` x1 and `right_roll_to_pitch.stl` x1, then start checking the leg subassembly fit.
 
 Progress notes: update this section whenever printing, sourcing, assembly, electronics, calibration, or software progress changes.
 
