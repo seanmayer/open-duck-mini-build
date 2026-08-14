@@ -50,9 +50,9 @@ The upstream guide lists both `foot_bottom_pla.stl` and `foot_bottom_tpu.stl`.
 
 - [x] `head_pitch_to_yaw.stl` x1
 - [x] `head_yaw_to_roll.stl` x1
-- [ ] `head_roll_mount.stl` x1
+- [x] `head_roll_mount.stl` x1
 - [ ] `head.stl` x1
-- [ ] `head_bot_sheet.stl` x1
+- [x] `head_bot_sheet.stl` x1
 - [ ] `left_antenna_holder.stl` x1
 - [ ] `right_antenna_holder.stl` x1
 - [ ] `left_eye.stl` x1
@@ -79,6 +79,40 @@ The upstream guide lists both `foot_bottom_pla.stl` and `foot_bottom_tpu.stl`.
 ## Daily Print Notes
 
 Use this section to add a short entry each time I print, reprint, or test-fit parts.
+
+### 2026-08-14 - Head Roll Mount And Bottom Sheet
+
+Printed:
+
+- `head_roll_mount.stl` x1
+- `head_bot_sheet.stl` x1
+
+Settings:
+
+- Material: PLA
+- Layer height: Not recorded
+- Infill: 15%
+- Supports: Not recorded
+- Plate: Not recorded
+- Estimated print time: Not recorded
+
+Result:
+
+- Completed the head roll mount and head bottom sheet.
+- Parts look clean and ready for later head/neck fit checks.
+
+Fit check:
+
+- Pending final fit with head shell, head servos, neck linkage, and hardware.
+
+Photos:
+
+- [head-roll-mount-2026-08-14.jpeg](../photos/printing/head/head-roll-mount-2026-08-14.jpeg)
+- [head-bot-sheet-2026-08-14.jpeg](../photos/printing/head/head-bot-sheet-2026-08-14.jpeg)
+
+Next:
+
+- Print `head.stl` x1.
 
 ### 2026-08-14 - Head Pitch/Yaw Linkage
 
@@ -112,7 +146,7 @@ Photos:
 
 Next:
 
-- Print `head_roll_mount.stl` x1 and `head_bot_sheet.stl` x1.
+- Head roll mount and bottom sheet completed later on 2026-08-14; print `head.stl` next.
 
 ### 2026-08-14 - Neck Sheets
 

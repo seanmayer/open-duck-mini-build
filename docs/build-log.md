@@ -249,6 +249,30 @@ Next:
 
 - Print `head_roll_mount.stl` x1 and `head_bot_sheet.stl` x1.
 
+## 2026-08-14 - Head Roll Mount And Bottom Sheet Printed
+
+Status: Head support parts printed.
+
+What changed:
+
+- Printed `head_roll_mount.stl` x1.
+- Printed `head_bot_sheet.stl` x1.
+- Added the head support photos to `photos/printing/head/`.
+- Marked both head support entries complete in the printing progress tracker.
+- Updated README progress to include these head parts.
+
+What I learned:
+
+- Most of the head mechanism support pieces are now printed; the larger head shell is the next main print.
+
+Problems:
+
+- Fit check with the head shell, head servos, neck linkage, and hardware is still pending.
+
+Next:
+
+- Print `head.stl` x1.
+
 ## Entry Template
 
 ```markdown
