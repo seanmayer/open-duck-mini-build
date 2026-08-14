@@ -18,32 +18,32 @@ Useful upstream links:
 
 Phase 1 workshop setup is complete enough to move forward. The build is now in the printing and fit-check stage.
 
-Printed so far: PLA feet, leg spacers, knee-to-ankle sheets, and roll motor mounts. The PLA feet have been dry-fitted without the optional TPU bottoms.
+Printed so far: PLA feet, leg spacers, knee-to-ankle sheets, roll motor mounts, roll-to-pitch parts, and trunk top/bottom pieces. The PLA feet have been dry-fitted without the optional TPU bottoms.
 
-The next milestone is finishing the remaining leg prints, then sourcing the actual robot hardware such as servos, Raspberry Pi, IMU, servo controller, batteries, bearings, and wiring.
+The next milestone is continuing through the upper-body prints, then sourcing the actual robot hardware such as servos, Raspberry Pi, IMU, servo controller, batteries, bearings, and wiring.
 
 ## Project Progress
 
-Updated: 2026-08-13
+Updated: 2026-08-14
 
 Progress is tracked as a practical build estimate rather than an exact percentage. Printing progress is counted from the required printed part quantities in [docs/printing-progress.md](docs/printing-progress.md). Optional TPU foot bottoms are not counted in the required print total yet.
 
 ```text
-Overall build progress   [##--------] 20%
-Printing progress        [####------] 45%  22 / 49 required printed parts
+Overall build progress   [##--------] 24%
+Printing progress        [#####-----] 53%  26 / 49 required printed parts
 ```
 
 | Area | Progress | Status |
 | --- | ---: | --- |
 | Workshop setup | 100% | Core tools, soldering setup, fasteners, inserts, wire, and consumables are ready. |
-| 3D printing and fit checks | 45% | Feet, leg spacers, knee-to-ankle sheets, and roll motor mounts are printed; PLA feet have been dry-fitted. |
+| 3D printing and fit checks | 53% | Feet, leg spacers, knee-to-ankle sheets, roll motor mounts, roll-to-pitch parts, and trunk top/bottom pieces are printed; PLA feet have been dry-fitted. |
 | Hardware sourcing | 0% | Robot-specific servos, controller, Raspberry Pi, IMU, power parts, and sensors still need sourcing. |
 | Mechanical assembly | 5% | Early dry fitting has started; final assembly waits on servos, switches, TPU bottoms, and remaining parts. |
 | Electronics and power | 0% | Not started. |
 | Calibration and first motion | 0% | Not started. |
 | Software and runtime experiments | 0% | Not started. |
 
-Current next step: print `left_roll_to_pitch.stl` x1 and `right_roll_to_pitch.stl` x1, then start checking the leg subassembly fit.
+Current next step: print `neck_left_sheet.stl` x1 and `neck_right_sheet.stl` x1, then start checking the leg subassembly fit while the upper-body prints continue.
 
 Progress notes: update this section whenever printing, sourcing, assembly, electronics, calibration, or software progress changes.
 

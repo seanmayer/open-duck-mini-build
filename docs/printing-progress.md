@@ -31,15 +31,15 @@ The upstream guide lists both `foot_bottom_pla.stl` and `foot_bottom_tpu.stl`.
 - [x] `knee_to_ankle_left_sheet.stl` x4
 - [x] `knee_to_ankle_right_sheet.stl` x4
 - [x] `leg_spacer.stl` x4
-- [ ] `left_roll_to_pitch.stl` x1
-- [ ] `right_roll_to_pitch.stl` x1
+- [x] `left_roll_to_pitch.stl` x1
+- [x] `right_roll_to_pitch.stl` x1
 - [x] `roll_motor_bottom.stl` x2
 - [x] `roll_motor_top.stl` x2
 
 ## Trunk
 
-- [ ] `trunk_bottom.stl` x1
-- [ ] `trunk_top.stl` x1
+- [x] `trunk_bottom.stl` x1
+- [x] `trunk_top.stl` x1
 
 ## Neck
 
@@ -80,6 +80,74 @@ The upstream guide lists both `foot_bottom_pla.stl` and `foot_bottom_tpu.stl`.
 
 Use this section to add a short entry each time I print, reprint, or test-fit parts.
 
+### 2026-08-14 - Roll-To-Pitch Parts
+
+Printed:
+
+- `left_roll_to_pitch.stl` x1
+- `right_roll_to_pitch.stl` x1
+
+Settings:
+
+- Material: PLA
+- Layer height: Not recorded
+- Infill: 15%
+- Supports: Not recorded
+- Plate: Not recorded
+- Estimated print time: Not recorded
+
+Result:
+
+- Completed the left and right roll-to-pitch parts.
+- This finishes the remaining required leg print group.
+
+Fit check:
+
+- Pending fit check with the knee-to-ankle sheets, leg spacers, roll motor mounts, servos, and hardware.
+
+Photos:
+
+- [roll-to-pitch-side-view-2026-08-14.jpeg](../photos/printing/legs/roll-to-pitch-side-view-2026-08-14.jpeg)
+- [roll-to-pitch-top-view-2026-08-14.jpeg](../photos/printing/legs/roll-to-pitch-top-view-2026-08-14.jpeg)
+
+Next:
+
+- Print `neck_left_sheet.stl` x1 and `neck_right_sheet.stl` x1.
+
+### 2026-08-14 - Trunk Top And Bottom
+
+Printed:
+
+- `trunk_bottom.stl` x1
+- `trunk_top.stl` x1
+
+Settings:
+
+- Material: PLA
+- Layer height: Not recorded
+- Infill: 15%
+- Supports: Not recorded
+- Plate: Not recorded
+- Estimated print time: Not recorded
+
+Result:
+
+- Completed the main trunk top and bottom pieces.
+- Both parts look clean enough for later fit-checking with the leg assemblies and electronics.
+
+Fit check:
+
+- Pending final fit with servos, controller board, Raspberry Pi, and wiring.
+
+Photos:
+
+- [trunk-bottom-2026-08-14.jpeg](../photos/printing/trunk/trunk-bottom-2026-08-14.jpeg)
+- [trunk-top-2026-08-14.jpeg](../photos/printing/trunk/trunk-top-2026-08-14.jpeg)
+
+Next:
+
+- Roll-to-pitch parts completed later on 2026-08-14; print the neck sheets next.
+
 ### 2026-08-13 - Roll Motor Mounts
 
 Printed:
@@ -111,11 +179,10 @@ Photos:
 - [roll-motor-top-2026-08-13.jpeg](../photos/printing/legs/roll-motor-top-2026-08-13.jpeg)
 - [roll-motor-bottom-before-cleanup-2026-08-13.jpeg](../photos/printing/legs/roll-motor-bottom-before-cleanup-2026-08-13.jpeg)
 - [roll-motor-bottom-after-cleanup-2026-08-13.jpeg](../photos/printing/legs/roll-motor-bottom-after-cleanup-2026-08-13.jpeg)
-- [roll-motor-bottom-side-view-2026-08-13.jpeg](../photos/printing/legs/roll-motor-bottom-side-view-2026-08-13.jpeg)
 
 Next:
 
-- Print `left_roll_to_pitch.stl` x1 and `right_roll_to_pitch.stl` x1 to finish the current leg print group.
+- Roll-to-pitch parts completed on 2026-08-14.
 
 ### 2026-08-12 - Knee-To-Ankle Sheets
 

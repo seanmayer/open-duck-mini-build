@@ -152,6 +152,55 @@ Next:
 
 - Print `left_roll_to_pitch.stl` x1 and `right_roll_to_pitch.stl` x1.
 
+## 2026-08-14 - Trunk Top And Bottom Printed
+
+Status: Main trunk pieces printed.
+
+What changed:
+
+- Printed `trunk_bottom.stl` x1.
+- Printed `trunk_top.stl` x1.
+- Added trunk print photos to `photos/printing/trunk/`.
+- Marked both trunk entries complete in the printing progress tracker.
+- Updated README progress to include the trunk pieces.
+
+What I learned:
+
+- The build is now moving from repeated leg parts into the central torso structure.
+
+Problems:
+
+- Fit check with the leg assemblies, servos, controller board, Raspberry Pi, and wiring is still pending.
+
+Next:
+
+- Roll-to-pitch parts completed later on 2026-08-14; print the neck sheets next.
+
+## 2026-08-14 - Roll-To-Pitch Parts Printed
+
+Status: Left and right roll-to-pitch parts printed.
+
+What changed:
+
+- Printed `left_roll_to_pitch.stl` x1.
+- Printed `right_roll_to_pitch.stl` x1.
+- Added roll-to-pitch photos to `photos/printing/legs/`.
+- Corrected the previously misplaced roll-to-pitch side-view photo so it is linked from the right print entry.
+- Marked both roll-to-pitch entries complete in the printing progress tracker.
+- Updated README progress to include the completed leg print group.
+
+What I learned:
+
+- The required leg print group is now complete enough for dry fitting and later servo checks.
+
+Problems:
+
+- Fit check with the servos and hardware is still pending.
+
+Next:
+
+- Print `neck_left_sheet.stl` x1 and `neck_right_sheet.stl` x1.
+
 ## Entry Template
 
 ```markdown
