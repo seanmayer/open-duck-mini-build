@@ -48,8 +48,8 @@ The upstream guide lists both `foot_bottom_pla.stl` and `foot_bottom_tpu.stl`.
 
 ## Head
 
-- [ ] `head_pitch_to_yaw.stl` x1
-- [ ] `head_yaw_to_roll.stl` x1
+- [x] `head_pitch_to_yaw.stl` x1
+- [x] `head_yaw_to_roll.stl` x1
 - [ ] `head_roll_mount.stl` x1
 - [ ] `head.stl` x1
 - [ ] `head_bot_sheet.stl` x1
@@ -79,6 +79,40 @@ The upstream guide lists both `foot_bottom_pla.stl` and `foot_bottom_tpu.stl`.
 ## Daily Print Notes
 
 Use this section to add a short entry each time I print, reprint, or test-fit parts.
+
+### 2026-08-14 - Head Pitch/Yaw Linkage
+
+Printed:
+
+- `head_pitch_to_yaw.stl` x1
+- `head_yaw_to_roll.stl` x1
+
+Settings:
+
+- Material: PLA
+- Layer height: Not recorded
+- Infill: 15%
+- Supports: Not recorded
+- Plate: Not recorded
+- Estimated print time: Not recorded
+
+Result:
+
+- Completed the first two head linkage parts.
+- Parts look usable for the next head/neck fit checks.
+
+Fit check:
+
+- Pending final fit with the neck sheets, head roll mount, head servos, and hardware.
+
+Photos:
+
+- [head-pitch-to-yaw-2026-08-14.jpeg](../photos/printing/head/head-pitch-to-yaw-2026-08-14.jpeg)
+- [head-yaw-to-roll-2026-08-14.jpeg](../photos/printing/head/head-yaw-to-roll-2026-08-14.jpeg)
+
+Next:
+
+- Print `head_roll_mount.stl` x1 and `head_bot_sheet.stl` x1.
 
 ### 2026-08-14 - Neck Sheets
 
@@ -113,7 +147,7 @@ Photos:
 
 Next:
 
-- Print `head_pitch_to_yaw.stl` x1 and `head_yaw_to_roll.stl` x1.
+- Head pitch/yaw linkage parts completed later on 2026-08-14; print the remaining head support parts next.
 
 ### 2026-08-14 - Roll-To-Pitch Parts
 

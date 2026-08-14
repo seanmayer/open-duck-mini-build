@@ -225,6 +225,30 @@ Next:
 
 - Print `head_pitch_to_yaw.stl` x1 and `head_yaw_to_roll.stl` x1.
 
+## 2026-08-14 - Head Pitch/Yaw Linkage Printed
+
+Status: First head linkage parts printed.
+
+What changed:
+
+- Printed `head_pitch_to_yaw.stl` x1.
+- Printed `head_yaw_to_roll.stl` x1.
+- Added the head linkage photos to `photos/printing/head/`.
+- Marked both head linkage entries complete in the printing progress tracker.
+- Updated README progress to include the first head parts.
+
+What I learned:
+
+- The build has moved from neck support pieces into the head mechanism.
+
+Problems:
+
+- Fit check with the neck sheets, head roll mount, head servos, and hardware is still pending.
+
+Next:
+
+- Print `head_roll_mount.stl` x1 and `head_bot_sheet.stl` x1.
+
 ## Entry Template
 
 ```markdown
