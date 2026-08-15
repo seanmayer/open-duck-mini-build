@@ -296,6 +296,32 @@ Next:
 
 - Print `left_antenna_holder.stl` x1, `right_antenna_holder.stl` x1, `left_eye.stl` x1, and `right_eye.stl` x1.
 
+## 2026-08-15 - Head Details Printed
+
+Status: Required head print group completed.
+
+What changed:
+
+- Printed `left_antenna_holder.stl` x1.
+- Printed `right_antenna_holder.stl` x1.
+- Printed `left_eye.stl` x1.
+- Printed `right_eye.stl` x1.
+- Added the antenna holder and eye photos to `photos/printing/head/`.
+- Marked the four head detail parts complete in the printing progress tracker.
+- Updated README progress to include the completed head group.
+
+What I learned:
+
+- The required head print group is now complete, so the next useful batch is the body/cache pieces.
+
+Problems:
+
+- Fit check with the head shell, head bottom sheet, head servos, antenna hardware, and eye mounting hardware is still pending.
+
+Next:
+
+- Print `left_cache.stl` x1 and `right_cache.stl` x1, then continue into the body panels.
+
 ## Entry Template
 
 ```markdown

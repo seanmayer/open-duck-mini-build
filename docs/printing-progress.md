@@ -53,10 +53,10 @@ The upstream guide lists both `foot_bottom_pla.stl` and `foot_bottom_tpu.stl`.
 - [x] `head_roll_mount.stl` x1
 - [x] `head.stl` x1
 - [x] `head_bot_sheet.stl` x1
-- [ ] `left_antenna_holder.stl` x1
-- [ ] `right_antenna_holder.stl` x1
-- [ ] `left_eye.stl` x1
-- [ ] `right_eye.stl` x1
+- [x] `left_antenna_holder.stl` x1
+- [x] `right_antenna_holder.stl` x1
+- [x] `left_eye.stl` x1
+- [x] `right_eye.stl` x1
 
 ## Body
 
@@ -79,6 +79,44 @@ The upstream guide lists both `foot_bottom_pla.stl` and `foot_bottom_tpu.stl`.
 ## Daily Print Notes
 
 Use this section to add a short entry each time I print, reprint, or test-fit parts.
+
+### 2026-08-15 - Head Details
+
+Printed:
+
+- `left_antenna_holder.stl` x1
+- `right_antenna_holder.stl` x1
+- `left_eye.stl` x1
+- `right_eye.stl` x1
+
+Settings:
+
+- Material: PLA
+- Layer height: Not recorded
+- Infill: 15%
+- Supports: Not recorded
+- Plate: Not recorded
+- Estimated print time: Not recorded
+
+Result:
+
+- Completed the antenna holders and eye pieces.
+- This finishes the required head print group.
+
+Fit check:
+
+- Pending final fit with the head shell, head bottom sheet, head servos, antenna hardware, and eye mounting hardware.
+
+Photos:
+
+- [left-antenna-holder-2026-08-15.jpeg](../photos/printing/head/left-antenna-holder-2026-08-15.jpeg)
+- [right-antenna-holder-2026-08-15.jpeg](../photos/printing/head/right-antenna-holder-2026-08-15.jpeg)
+- [left-eye-2026-08-15.jpeg](../photos/printing/head/left-eye-2026-08-15.jpeg)
+- [right-eye-2026-08-15.jpeg](../photos/printing/head/right-eye-2026-08-15.jpeg)
+
+Next:
+
+- Print `left_cache.stl` x1 and `right_cache.stl` x1, then continue into the body panels.
 
 ### 2026-08-15 - Head Shell
 
@@ -110,7 +148,7 @@ Photos:
 
 Next:
 
-- Print `left_antenna_holder.stl` x1, `right_antenna_holder.stl` x1, `left_eye.stl` x1, and `right_eye.stl` x1.
+- Head details completed later on 2026-08-15; print the body/cache pieces next.
 
 ### 2026-08-14 - Head Roll Mount And Bottom Sheet
 
