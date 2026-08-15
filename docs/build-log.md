@@ -273,6 +273,29 @@ Next:
 
 - Print `head.stl` x1.
 
+## 2026-08-15 - Head Shell Printed
+
+Status: Main head shell printed.
+
+What changed:
+
+- Printed `head.stl` x1.
+- Added the head shell photo to `photos/printing/head/`.
+- Marked the head shell complete in the printing progress tracker.
+- Updated README progress to include the new head print.
+
+What I learned:
+
+- The upper-body print set is now far enough along that the head details are the next logical small batch.
+
+Problems:
+
+- Fit check with the head bottom sheet, head roll mount, head servos, antenna holders, eyes, and hardware is still pending.
+
+Next:
+
+- Print `left_antenna_holder.stl` x1, `right_antenna_holder.stl` x1, `left_eye.stl` x1, and `right_eye.stl` x1.
+
 ## Entry Template
 
 ```markdown

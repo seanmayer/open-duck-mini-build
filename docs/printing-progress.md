@@ -51,7 +51,7 @@ The upstream guide lists both `foot_bottom_pla.stl` and `foot_bottom_tpu.stl`.
 - [x] `head_pitch_to_yaw.stl` x1
 - [x] `head_yaw_to_roll.stl` x1
 - [x] `head_roll_mount.stl` x1
-- [ ] `head.stl` x1
+- [x] `head.stl` x1
 - [x] `head_bot_sheet.stl` x1
 - [ ] `left_antenna_holder.stl` x1
 - [ ] `right_antenna_holder.stl` x1
@@ -79,6 +79,38 @@ The upstream guide lists both `foot_bottom_pla.stl` and `foot_bottom_tpu.stl`.
 ## Daily Print Notes
 
 Use this section to add a short entry each time I print, reprint, or test-fit parts.
+
+### 2026-08-15 - Head Shell
+
+Printed:
+
+- `head.stl` x1
+
+Settings:
+
+- Material: PLA
+- Layer height: Not recorded
+- Infill: 15%
+- Supports: Not recorded
+- Plate: Not recorded
+- Estimated print time: Not recorded
+
+Result:
+
+- Completed the main head shell.
+- This is one of the larger, more visually important upper-body prints.
+
+Fit check:
+
+- Pending final fit with the head bottom sheet, head roll mount, head servos, antenna holders, eyes, and hardware.
+
+Photos:
+
+- [head-shell-2026-08-15.jpeg](../photos/printing/head/head-shell-2026-08-15.jpeg)
+
+Next:
+
+- Print `left_antenna_holder.stl` x1, `right_antenna_holder.stl` x1, `left_eye.stl` x1, and `right_eye.stl` x1.
 
 ### 2026-08-14 - Head Roll Mount And Bottom Sheet
 
@@ -112,7 +144,7 @@ Photos:
 
 Next:
 
-- Print `head.stl` x1.
+- Head shell completed on 2026-08-15; print the antenna holders and eyes next.
 
 ### 2026-08-14 - Head Pitch/Yaw Linkage
 
