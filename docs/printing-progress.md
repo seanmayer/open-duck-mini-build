@@ -60,8 +60,8 @@ The upstream guide lists both `foot_bottom_pla.stl` and `foot_bottom_tpu.stl`.
 
 ## Body
 
-- [ ] `left_cache.stl` x1
-- [ ] `right_cache.stl` x1
+- [x] `left_cache.stl` x1
+- [x] `right_cache.stl` x1
 - [ ] `body_front.stl` x1
 - [ ] `body_middle_bottom.stl` x1
 - [ ] `body_middle_top.stl` x1
@@ -79,6 +79,42 @@ The upstream guide lists both `foot_bottom_pla.stl` and `foot_bottom_tpu.stl`.
 ## Daily Print Notes
 
 Use this section to add a short entry each time I print, reprint, or test-fit parts.
+
+### 2026-08-16 - Left And Right Cache Pieces
+
+Printed:
+
+- `left_cache.stl` x1
+- `right_cache.stl` x1
+
+Settings:
+
+- Material: PLA
+- Layer height: Not recorded
+- Infill: 15%
+- Supports: Used
+- Plate: Not recorded
+- Estimated print time: Not recorded
+
+Result:
+
+- Completed the left and right cache body pieces.
+- Support contact areas needed sanding after removal.
+- Cleaned the parts with isopropyl alcohol after sanding.
+- Surface finish is not ideal, but the affected areas should be acceptable once painted.
+
+Fit check:
+
+- Pending final fit with the body panels, trunk pieces, hardware, and electronics.
+
+Photos:
+
+- [left-cache-2026-08-16.jpeg](../photos/printing/body/left-cache-2026-08-16.jpeg)
+- [right-cache-2026-08-16.jpeg](../photos/printing/body/right-cache-2026-08-16.jpeg)
+
+Next:
+
+- Print `body_front.stl` x1, then continue with `body_middle_bottom.stl` and `body_middle_top.stl`.
 
 ### 2026-08-15 - Head Details
 
@@ -116,7 +152,7 @@ Photos:
 
 Next:
 
-- Print `left_cache.stl` x1 and `right_cache.stl` x1, then continue into the body panels.
+- Cache pieces completed on 2026-08-16; print the main body panels next.
 
 ### 2026-08-15 - Head Shell
 

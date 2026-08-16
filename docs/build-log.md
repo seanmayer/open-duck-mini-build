@@ -322,6 +322,32 @@ Next:
 
 - Print `left_cache.stl` x1 and `right_cache.stl` x1, then continue into the body panels.
 
+## 2026-08-16 - Left And Right Cache Pieces Printed
+
+Status: First body/cache pieces printed.
+
+What changed:
+
+- Printed `left_cache.stl` x1.
+- Printed `right_cache.stl` x1.
+- Added the cache piece photos to `photos/printing/body/`.
+- Marked both cache parts complete in the printing progress tracker.
+- Updated README progress to include the new body pieces.
+
+What I learned:
+
+- Support contact areas on these cosmetic body pieces may need sanding and cleaning before they look acceptable.
+- The finish is not ideal, but these areas should be fine to paint over later.
+
+Problems:
+
+- Support cleanup left some visible finish issues.
+- Final fit with the body panels, trunk pieces, hardware, and electronics is still pending.
+
+Next:
+
+- Print `body_front.stl` x1, then continue with `body_middle_bottom.stl` and `body_middle_top.stl`.
+
 ## Entry Template
 
 ```markdown
