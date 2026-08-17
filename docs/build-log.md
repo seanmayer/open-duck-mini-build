@@ -371,6 +371,29 @@ Next:
 
 - Print `body_middle_bottom.stl` x1 and `body_middle_top.stl` x1.
 
+## 2026-08-17 - Body Middle Bottom Panel Printed
+
+Status: Body middle bottom panel printed.
+
+What changed:
+
+- Printed `body_middle_bottom.stl` x1.
+- Added the body middle bottom photo to `photos/printing/body/`.
+- Marked the body middle bottom panel complete in the printing progress tracker.
+- Updated README progress to 41 / 49 required printed parts.
+
+What I learned:
+
+- The middle body shell is now underway, with the top panel still remaining.
+
+Problems:
+
+- Final fit with the body middle top, body back, battery lid, trunk pieces, hardware, servos, and electronics is still pending.
+
+Next:
+
+- Print `body_middle_top.stl` x1, then continue with `body_back.stl`.
+
 ## Entry Template
 
 ```markdown

@@ -63,7 +63,7 @@ The upstream guide lists both `foot_bottom_pla.stl` and `foot_bottom_tpu.stl`.
 - [x] `left_cache.stl` x1
 - [x] `right_cache.stl` x1
 - [x] `body_front.stl` x1
-- [ ] `body_middle_bottom.stl` x1
+- [x] `body_middle_bottom.stl` x1
 - [ ] `body_middle_top.stl` x1
 - [ ] `body_back.stl` x1
 - [ ] `battery_pack_lid.stl` x1
@@ -79,6 +79,38 @@ The upstream guide lists both `foot_bottom_pla.stl` and `foot_bottom_tpu.stl`.
 ## Daily Print Notes
 
 Use this section to add a short entry each time I print, reprint, or test-fit parts.
+
+### 2026-08-17 - Body Middle Bottom Panel
+
+Printed:
+
+- `body_middle_bottom.stl` x1
+
+Settings:
+
+- Material: PLA
+- Layer height: Not recorded
+- Infill: 15%
+- Supports: Not recorded
+- Plate: Not recorded
+- Estimated print time: Not recorded
+
+Result:
+
+- Completed the body middle bottom panel.
+- Part is ready for later body shell fit checks.
+
+Fit check:
+
+- Pending final fit with `body_middle_top.stl`, `body_back.stl`, `battery_pack_lid.stl`, trunk pieces, hardware, servos, and electronics.
+
+Photos:
+
+- [body-middle-bottom-2026-08-17.jpeg](../photos/printing/body/body-middle-bottom-2026-08-17.jpeg)
+
+Next:
+
+- Print `body_middle_top.stl` x1, then continue with `body_back.stl`.
 
 ### 2026-08-16 - Body Front Panel
 
@@ -110,7 +142,7 @@ Photos:
 
 Next:
 
-- Print `body_middle_bottom.stl` x1 and `body_middle_top.stl` x1.
+- Body middle bottom completed on 2026-08-17; print `body_middle_top.stl` x1 next.
 
 ### 2026-08-16 - Left And Right Cache Pieces
 
