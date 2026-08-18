@@ -64,21 +64,159 @@ The upstream guide lists both `foot_bottom_pla.stl` and `foot_bottom_tpu.stl`.
 - [x] `right_cache.stl` x1
 - [x] `body_front.stl` x1
 - [x] `body_middle_bottom.stl` x1
-- [ ] `body_middle_top.stl` x1
-- [ ] `body_back.stl` x1
-- [ ] `battery_pack_lid.stl` x1
+- [x] `body_middle_top.stl` x1
+- [x] `body_back.stl` x1
+- [x] `battery_pack_lid.stl` x1
 
 ## Accessories
 
-- [ ] `bulb.stl` x1
-- [ ] `flash_light_module.stl` x1
-- [ ] `flash_reflector_interface.stl` x1
-- [ ] `speaker_interface.stl` x1
-- [ ] `speaker_stand.stl` x1
+- [x] `bulb.stl` x1
+- [x] `flash_light_module.stl` x1
+- [x] `flash_reflector_interface.stl` x1
+- [x] `speaker_interface.stl` x1
+- [x] `speaker_stand.stl` x1
 
 ## Daily Print Notes
 
 Use this section to add a short entry each time I print, reprint, or test-fit parts.
+
+### 2026-08-18 - Accessory Prints Completed
+
+Printed:
+
+- `bulb.stl` x1
+- `flash_light_module.stl` x1
+- `flash_reflector_interface.stl` x1
+- `speaker_interface.stl` x1
+- `speaker_stand.stl` x1
+
+Settings:
+
+- Material: PLA
+- Layer height: Not recorded
+- Infill: 15%
+- Supports: Not recorded
+- Plate: Not recorded
+- Estimated print time: Not recorded
+
+Result:
+
+- Completed all five remaining required accessory prints.
+- The required STL print checklist is now complete.
+- Only `foot_bottom_tpu.stl` remains as an optional TPU upgrade for the feet.
+
+Fit check:
+
+- Pending final fit with the head, body shell, trunk pieces, hardware, servos, electronics, and speaker/flash modules.
+
+Photos:
+
+- [bulb-2026-08-18.jpeg](../photos/printing/accessories/bulb-2026-08-18.jpeg)
+- [flash-light-module-2026-08-18.jpeg](../photos/printing/accessories/flash-light-module-2026-08-18.jpeg)
+- [flash-reflector-interface-2026-08-18.jpeg](../photos/printing/accessories/flash-reflector-interface-2026-08-18.jpeg)
+- [speaker-interface-2026-08-18.jpeg](../photos/printing/accessories/speaker-interface-2026-08-18.jpeg)
+- [speaker-stand-2026-08-18.jpeg](../photos/printing/accessories/speaker-stand-2026-08-18.jpeg)
+
+Next:
+
+- Print `foot_bottom_tpu.stl` x2 in TPU at 40% infill.
+- Begin final fit checks while the robot-specific hardware arrives.
+
+### 2026-08-18 - Battery Pack Lid
+
+Printed:
+
+- `battery_pack_lid.stl` x1
+
+Settings:
+
+- Material: PLA
+- Layer height: Not recorded
+- Infill: 15%
+- Supports: Not recorded
+- Plate: Not recorded
+- Estimated print time: Not recorded
+
+Result:
+
+- Completed the battery pack lid.
+- This completes the required body print group.
+
+Fit check:
+
+- Pending final fit with the body shell, trunk pieces, hardware, servos, battery holder, and power wiring.
+
+Photos:
+
+- [battery-pack-lid-2026-08-18.jpeg](../photos/printing/body/battery-pack-lid-2026-08-18.jpeg)
+
+Next:
+
+- Continue with the remaining accessory prints.
+
+### 2026-08-18 - Body Back Panel
+
+Printed:
+
+- `body_back.stl` x1
+
+Settings:
+
+- Material: PLA
+- Layer height: Not recorded
+- Infill: 15%
+- Supports: Not recorded
+- Plate: Not recorded
+- Estimated print time: Not recorded
+
+Result:
+
+- Completed the body back panel.
+- The body back panel printed cleanly enough to continue.
+
+Fit check:
+
+- Pending final fit with trunk pieces, hardware, servos, and electronics.
+
+Photos:
+
+- [body-back-2026-08-18.jpeg](../photos/printing/body/body-back-2026-08-18.jpeg)
+
+Next:
+
+- Battery pack lid completed later on 2026-08-18; continue with the remaining accessory prints.
+
+### 2026-08-18 - Body Middle Top Panel
+
+Printed:
+
+- `body_middle_top.stl` x1
+
+Settings:
+
+- Material: PLA
+- Layer height: Not recorded
+- Infill: 15%
+- Supports: Not recorded
+- Plate: Not recorded
+- Estimated print time: Not recorded
+
+Result:
+
+- Completed the body middle top panel.
+- Both body middle panels are now printed and ready for later shell fit checks.
+
+Fit check:
+
+- Pending final fit with `body_back.stl`, `battery_pack_lid.stl`, trunk pieces, hardware, servos, and electronics.
+
+Photos:
+
+- [body-middle-top-2026-08-18.jpeg](../photos/printing/body/body-middle-top-2026-08-18.jpeg)
+
+Next:
+
+- Body back completed later on 2026-08-18; print `battery_pack_lid.stl` x1 next.
 
 ### 2026-08-17 - Body Middle Bottom Panel
 
@@ -110,7 +248,7 @@ Photos:
 
 Next:
 
-- Print `body_middle_top.stl` x1, then continue with `body_back.stl`.
+- Body middle top completed on 2026-08-18; print `body_back.stl` x1 next.
 
 ### 2026-08-16 - Body Front Panel
 

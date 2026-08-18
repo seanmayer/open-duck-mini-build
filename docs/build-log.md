@@ -394,6 +394,104 @@ Next:
 
 - Print `body_middle_top.stl` x1, then continue with `body_back.stl`.
 
+## 2026-08-18 - Body Middle Top Panel Printed
+
+Status: Body middle top panel printed.
+
+What changed:
+
+- Printed `body_middle_top.stl` x1.
+- Added the body middle top photo to `photos/printing/body/`.
+- Marked the body middle top panel complete in the printing progress tracker.
+- Updated README progress to 42 / 49 required printed parts.
+
+What I learned:
+
+- Both middle body panels are now printed, so the main body shell is close to the final printed pieces.
+
+Problems:
+
+- Final fit with the body back, battery lid, trunk pieces, hardware, servos, and electronics is still pending.
+
+Next:
+
+- Print `body_back.stl` x1, then continue with `battery_pack_lid.stl`.
+
+## 2026-08-18 - Body Back Panel Printed
+
+Status: Body back panel printed.
+
+What changed:
+
+- Printed `body_back.stl` x1.
+- Added the body back photo to `photos/printing/body/`.
+- Marked the body back panel complete in the printing progress tracker.
+- Updated README progress to 43 / 49 required printed parts.
+
+What I learned:
+
+- The main body shell print group is almost complete.
+
+Problems:
+
+- Final fit with the battery lid, trunk pieces, hardware, servos, and electronics is still pending.
+
+Next:
+
+- Battery pack lid completed later on 2026-08-18; continue with the remaining accessory prints.
+
+## 2026-08-18 - Battery Pack Lid Printed
+
+Status: Battery pack lid printed.
+
+What changed:
+
+- Printed `battery_pack_lid.stl` x1.
+- Added the battery pack lid photo to `photos/printing/body/`.
+- Marked the battery pack lid complete in the printing progress tracker.
+- Updated README progress to 44 / 49 required printed parts.
+
+What I learned:
+
+- The required body print group is now complete.
+
+Problems:
+
+- Final fit with the body shell, trunk pieces, hardware, servos, battery holder, and power wiring is still pending.
+
+Next:
+
+- Accessory prints completed later on 2026-08-18; print the optional TPU foot bottoms next.
+
+## 2026-08-18 - Accessory Prints Completed
+
+Status: Remaining required accessory prints completed.
+
+What changed:
+
+- Printed `bulb.stl` x1.
+- Printed `flash_light_module.stl` x1.
+- Printed `flash_reflector_interface.stl` x1.
+- Printed `speaker_interface.stl` x1.
+- Printed `speaker_stand.stl` x1.
+- Added accessory photos to `photos/printing/accessories/`.
+- Marked all required accessory prints complete in the printing progress tracker.
+- Updated README progress to 49 / 49 required printed parts.
+
+What I learned:
+
+- The required STL print checklist is complete.
+- Only the optional TPU foot bottoms remain from the print guide.
+
+Problems:
+
+- Final fit with hardware, electronics, speaker parts, flash parts, and TPU foot bottoms is still pending.
+
+Next:
+
+- Print `foot_bottom_tpu.stl` x2 in TPU at 40% infill.
+- Begin final fit checks while the robot-specific hardware arrives.
+
 ## Entry Template
 
 ```markdown
