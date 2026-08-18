@@ -18,32 +18,32 @@ Useful upstream links:
 
 Phase 1 workshop setup is complete enough to move forward. The build is now in the printing and fit-check stage.
 
-Printed so far: all required STL prints are complete. The PLA feet have been dry-fitted without the optional TPU bottoms.
+Printed so far: all required STL prints and optional TPU foot bottoms are complete. The PLA feet have been dry-fitted, and the TPU foot bottoms are ready for final fit checks.
 
-The next milestone is printing the optional TPU foot bottoms, then moving into final fit checks and hardware preparation.
+The next milestone is final fit checks, heat-set insert prep, and hardware/electronics preparation as parts arrive.
 
 ## Project Progress
 
 Updated: 2026-08-18
 
-Progress is tracked as a practical build estimate rather than an exact percentage. Printing progress is counted from the required printed part quantities in [docs/printing-progress.md](docs/printing-progress.md). Optional TPU foot bottoms are not counted in the required print total yet.
+Progress is tracked as a practical build estimate rather than an exact percentage. Printing progress is counted from the required printed part quantities in [docs/printing-progress.md](docs/printing-progress.md). The optional TPU foot bottoms are complete as an upgrade to the PLA feet.
 
 ```text
-Overall build progress   [#####-----] 45%
-Printing progress        [##########] 100%  49 / 49 required printed parts
+Overall build progress   [#####-----] 46%
+Printing progress        [##########] 100%  49 / 49 required printed parts + TPU feet
 ```
 
 | Area | Progress | Status |
 | --- | ---: | --- |
 | Workshop setup | 100% | Core tools, soldering setup, fasteners, inserts, wire, and consumables are ready. |
-| 3D printing and fit checks | 100% | All required STL prints are complete; optional TPU foot bottoms remain for improved grip. PLA feet have been dry-fitted. |
+| 3D printing and fit checks | 100% | All required STL prints and optional TPU foot bottoms are complete. PLA feet have been dry-fitted. |
 | Hardware sourcing | 0% | Robot-specific servos, controller, Raspberry Pi, IMU, power parts, and sensors still need sourcing. |
-| Mechanical assembly | 5% | Early dry fitting has started; final assembly waits on servos, switches, TPU bottoms, and remaining parts. |
+| Mechanical assembly | 5% | Early dry fitting has started; final assembly waits on servos, switches, and remaining hardware. |
 | Electronics and power | 0% | Not started. |
 | Calibration and first motion | 0% | Not started. |
 | Software and runtime experiments | 0% | Not started. |
 
-Current next step: print `foot_bottom_tpu.stl` x2 in TPU at 40% infill, then move into final fit checks and hardware preparation.
+Current next step: fit the TPU bottoms to the PLA feet, then move into final fit checks and hardware preparation.
 
 Progress notes: update this section whenever printing, sourcing, assembly, electronics, calibration, or software progress changes.
 

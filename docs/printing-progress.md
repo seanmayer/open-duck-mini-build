@@ -17,14 +17,14 @@ Upstream source: https://github.com/apirrone/Open_Duck_Mini/blob/v2/docs/print_g
 The upstream guide lists both `foot_bottom_pla.stl` and `foot_bottom_tpu.stl`.
 
 - Use `foot_bottom_pla.stl` as the PLA-friendly starter option.
-- Treat `foot_bottom_tpu.stl` as optional for later, printed in TPU at 40% infill for better grip.
+- `foot_bottom_tpu.stl` is the optional TPU upgrade, printed at 40% infill for better grip.
 
 ## Feet
 
 - [x] `foot_top.stl` x2
 - [x] `foot_side.stl` x2
 - [x] `foot_bottom_pla.stl` x2
-- [ ] `foot_bottom_tpu.stl` x2 - optional, TPU at 40% infill
+- [x] `foot_bottom_tpu.stl` x2 - optional, TPU at 40% infill
 
 ## Legs
 
@@ -80,6 +80,40 @@ The upstream guide lists both `foot_bottom_pla.stl` and `foot_bottom_tpu.stl`.
 
 Use this section to add a short entry each time I print, reprint, or test-fit parts.
 
+### 2026-08-18 - TPU Foot Bottoms Completed
+
+Printed:
+
+- `foot_bottom_tpu.stl` x2
+
+Settings:
+
+- Material: TPU
+- Layer height: Not recorded
+- Infill: 40%
+- Supports: Not recorded
+- Plate: Not recorded
+- Estimated print time: Not recorded
+
+Result:
+
+- Completed the optional TPU foot bottoms for improved grip.
+- TPU adhered very strongly to the print plate and was especially difficult to remove.
+- This completes both the required STL checklist and the optional TPU foot upgrade.
+
+Fit check:
+
+- Pending final fit with the PLA foot assemblies and hardware.
+
+Photos:
+
+- [foot-bottom-tpu-2026-08-18.jpeg](../photos/printing/feet/foot-bottom-tpu-2026-08-18.jpeg)
+
+Next:
+
+- Fit the TPU bottoms to the PLA feet.
+- Begin final fit checks while the robot-specific hardware arrives.
+
 ### 2026-08-18 - Accessory Prints Completed
 
 Printed:
@@ -103,7 +137,7 @@ Result:
 
 - Completed all five remaining required accessory prints.
 - The required STL print checklist is now complete.
-- Only `foot_bottom_tpu.stl` remains as an optional TPU upgrade for the feet.
+- The optional TPU foot bottoms were completed later on 2026-08-18.
 
 Fit check:
 
@@ -119,7 +153,7 @@ Photos:
 
 Next:
 
-- Print `foot_bottom_tpu.stl` x2 in TPU at 40% infill.
+- TPU foot bottoms completed later on 2026-08-18.
 - Begin final fit checks while the robot-specific hardware arrives.
 
 ### 2026-08-18 - Battery Pack Lid

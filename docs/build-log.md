@@ -492,6 +492,31 @@ Next:
 - Print `foot_bottom_tpu.stl` x2 in TPU at 40% infill.
 - Begin final fit checks while the robot-specific hardware arrives.
 
+## 2026-08-18 - TPU Foot Bottoms Printed
+
+Status: Optional TPU foot bottoms printed.
+
+What changed:
+
+- Printed `foot_bottom_tpu.stl` x2.
+- Added the TPU foot bottom photo to `photos/printing/feet/`.
+- Marked the optional TPU foot bottoms complete in the printing progress tracker.
+- Updated README progress to show the full printing phase complete, including the TPU feet.
+
+What I learned:
+
+- TPU is much harder to remove from the print plate than PLA.
+- A release layer, such as glue stick or Bambu liquid glue, should help on future TPU prints.
+
+Problems:
+
+- TPU had very strong bed adhesion, so the parts should be inspected before final foot assembly.
+
+Next:
+
+- Fit the TPU bottoms to the PLA feet.
+- Begin final fit checks and hardware preparation while electronics and servos arrive.
+
 ## Entry Template
 
 ```markdown
