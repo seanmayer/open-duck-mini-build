@@ -16,20 +16,22 @@ Useful upstream links:
 
 ## Current Status
 
-Phase 1 workshop setup is complete enough to move forward. The build is now in the printing and fit-check stage.
+Phase 1 workshop setup is complete enough to move forward. The build is now past printing and into fit checks plus hardware sourcing.
 
 Printed so far: all required STL prints and optional TPU foot bottoms are complete. The PLA feet have been dry-fitted, and the TPU foot bottoms are ready for final fit checks.
+
+Hardware sourcing has started: the foot micro switches, battery charger, and 18650 cells have arrived, with the main robot electronics, servos, and remaining power hardware being tracked as they arrive.
 
 The next milestone is final fit checks, heat-set insert prep, and hardware/electronics preparation as parts arrive.
 
 ## Project Progress
 
-Updated: 2026-08-18
+Updated: 2026-08-19
 
 Progress is tracked as a practical build estimate rather than an exact percentage. Printing progress is counted from the required printed part quantities in [docs/printing-progress.md](docs/printing-progress.md). The optional TPU foot bottoms are complete as an upgrade to the PLA feet.
 
 ```text
-Overall build progress   [#####-----] 46%
+Overall build progress   [#####-----] 48%
 Printing progress        [##########] 100%  49 / 49 required printed parts + TPU feet
 ```
 
@@ -37,13 +39,13 @@ Printing progress        [##########] 100%  49 / 49 required printed parts + TPU
 | --- | ---: | --- |
 | Workshop setup | 100% | Core tools, soldering setup, fasteners, inserts, wire, and consumables are ready. |
 | 3D printing and fit checks | 100% | All required STL prints and optional TPU foot bottoms are complete. PLA feet have been dry-fitted. |
-| Hardware sourcing | 0% | Robot-specific servos, controller, Raspberry Pi, IMU, power parts, and sensors still need sourcing. |
+| Hardware sourcing | 20% | Foot micro switches, 18650 cells, and charger received; servos, controller, Raspberry Pi, IMU, power protection/regulation parts, and sensors are being tracked. |
 | Mechanical assembly | 5% | Early dry fitting has started; final assembly waits on servos, switches, and remaining hardware. |
 | Electronics and power | 0% | Not started. |
 | Calibration and first motion | 0% | Not started. |
 | Software and runtime experiments | 0% | Not started. |
 
-Current next step: fit the TPU bottoms to the PLA feet, then move into final fit checks and hardware preparation.
+Current next step: fit the TPU bottoms to the PLA feet, test-fit the foot micro switches, check the 18650 cell voltages, and keep the batteries aside until the power protection/regulation path is confirmed.
 
 Progress notes: update this section whenever printing, sourcing, assembly, electronics, calibration, or software progress changes.
 
@@ -73,6 +75,7 @@ Progress notes: update this section whenever printing, sourcing, assembly, elect
 - [Printing Progress Tracker](docs/printing-progress.md)
 - [Build Log](docs/build-log.md)
 - [Roadmap](docs/roadmap.md)
+- [Hardware Sourcing Tracker](docs/hardware-sourcing.md)
 - [Phase 1 BOM Checklist](bom/phase-1.csv)
 
 ## Principles

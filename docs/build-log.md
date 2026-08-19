@@ -517,6 +517,60 @@ Next:
 - Fit the TPU bottoms to the PLA feet.
 - Begin final fit checks and hardware preparation while electronics and servos arrive.
 
+## 2026-08-19 - Foot Micro Switches Arrived
+
+Status: Foot contact switches received.
+
+What changed:
+
+- Received 4 x SS-10 style micro switches with pin plungers.
+- Added the switch photo to `photos/hardware/`.
+- Added a hardware sourcing tracker for robot-specific parts.
+- Updated README hardware sourcing progress.
+
+What I learned:
+
+- These switches are SPDT, so the terminals should be checked before wiring to identify common, normally open, and normally closed.
+- The printed feet can now be checked against the actual switch bodies and plunger travel.
+
+Problems:
+
+- Final fit in the foot assemblies is still pending.
+- Switch wiring is not started yet.
+
+Next:
+
+- Test-fit the switches in the foot assemblies.
+- Use a multimeter continuity check to identify the switch terminals before soldering.
+- Continue tracking incoming servos and electronics as they arrive.
+
+## 2026-08-19 - Battery Order Arrived
+
+Status: First power hardware received.
+
+What changed:
+
+- Received the Nitecore Intellicharger NEW i2 battery charger.
+- Received 2 x P30B 18650 Li-ion cells.
+- Added battery order photos to `photos/hardware/`.
+- Updated the hardware sourcing tracker with the received charger and cells.
+- Updated README hardware sourcing progress.
+
+What I learned:
+
+- Battery sourcing has started, but the charger and cells are only part of the power system.
+- The robot still needs a confirmed in-robot power path before the batteries are connected.
+
+Problems:
+
+- BMS/protection, regulator, battery holder, switch, and power wiring still need to be confirmed.
+
+Next:
+
+- Check each cell voltage with a multimeter.
+- Store the cells safely until assembly.
+- Do not wire the cells into the robot until the BMS/protection, regulator, switch, and wiring plan are confirmed.
+
 ## Entry Template
 
 ```markdown

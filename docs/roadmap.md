@@ -18,7 +18,7 @@ Key outputs:
 
 ## Phase 2 - Source Robot Hardware
 
-Status: Next.
+Status: In progress.
 
 Goal: Build a reliable shopping list from the official Open Duck Mini BOM, then source parts in sensible batches.
 
@@ -29,6 +29,13 @@ Planned groups:
 - Electronics: servo controller, IMU, contact switches, wiring, and connectors.
 - Power: cells, battery holder, BMS, regulators, charger board, switch, and connectors.
 - Mechanical extras: bearings and any missing fasteners not covered by the starter assortment.
+
+Current progress:
+
+- Foot micro switches have arrived.
+- Battery charger and 18650 cells have arrived.
+- In-robot power protection, regulation, switching, and wiring still need to be confirmed.
+- Remaining robot-specific hardware is tracked in [Hardware Sourcing Tracker](hardware-sourcing.md).
 
 ## Phase 3 - Print And Fit Check
 
