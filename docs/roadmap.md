@@ -34,7 +34,10 @@ Current progress:
 
 - Foot micro switches have arrived.
 - Battery charger and 18650 cells have arrived.
-- In-robot power protection, regulation, switching, and wiring still need to be confirmed.
+- SG90 micro servos and 8 x 22 x 7 mm bearings have arrived.
+- Two 2S battery holders, a 5V 5A UBEC, XT30 connectors, DC barrel adapters, and red/black wire have arrived.
+- Loctite 243 is ready for final metal fasteners.
+- In-robot BMS/protection and main switching still need to be confirmed before the cells are connected.
 - Remaining robot-specific hardware is tracked in [Hardware Sourcing Tracker](hardware-sourcing.md).
 
 ## Phase 3 - Print And Fit Check
