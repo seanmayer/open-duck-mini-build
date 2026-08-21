@@ -34,6 +34,7 @@ Phase 1 is considered complete enough to move on to robot-specific parts.
 | Consumables | 580-piece heat shrink tubing kit | Purchased | Mixed colours and sizes from 1-10 mm for insulation, strain relief, and wire tidying. |
 | Consumables | 22 AWG silicone wire kit | Purchased | Six-colour 10 ft spools for general-purpose robotics wiring. |
 | Consumables | Nylon cable ties | Purchased | Useful for temporary cable management during wiring and testing. |
+| Consumables | Loctite 243 blue threadlocker, 5 ml | Purchased | Medium-strength threadlocker for metal fasteners during final assembly; keep it away from plastic parts. |
 
 ## Inventory Photos
 
@@ -51,6 +52,7 @@ Phase 1 is considered complete enough to move on to robot-specific parts.
 | Heat shrink tubing kit | [heat-shrink-tubing-kit.jpeg](../photos/phase-1-tools/heat-shrink-tubing-kit.jpeg) |
 | Screw assortment | [screw-assortment.jpeg](../photos/phase-1-tools/screw-assortment.jpeg) |
 | Silicone wire and cable ties | [silicone-wire-cable-ties.jpeg](../photos/phase-1-tools/silicone-wire-cable-ties.jpeg) |
+| Loctite 243 blue threadlocker | [loctite-243-2026-08-21.jpeg](../photos/hardware/loctite-243-2026-08-21.jpeg) |
 
 ## Optional Items
 
@@ -60,7 +62,6 @@ These are useful, but they should not block Phase 2.
 | --- | --- | --- |
 | Digital multimeter | High if not already owned | Useful for continuity checks, battery voltage, power rails, and finding shorts before powering the robot. |
 | Silicone soldering mat | Medium | Protects the desk and keeps tiny screws and connectors organized. |
-| Blue threadlocker, such as Loctite 243 | Medium | Useful once the robot is walking and vibration becomes a real issue. |
 | Velcro cable ties | Medium | Nice later for reusable cable management; nylon cable ties are already available. |
 | Magnetic parts tray | Low | Nice quality-of-life item for M2 and M3 screws. |
 | Additional silicone wire gauges | Later | 26-28 AWG for tiny signals; 18-20 AWG for higher-current battery wiring. |

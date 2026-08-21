@@ -571,6 +571,39 @@ Next:
 - Store the cells safely until assembly.
 - Do not wire the cells into the robot until the BMS/protection, regulator, switch, and wiring plan are confirmed.
 
+## 2026-08-21 - Second Hardware Batch Arrived
+
+Status: Motion, mechanical, wiring, and additional power parts received.
+
+What changed:
+
+- Received a multi-pack of SG90 9g micro servos with horns and mounting hardware.
+- Received 20 x 8 x 22 x 7 mm bearings.
+- Received 2 x 2S 18650 battery holders with leads.
+- Received a 2-7S-input UBEC rated for a regulated 5V 5A output.
+- Received 12 pairs of XT30 connectors with heat-shrink tubing.
+- Received a kit of DC barrel plug/socket screw-terminal adapters.
+- Received red and black power wire.
+- Received 5 ml of Loctite 243 medium-strength threadlocker.
+- Added all eight arrival photos to `photos/hardware/` and updated the sourcing tracker, workshop checklist, roadmap, and README.
+
+What I learned:
+
+- The smaller motion hardware and several mechanical and wiring items are now available for fit checks and bench testing.
+- The new UBEC can provide a 5V rail, but it does not replace the battery BMS/protection or main power switch.
+- The battery holders are passive components and must not be treated as battery protection.
+
+Problems:
+
+- The BMS/protection and main power switch are still outstanding, so the 18650 cells must remain disconnected from the robot.
+- The wire gauge, DC barrel dimensions, connector polarities, bearing fit, and servo operation still need to be verified.
+
+Next:
+
+- Test-fit and bench-test the SG90 servos and bearings.
+- Verify the UBEC output, battery-holder wiring, wire gauge, and connector polarity with a multimeter before making power leads.
+- Keep the cells out of the holders until the protected, switched power path is fully confirmed.
+
 ## Entry Template
 
 ```markdown
