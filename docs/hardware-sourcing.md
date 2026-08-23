@@ -5,11 +5,11 @@ This tracker records robot-specific parts as they are ordered, received, checked
 ## Status Summary
 
 - Printing phase: complete, including optional TPU foot bottoms.
-- Hardware sourcing: in progress, with a second batch of motion, mechanical, wiring, and power parts received.
+- Hardware sourcing: in progress, with a third batch of power-protection and Raspberry Pi support parts received.
 - First received robot-specific electronics: foot micro switches.
 - Motion hardware now includes the SG90 micro servos; the main STS3215 servo order is still awaiting delivery.
-- Power hardware now includes the charger, cells, 2S holders, 5V UBEC, XT30 connectors, DC adapters, and red/black wire.
-- The in-robot battery path is not complete until the BMS/protection and main power switch are confirmed.
+- Power hardware now includes the charger, cells, 2S holders, 5V UBEC, BMS boards, XT30 connectors, DC adapters, and red/black wire.
+- The in-robot battery path is not complete until the BMS wiring/specification and main power switch are confirmed.
 
 ## Parts Tracker
 
@@ -26,7 +26,11 @@ This tracker records robot-specific parts as they are ordered, received, checked
 | Power | P30B 18650 Li-ion cells, 3000mAh, 30A, 3.7V | 2 | Received | 2026-08-19 | Main battery cells. Check voltage before first use and do not wire into the robot until the BMS, regulator, and power path are confirmed. |
 | Power | 2S 18650 battery holders with leads | 2 | Received | 2026-08-21 | Verify series wiring, polarity, contact tension, and fit before inserting cells. Holders do not provide battery protection. |
 | Power | UBEC, 2-7S input, regulated 5V 5A output | 1 | Received | 2026-08-21 | Intended for the 5V electronics rail only. Verify output and current requirements before connecting the Raspberry Pi or other electronics. |
-| Power | BMS/protection and main power switch | 1 set | To order / confirm | 2026-08-21 | Still required before the battery path can be assembled or energised. |
+| Power | 2S BMS/protection boards, labelled 4.2V / 8.4V and 200A | 4 | Received | 2026-08-23 | Verify the exact wiring, protection features, and safe continuous-current rating before use; the visible 200A marking is not a verified system rating. |
+| Power | Main power switch | 1 | To order / confirm | 2026-08-23 | Still required before the battery path can be assembled or energised. |
+| Bench power | UK mains DC barrel power adapter | 1 | Received | 2026-08-23 | Output label is not visible in the arrival photo. Measure voltage, polarity, connector size, and current capability before connecting it to anything. |
+| Raspberry Pi support | GeekPi 40-pin header kit | 13-piece kit | Received | 2026-08-23 | Includes GPIO header/extension options. Confirm the required orientation and whether soldering is needed once the Raspberry Pi arrives. |
+| Bench setup | 4K/UHD HDMI cable | 1 | Received | 2026-08-23 | Available for Raspberry Pi display and setup work. |
 | Mechanical | 8 x 22 x 7 mm bearings | 20 | Received | 2026-08-21 | Check quantity, free rotation, and fit against the printed parts and official BOM. |
 | Mechanical | Remaining robot-specific hardware | Per BOM | To order / confirm | 2026-08-21 | Check outstanding fasteners and other mechanical parts against the official BOM. |
 | Assembly | Loctite 243 medium-strength threadlocker, 5 ml | 1 | Received | 2026-08-21 | Use sparingly on final metal-to-metal threaded joints; avoid contact with plastic parts. |
@@ -50,6 +54,10 @@ This tracker records robot-specific parts as they are ordered, received, checked
 | Red and black power wire | [red-black-wire-2026-08-21.jpeg](../photos/hardware/red-black-wire-2026-08-21.jpeg) |
 | SG90 micro servos | [sg90-servos-2026-08-21.jpeg](../photos/hardware/sg90-servos-2026-08-21.jpeg) |
 | XT30 connector pairs | [xt30-connectors-2026-08-21.jpeg](../photos/hardware/xt30-connectors-2026-08-21.jpeg) |
+| 2S BMS/protection boards | [2s-bms-protection-boards-2026-08-23.jpeg](../photos/hardware/2s-bms-protection-boards-2026-08-23.jpeg) |
+| DC barrel power adapter | [dc-barrel-power-adapter-2026-08-23.jpeg](../photos/hardware/dc-barrel-power-adapter-2026-08-23.jpeg) |
+| 4K/UHD HDMI cable | [hdmi-cable-4k-2026-08-23.jpeg](../photos/hardware/hdmi-cable-4k-2026-08-23.jpeg) |
+| GeekPi 40-pin header kit | [raspberry-pi-40-pin-header-kit-2026-08-23.jpeg](../photos/hardware/raspberry-pi-40-pin-header-kit-2026-08-23.jpeg) |
 
 ## Next Checks
 
@@ -58,7 +66,9 @@ This tracker records robot-specific parts as they are ordered, received, checked
 - Check the initial voltage of each 18650 cell with a multimeter and store the cells safely.
 - Check the battery-holder polarity and series wiring without installing the cells.
 - Verify the UBEC produces a stable 5V output before connecting any electronics.
+- Identify the BMS terminals from its documentation and verify it is suitable for the intended 2S pack before connecting cells or a load.
+- Measure the DC barrel adapter output voltage and polarity before use; do not rely on the photo or connector shape.
 - Bench-test the SG90 servos and test-fit the 8 x 22 x 7 mm bearings.
 - Confirm the wire gauge, DC barrel dimensions/polarity, and XT30 polarity before building leads.
-- Do not connect the cells to the robot until the BMS/protection, main switch, and complete wiring plan are confirmed.
+- Do not connect the cells to the robot until the BMS wiring/specification, main switch, and complete wiring plan are confirmed.
 - Update this tracker as each ordered electronics package arrives.
