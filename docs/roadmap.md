@@ -36,7 +36,8 @@ Current progress:
 - Battery charger and 18650 cells have arrived.
 - SG90 micro servos and 8 x 22 x 7 mm bearings have arrived.
 - Two 2S battery holders, a 5V 5A UBEC, XT30 connectors, DC barrel adapters, and red/black wire have arrived.
-- Four 2S BMS/protection boards have arrived; their wiring and verified current capability still need checking before use.
+- The original battery holders did not fit the rear-panel mounting area. A compact replacement holder is on order instead of printing a custom holder.
+- Four 2S BMS/protection boards marked for 4.2V / 8.4V packs and labelled 20A have arrived; their wiring and verified current capability still need checking before use.
 - A DC barrel power adapter, 4K HDMI cable, and GeekPi 40-pin GPIO header kit are ready for later bench setup.
 - Loctite 243 is ready for final metal fasteners.
 - Main switching still needs to be confirmed, and the BMS wiring/specification must be verified before the cells are connected.

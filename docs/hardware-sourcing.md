@@ -8,7 +8,7 @@ This tracker records robot-specific parts as they are ordered, received, checked
 - Hardware sourcing: in progress, with a third batch of power-protection and Raspberry Pi support parts received.
 - First received robot-specific electronics: foot micro switches.
 - Motion hardware now includes the SG90 micro servos; the main STS3215 servo order is still awaiting delivery.
-- Power hardware now includes the charger, cells, 2S holders, 5V UBEC, BMS boards, XT30 connectors, DC adapters, and red/black wire.
+- Power hardware now includes the charger, cells, 5V UBEC, BMS boards, XT30 connectors, DC adapters, and red/black wire. A compact replacement 2S holder is on order after the original holders failed the rear-panel fit check.
 - The in-robot battery path is not complete until the BMS wiring/specification and main power switch are confirmed.
 
 ## Parts Tracker
@@ -24,9 +24,10 @@ This tracker records robot-specific parts as they are ordered, received, checked
 | Motion | SG90 9g micro servos | 2 required | Received | 2026-08-21 | Multi-pack received with horns and mounting hardware. Bench-test direction and travel before installation. |
 | Power | Nitecore Intellicharger NEW i2 battery charger | 1 | Received | 2026-08-19 | External charger for loose cells. Store and charge lithium cells safely. |
 | Power | P30B 18650 Li-ion cells, 3000mAh, 30A, 3.7V | 2 | Received | 2026-08-19 | Main battery cells. Check voltage before first use and do not wire into the robot until the BMS, regulator, and power path are confirmed. |
-| Power | 2S 18650 battery holders with leads | 2 | Received | 2026-08-21 | Verify series wiring, polarity, contact tension, and fit before inserting cells. Holders do not provide battery protection. |
+| Power | 2S 18650 battery holders with leads | 2 | Received - not selected for final fit | 2026-08-21 | The outer casing does not fit the rear-panel mounting area. Retain as spares or bench items; do not insert cells for the robot build. |
+| Power | Compact replacement 2S 18650 battery holder | 1 | Ordered / awaiting delivery | 2026-08-24 | Chosen to fit the rear panel without printing a custom holder. Confirm dimensions, contact quality, series layout, and access to the BMS midpoint before installing cells. |
 | Power | UBEC, 2-7S input, regulated 5V 5A output | 1 | Received | 2026-08-21 | Intended for the 5V electronics rail only. Verify output and current requirements before connecting the Raspberry Pi or other electronics. |
-| Power | 2S BMS/protection boards, labelled 4.2V / 8.4V and 200A | 4 | Received | 2026-08-23 | Verify the exact wiring, protection features, and safe continuous-current rating before use; the visible 200A marking is not a verified system rating. |
+| Power | 2S BMS/protection boards, labelled 4.2V / 8.4V and 20A | 4 | Received | 2026-08-23 | Verify the exact wiring, protection features, and safe continuous-current rating before use. The board label is 20A, not 200A. |
 | Power | Main power switch | 1 | To order / confirm | 2026-08-23 | Still required before the battery path can be assembled or energised. |
 | Bench power | UK mains DC barrel power adapter | 1 | Received | 2026-08-23 | Output label is not visible in the arrival photo. Measure voltage, polarity, connector size, and current capability before connecting it to anything. |
 | Raspberry Pi support | GeekPi 40-pin header kit | 13-piece kit | Received | 2026-08-23 | Includes GPIO header/extension options. Confirm the required orientation and whether soldering is needed once the Raspberry Pi arrives. |
