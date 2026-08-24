@@ -604,6 +604,61 @@ Next:
 - Verify the UBEC output, battery-holder wiring, wire gauge, and connector polarity with a multimeter before making power leads.
 - Keep the cells out of the holders until the protected, switched power path is fully confirmed.
 
+## 2026-08-23 - Power Protection And Raspberry Pi Support Parts Arrived
+
+Status: Additional power-protection and bench-setup parts received.
+
+What changed:
+
+- Received four 2S BMS/protection boards marked for 4.2V / 8.4V packs and labelled 20A.
+- Received a UK mains DC barrel power adapter.
+- Received a 4K/UHD HDMI cable for Raspberry Pi display/setup work.
+- Received a GeekPi 13-piece 40-pin GPIO header kit.
+- Added arrival photos and updated the hardware tracker, roadmap, and README.
+
+What I learned:
+
+- The BMS boards are physically available, but their printed rating is not enough to establish safe use in this robot; their wiring, protection functions, and continuous-current capability must still be checked.
+- The GPIO kit gives options for the future Raspberry Pi, but does not replace the still-outstanding Pi itself.
+
+Problems:
+
+- The DC adapter label is not visible in the arrival photo, so its output voltage, polarity, connector size, and current rating are unconfirmed.
+- The main battery power switch is still outstanding.
+
+Next:
+
+- Confirm the BMS terminal mapping and suitability for the planned 2S battery pack before connecting cells.
+- Measure the DC adapter output and polarity with a multimeter before connecting it to electronics.
+- Keep the cells disconnected until the protected, switched power path is fully confirmed.
+
+## 2026-08-24 - Rear-Panel Battery Holder Fit Check
+
+Status: Replacement holder ordered; no battery cells installed and no power wiring started.
+
+What changed:
+
+- Test-fitted the original 2S holder against the printed rear battery panel.
+- Found that its outer casing does not fit the intended mounting area.
+- Ordered a compact replacement 2S holder rather than spending additional time and filament on a custom printed holder.
+- Kept the separate 2S BMS/protection board as the planned pack-protection component.
+
+What I learned:
+
+- The rear panel needs a compact holder; mechanical fit needs to be checked before any cells or wiring are added.
+- A holder supplies the physical cell contacts, while the separate BMS still needs the pack negative, cell midpoint, and pack positive connections.
+
+Problems:
+
+- The replacement holder has not arrived, so its exact fit, contacts, and access to the BMS midpoint remain unverified.
+- The main power switch and final protected wiring plan are still outstanding.
+
+Next:
+
+- Measure and test-fit the replacement holder on arrival with no cells installed.
+- Confirm its 2S series arrangement and BMS connection points before soldering.
+- Keep the cells disconnected until the complete protected and switched power path is verified.
+
 ## Entry Template
 
 ```markdown
