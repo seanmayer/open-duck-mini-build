@@ -7,28 +7,28 @@ This tracker records robot-specific parts as they are ordered, received, checked
 - Printing phase: complete, including optional TPU foot bottoms.
 - Hardware sourcing: in progress, with a third batch of power-protection and Raspberry Pi support parts received.
 - First received robot-specific electronics: foot micro switches.
-- Motion hardware now includes the SG90 micro servos; the main STS3215 servo order is still awaiting delivery.
-- Power hardware now includes the charger, cells, 5V UBEC, BMS boards, XT30 connectors, DC adapters, and red/black wire. A compact replacement 2S holder is on order after the original holders failed the rear-panel fit check.
-- The in-robot battery path is not complete until the BMS wiring/specification and main power switch are confirmed.
+- Motion hardware now includes all 14 STS3215 serial bus servos and the SG90 micro servos; the BNO055 IMU has also arrived.
+- Power hardware now includes the charger, cells, 5V UBEC, BMS boards, main power switch, XT30 connectors, DC adapters, red/black wire, and a compact replacement 2S holder that fits the reprinted rear panel.
+- The in-robot battery path is not complete until the BMS wiring/specification and full switched wiring path are confirmed.
 
 ## Parts Tracker
 
 | Group | Item | Qty | Status | Last Updated | Notes |
 | --- | --- | ---: | --- | --- | --- |
 | Foot sensors | SS-10 style micro switch, pin plunger, SPDT, 10A 250V AC | 4 | Received | 2026-08-19 | Intended for foot contact sensing. Verify COM/NO/NC terminals with a multimeter before wiring. |
-| Motion | Feetech STS3215 serial bus servos | 14 | Ordered / awaiting delivery | 2026-08-19 | Main robot servos. Verify model, voltage, horns, and included hardware on arrival. |
+| Motion | Feetech STS3215 serial bus servos, 7.4V, 1:345 | 14 | Received | 2026-08-24 | Main robot servos. Arrival photo confirms 14 units; each came with its cable, horn/disc and mounting screws. Keep each servo's accessories together and do not permanently fit horns until the servos are centred. |
 | Electronics | Serial bus servo driver board | 1 | Ordered / awaiting delivery | 2026-08-19 | Interface between the Raspberry Pi and STS3215 servo bus. |
 | Brain | Raspberry Pi Zero 2 W | 1 | To order / confirm | 2026-08-19 | Needed for the stock runtime. Do not substitute a Pico for the main computer. |
 | Storage | 64GB SanDisk microSD card | 1 | Ordered / awaiting delivery | 2026-08-19 | Storage for Raspberry Pi OS and robot runtime. |
-| Sensors | BNO055 IMU breakout | 1 | Ordered / awaiting delivery | 2026-08-19 | Orientation sensor. Verify pinout and I2C wiring before mounting. |
+| Sensors | BNO055 IMU breakout | 1 | Received | 2026-08-25 | Orientation sensor received with header pins. Verify pinout and I2C wiring before mounting or soldering headers. |
 | Motion | SG90 9g micro servos | 2 required | Received | 2026-08-21 | Multi-pack received with horns and mounting hardware. Bench-test direction and travel before installation. |
 | Power | Nitecore Intellicharger NEW i2 battery charger | 1 | Received | 2026-08-19 | External charger for loose cells. Store and charge lithium cells safely. |
 | Power | P30B 18650 Li-ion cells, 3000mAh, 30A, 3.7V | 2 | Received | 2026-08-19 | Main battery cells. Check voltage before first use and do not wire into the robot until the BMS, regulator, and power path are confirmed. |
 | Power | 2S 18650 battery holders with leads | 2 | Received - not selected for final fit | 2026-08-21 | The outer casing does not fit the rear-panel mounting area. Retain as spares or bench items; do not insert cells for the robot build. |
-| Power | Compact replacement 2S 18650 battery holder | 1 | Ordered / awaiting delivery | 2026-08-24 | Chosen to fit the rear panel without printing a custom holder. Confirm dimensions, contact quality, series layout, and access to the BMS midpoint before installing cells. |
+| Power | Compact replacement 2S 18650 battery holder | 1 | Received / fit checked | 2026-08-26 | Fits the reprinted rear panel. Confirm contact quality, series layout, and access to the BMS midpoint before installing cells or starting power wiring. |
 | Power | UBEC, 2-7S input, regulated 5V 5A output | 1 | Received | 2026-08-21 | Intended for the 5V electronics rail only. Verify output and current requirements before connecting the Raspberry Pi or other electronics. |
 | Power | 2S BMS/protection boards, labelled 4.2V / 8.4V and 20A | 4 | Received | 2026-08-23 | Verify the exact wiring, protection features, and safe continuous-current rating before use. The board label is 20A, not 200A. |
-| Power | Main power switch | 1 | To order / confirm | 2026-08-23 | Still required before the battery path can be assembled or energised. |
+| Power | Panel-mount ON/OFF main power switch with supplied leads/connectors | 1 | Received | 2026-08-25 | Verify terminal function, switch rating, mounting fit, and polarity before wiring it into the protected battery path. |
 | Bench power | UK mains DC barrel power adapter | 1 | Received | 2026-08-23 | Output label is not visible in the arrival photo. Measure voltage, polarity, connector size, and current capability before connecting it to anything. |
 | Raspberry Pi support | GeekPi 40-pin header kit | 13-piece kit | Received | 2026-08-23 | Includes GPIO header/extension options. Confirm the required orientation and whether soldering is needed once the Raspberry Pi arrives. |
 | Bench setup | 4K/UHD HDMI cable | 1 | Received | 2026-08-23 | Available for Raspberry Pi display and setup work. |
@@ -71,5 +71,5 @@ This tracker records robot-specific parts as they are ordered, received, checked
 - Measure the DC barrel adapter output voltage and polarity before use; do not rely on the photo or connector shape.
 - Bench-test the SG90 servos and test-fit the 8 x 22 x 7 mm bearings.
 - Confirm the wire gauge, DC barrel dimensions/polarity, and XT30 polarity before building leads.
-- Do not connect the cells to the robot until the BMS wiring/specification, main switch, and complete wiring plan are confirmed.
+- Do not connect the cells to the robot until the BMS wiring/specification, switch terminal mapping, and complete wiring plan are confirmed.
 - Update this tracker as each ordered electronics package arrives.

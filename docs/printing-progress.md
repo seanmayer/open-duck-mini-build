@@ -80,6 +80,19 @@ The upstream guide lists both `foot_bottom_pla.stl` and `foot_bottom_tpu.stl`.
 
 Use this section to add a short entry each time I print, reprint, or test-fit parts.
 
+### 2026-08-26 - Rear/Body Back Panel Reprint and Holder Fit Check
+
+Printed:
+
+- Replacement rear/body back panel x1
+
+Notes:
+
+- The original panel broke while attempting to press in an oversized battery holder that did not fit the mounting area.
+- The print had a weak section caused by changing to a different PLA filament partway through the print; this was the underlying failure point.
+- The compact replacement 2S 18650 holder has now arrived and fits the replacement panel.
+- Battery cells remain out of the holder. Wiring and BMS checks are still required before any power-on test.
+
 ### 2026-08-18 - TPU Foot Bottoms Completed
 
 Printed:
