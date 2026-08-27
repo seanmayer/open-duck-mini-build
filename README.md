@@ -20,7 +20,7 @@ Phase 1 workshop setup is complete enough to move forward. The build is now past
 
 Printed so far: all required STL prints and optional TPU foot bottoms are complete. The PLA feet have been dry-fitted, and the TPU foot bottoms are ready for final fit checks.
 
-Hardware sourcing is well underway. The foot micro switches, battery charger, 18650 cells, SG90 servos, 8 x 22 x 7 mm bearings, 5V UBEC, XT30 connectors, DC barrel adapters, red/black wire, Loctite 243, 2S BMS/protection boards, a DC barrel power adapter, a 4K HDMI cable, and a Raspberry Pi 40-pin GPIO header kit have arrived. A compact replacement 2S battery holder is on order after the original holders proved too large for the rear-panel fit. The main STS3215 servos, controller, Raspberry Pi, IMU, and main power switch are still being tracked.
+Hardware sourcing is well underway. The foot micro switches, main STS3215 servos, SG90 servos, BNO055 IMU, main power switch, battery charger, 18650 cells, 8 x 22 x 7 mm bearings, 5V UBEC, XT30 connectors, DC barrel adapters, red/black wire, Loctite 243, 2S BMS/protection boards, a DC barrel power adapter, a 4K HDMI cable, and a Raspberry Pi 40-pin GPIO header kit have arrived. A compact replacement 2S battery holder has also arrived and fits the reprinted rear panel; pack wiring and safety checks are still pending. The controller and Raspberry Pi are still being tracked.
 
 The next milestone is final fit checks, heat-set insert prep, and hardware/electronics preparation as parts arrive.
 
@@ -39,13 +39,13 @@ Printing progress        [##########] 100%  49 / 49 required printed parts + TPU
 | --- | ---: | --- |
 | Workshop setup | 100% | Core tools, soldering setup, fasteners, inserts, wire, and consumables are ready. |
 | 3D printing and fit checks | 100% | All required STL prints and optional TPU foot bottoms are complete. PLA feet have been dry-fitted. |
-| Hardware sourcing | 45% | SG90 servos, foot switches, cells, charger, bearings, UBEC, BMS boards, connectors, power accessories, and GPIO headers are received. A compact replacement battery holder is ordered; main servos, controller, Raspberry Pi, IMU, and switch remain outstanding. |
+| Hardware sourcing | 65% | STS3215 and SG90 servos, BNO055 IMU, main power switch, foot switches, cells, charger, bearings, UBEC, BMS boards, connectors, power accessories, GPIO headers, and compact battery holder are received. Controller and Raspberry Pi remain outstanding. |
 | Mechanical assembly | 5% | Early dry fitting has started; final assembly waits on servos, switches, and remaining hardware. |
 | Electronics and power | 0% | Not started. |
 | Calibration and first motion | 0% | Not started. |
 | Software and runtime experiments | 0% | Not started. |
 
-Current next step: fit the TPU bottoms and foot switches, test-fit the SG90 servos and bearings, verify the UBEC and DC adapter output/polarity with a multimeter, and keep the 18650 cells disconnected until the BMS wiring and main power switch are confirmed.
+Current next step: fit the TPU bottoms and foot switches, test-fit the SG90 servos and bearings, verify the UBEC and DC adapter output/polarity with a multimeter, and keep the 18650 cells disconnected until the BMS wiring and switched power path are confirmed.
 
 Progress notes: update this section whenever printing, sourcing, assembly, electronics, calibration, or software progress changes.
 

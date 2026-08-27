@@ -34,13 +34,15 @@ Current progress:
 
 - Foot micro switches have arrived.
 - Battery charger and 18650 cells have arrived.
+- All 14 Feetech STS3215 main servos have arrived with their cables, horns/discs, and mounting screws. Mechanical dry fitting can begin; servo centring and final horn installation wait for the verified power and controller setup.
+- The BNO055 IMU breakout and its header pins have arrived. Keep it unmounted until its orientation, pinout, and I2C wiring are confirmed.
 - SG90 micro servos and 8 x 22 x 7 mm bearings have arrived.
 - Two 2S battery holders, a 5V 5A UBEC, XT30 connectors, DC barrel adapters, and red/black wire have arrived.
-- The original battery holders did not fit the rear-panel mounting area. A compact replacement holder is on order instead of printing a custom holder.
+- The original battery holders did not fit the rear-panel mounting area. A compact replacement holder has arrived and fits the reprinted rear panel; its wiring and BMS connections still need verifying before cells are installed.
 - Four 2S BMS/protection boards marked for 4.2V / 8.4V packs and labelled 20A have arrived; their wiring and verified current capability still need checking before use.
 - A DC barrel power adapter, 4K HDMI cable, and GeekPi 40-pin GPIO header kit are ready for later bench setup.
 - Loctite 243 is ready for final metal fasteners.
-- Main switching still needs to be confirmed, and the BMS wiring/specification must be verified before the cells are connected.
+- The main power switch has arrived; its terminal mapping, mounting fit, and wiring still need to be confirmed. The BMS wiring/specification must also be verified before the cells are connected.
 - Remaining robot-specific hardware is tracked in [Hardware Sourcing Tracker](hardware-sourcing.md).
 
 ## Phase 3 - Print And Fit Check

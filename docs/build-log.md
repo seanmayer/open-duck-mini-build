@@ -659,6 +659,68 @@ Next:
 - Confirm its 2S series arrangement and BMS connection points before soldering.
 - Keep the cells disconnected until the complete protected and switched power path is verified.
 
+## 2026-08-24 - Main Servo Delivery Checked
+
+Status: Received and visually counted; installation and power-on testing have not started.
+
+What changed:
+
+- Received 14 Feetech STS3215 serial bus servos marked 7.4V and 1:345.
+- Confirmed that each servo arrived with its cable, horn/disc, mounting screws, and centre screw.
+
+Next:
+
+- Keep every servo's accessories together and label the units before assembly.
+- Begin mechanical dry fitting into the printed body, limbs, and head parts.
+- Do not permanently install horns/discs or power the servos until they can be centred with the final controller and verified power setup.
+
+## 2026-08-25 - IMU Delivery Checked
+
+Status: Received; not mounted or wired.
+
+What changed:
+
+- Received the BNO055 IMU breakout with loose header pins.
+
+Next:
+
+- Confirm the required orientation, pinout, and I2C wiring before mounting it.
+- Leave the header pins unsoldered until the mounting and wiring approach is confirmed.
+
+## 2026-08-25 - Main Power Switch Delivery Checked
+
+Status: Received; not installed or wired.
+
+What changed:
+
+- Received the panel-mount ON/OFF main power switch with its supplied leads and crimp connectors.
+
+Next:
+
+- Confirm the switch terminals, current rating, mounting fit, and wire polarity with a multimeter before installation.
+- Keep the cells disconnected until the BMS and complete protected, switched power path are verified.
+
+## 2026-08-26 - Compact Battery Holder Fitted to Replacement Rear Panel
+
+Status: Holder received and mechanically fit-checked; no cells installed and no power wiring started.
+
+What changed:
+
+- Received the compact replacement 2S 18650 battery holder and confirmed that it fits the rear-panel mounting area.
+- Reprinted the rear/body back panel after the earlier panel broke during an attempted fit of the oversized original holder.
+- Recorded that the earlier panel had a weak section where the print changed from one PLA filament to another; the oversized holder applied the force, but the filament-change weakness was the reason the panel failed.
+
+What I learned:
+
+- Test-fit bought components before committing to wiring or final assembly.
+- Avoid changing PLA filament partway through a structurally important print where possible, especially around stressed mounting features.
+
+Next:
+
+- Secure the holder in the replacement rear panel and inspect the contacts and lead routing with no cells installed.
+- Verify the holder's 2S series arrangement and the BMS sense-wire connection points before soldering or installing cells.
+- Keep the cells disconnected until the complete protected, switched power path is verified.
+
 ## Entry Template
 
 ```markdown
