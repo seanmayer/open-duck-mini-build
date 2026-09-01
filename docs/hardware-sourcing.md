@@ -5,11 +5,12 @@ This tracker records robot-specific parts as they are ordered, received, checked
 ## Status Summary
 
 - Printing phase: complete, including optional TPU foot bottoms.
-- Hardware sourcing: in progress, with a third batch of power-protection and Raspberry Pi support parts received.
+- Hardware sourcing: in progress, with the main motion hardware and battery-pack electronics now received.
 - First received robot-specific electronics: foot micro switches.
 - Motion hardware now includes all 14 STS3215 serial bus servos and the SG90 micro servos; the BNO055 IMU has also arrived.
-- Power hardware now includes the charger, cells, 5V UBEC, BMS boards, main power switch, XT30 connectors, DC adapters, red/black wire, and a compact replacement 2S holder that fits the reprinted rear panel.
-- The in-robot battery path is not complete until the BMS wiring/specification and full switched wiring path are confirmed.
+- Power hardware now includes the charger, cells, 5V UBEC, BMS boards, main power switch, XT30 connectors, DC adapters, red/black wire, and compact replacement 2S holder.
+- The compact holder, BMS, rocker switch, USB-C charging board, UBEC, switched 5V output, and raw 7.4V branch are now assembled and tested as a power-pack subassembly.
+- The power pack is not yet connected to the full robot; USB-C charging still needs a controlled test before regular use.
 
 ## Parts Tracker
 
@@ -23,12 +24,12 @@ This tracker records robot-specific parts as they are ordered, received, checked
 | Sensors | BNO055 IMU breakout | 1 | Received | 2026-08-25 | Orientation sensor received with header pins. Verify pinout and I2C wiring before mounting or soldering headers. |
 | Motion | SG90 9g micro servos | 2 required | Received | 2026-08-21 | Multi-pack received with horns and mounting hardware. Bench-test direction and travel before installation. |
 | Power | Nitecore Intellicharger NEW i2 battery charger | 1 | Received | 2026-08-19 | External charger for loose cells. Store and charge lithium cells safely. |
-| Power | P30B 18650 Li-ion cells, 3000mAh, 30A, 3.7V | 2 | Received | 2026-08-19 | Main battery cells. Check voltage before first use and do not wire into the robot until the BMS, regulator, and power path are confirmed. |
+| Power | P30B 18650 Li-ion cells, 3000mAh, 30A, 3.7V | 2 | Installed / tested in pack | 2026-08-29 | Main battery cells. Each cell measured approximately 3.5V during pack testing; total series voltage measured approximately 7V. Remove cells when the unfinished robot is not being worked on. |
 | Power | 2S 18650 battery holders with leads | 2 | Received - not selected for final fit | 2026-08-21 | The outer casing does not fit the rear-panel mounting area. Retain as spares or bench items; do not insert cells for the robot build. |
-| Power | Compact replacement 2S 18650 battery holder | 1 | Received / fit checked | 2026-08-26 | Fits the reprinted rear panel. Confirm contact quality, series layout, and access to the BMS midpoint before installing cells or starting power wiring. |
-| Power | UBEC, 2-7S input, regulated 5V 5A output | 1 | Received | 2026-08-21 | Intended for the 5V electronics rail only. Verify output and current requirements before connecting the Raspberry Pi or other electronics. |
-| Power | 2S BMS/protection boards, labelled 4.2V / 8.4V and 20A | 4 | Received | 2026-08-23 | Verify the exact wiring, protection features, and safe continuous-current rating before use. The board label is 20A, not 200A. |
-| Power | Panel-mount ON/OFF main power switch with supplied leads/connectors | 1 | Received | 2026-08-25 | Verify terminal function, switch rating, mounting fit, and polarity before wiring it into the protected battery path. |
+| Power | Compact replacement 2S 18650 battery holder | 1 | Installed / tested | 2026-08-29 | Fits the reprinted rear panel and is used in the completed 2S pack. Contact issue during testing was resolved by reseating the cell; midpoint access is confirmed. |
+| Power | UBEC, 2-7S input, regulated 5V 5A output | 1 | Installed / tested | 2026-08-29 | Intended for the 5V electronics rail only. Output tested at approximately 5V with the switch ON and 0V with the switch OFF. |
+| Power | 2S BMS/protection boards, labelled 4.2V / 8.4V and 20A | 4 | Installed / tested | 2026-08-29 | One board wired to 0V, 4.2V midpoint, 8.4V positive, and P+/P- output rails. Pack protection is wired; USB-C charging controlled test still pending. Spare boards remain. |
+| Power | Panel-mount ON/OFF main power switch with supplied leads/connectors | 1 | Installed / tested | 2026-08-29 | Installed in the protected negative rail after BMS P-. Continuity verified: ON = continuity, OFF = open circuit. |
 | Bench power | UK mains DC barrel power adapter | 1 | Received | 2026-08-23 | Output label is not visible in the arrival photo. Measure voltage, polarity, connector size, and current capability before connecting it to anything. |
 | Raspberry Pi support | GeekPi 40-pin header kit | 13-piece kit | Received | 2026-08-23 | Includes GPIO header/extension options. Confirm the required orientation and whether soldering is needed once the Raspberry Pi arrives. |
 | Bench setup | 4K/UHD HDMI cable | 1 | Received | 2026-08-23 | Available for Raspberry Pi display and setup work. |
@@ -59,17 +60,16 @@ This tracker records robot-specific parts as they are ordered, received, checked
 | DC barrel power adapter | [dc-barrel-power-adapter-2026-08-23.jpeg](../photos/hardware/dc-barrel-power-adapter-2026-08-23.jpeg) |
 | 4K/UHD HDMI cable | [hdmi-cable-4k-2026-08-23.jpeg](../photos/hardware/hdmi-cable-4k-2026-08-23.jpeg) |
 | GeekPi 40-pin header kit | [raspberry-pi-40-pin-header-kit-2026-08-23.jpeg](../photos/hardware/raspberry-pi-40-pin-header-kit-2026-08-23.jpeg) |
+| Completed 2S power-pack subassembly | [power-pack-complete-2026-08-29.jpg](../photos/hardware/power-pack-complete-2026-08-29.jpg) |
 
 ## Next Checks
 
-- Test-fit the switches in the feet.
-- Confirm which switch terminals are common, normally open, and normally closed.
-- Check the initial voltage of each 18650 cell with a multimeter and store the cells safely.
-- Check the battery-holder polarity and series wiring without installing the cells.
-- Verify the UBEC produces a stable 5V output before connecting any electronics.
-- Identify the BMS terminals from its documentation and verify it is suitable for the intended 2S pack before connecting cells or a load.
-- Measure the DC barrel adapter output voltage and polarity before use; do not rely on the photo or connector shape.
+- Verify USB-C charging operation in a controlled test before relying on onboard charging.
+- Keep the 18650 cells removed whenever the unfinished robot is not being worked on.
+- Connect the raw 7.4V branch to the motor-control system only when the motor-controller wiring is ready.
+- Connect the regulated 5V output to the appropriate electronics only after checking polarity and voltage.
 - Bench-test the SG90 servos and test-fit the 8 x 22 x 7 mm bearings.
-- Confirm the wire gauge, DC barrel dimensions/polarity, and XT30 polarity before building leads.
-- Do not connect the cells to the robot until the BMS wiring/specification, switch terminal mapping, and complete wiring plan are confirmed.
+- Test-fit the switches in the feet and confirm COM/NO/NC terminals.
+- Measure the DC barrel adapter output voltage and polarity before use; do not rely on the photo or connector shape.
+- Confirm XT30 polarity before building final leads.
 - Update this tracker as each ordered electronics package arrives.

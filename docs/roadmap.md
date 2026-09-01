@@ -38,11 +38,13 @@ Current progress:
 - The BNO055 IMU breakout and its header pins have arrived. Keep it unmounted until its orientation, pinout, and I2C wiring are confirmed.
 - SG90 micro servos and 8 x 22 x 7 mm bearings have arrived.
 - Two 2S battery holders, a 5V 5A UBEC, XT30 connectors, DC barrel adapters, and red/black wire have arrived.
-- The original battery holders did not fit the rear-panel mounting area. A compact replacement holder has arrived and fits the reprinted rear panel; its wiring and BMS connections still need verifying before cells are installed.
-- Four 2S BMS/protection boards marked for 4.2V / 8.4V packs and labelled 20A have arrived; their wiring and verified current capability still need checking before use.
+- The original battery holders did not fit the rear-panel mounting area. A compact replacement holder has arrived, fits the reprinted rear panel, and has now been used in the completed 2S power-pack subassembly.
+- One 2S BMS/protection board has been wired into the pack with battery negative, midpoint, battery positive, and protected P+/P- rails verified; remaining BMS boards are spares.
 - A DC barrel power adapter, 4K HDMI cable, and GeekPi 40-pin GPIO header kit are ready for later bench setup.
 - Loctite 243 is ready for final metal fasteners.
-- The main power switch has arrived; its terminal mapping, mounting fit, and wiring still need to be confirmed. The BMS wiring/specification must also be verified before the cells are connected.
+- The main power switch has been installed in the protected negative rail and tested with continuity and switched output checks.
+- The USB-C charging board and 5V / 5A UBEC are wired. The UBEC produces approximately 5V when switched on and 0V when switched off; USB-C charging still needs a controlled test.
+- The raw 7.4V branch is prepared for the motor-control system, but the pack is not yet connected to the full robot.
 - Remaining robot-specific hardware is tracked in [Hardware Sourcing Tracker](hardware-sourcing.md).
 
 ## Phase 3 - Print And Fit Check
