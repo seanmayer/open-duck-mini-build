@@ -815,6 +815,42 @@ Next:
 - Connect the regulated 5V supply to the appropriate electronics.
 - Continue checking polarity and voltage before connecting each new subsystem.
 
+## 2026-09-06 - Servo Controller Bench Setup Planned
+
+Status: Next electronics step planned; not wired or tested yet.
+
+What changed:
+
+- Confirmed that the Waveshare serial bus servo driver boards are the intended interface for the STS3215 serial bus servos.
+- Recorded that two controller boards are enough for the 14 servos because the STS3215 servos share a serial bus and each servo is addressed by its own ID.
+- Chose a laptop-first approach for initial servo ID programming, rather than starting on the Raspberry Pi, to keep the Pi setup clean and make driver/software testing easier.
+- Confirmed that the UBEC's servo-style output connector is the regulated 5V output and is not the correct power feed for the STS3215 servo motor rail.
+
+Planned wiring:
+
+- Splice a new red/black branch from the switched 7.4V output rail between the BMS/power switch and the UBEC input.
+- Feed this switched 7.4V branch into the Waveshare controller power input, preferably using the green screw terminal for the first bench test.
+- Keep the UBEC branch separate: the UBEC remains for regulated 5V electronics power, not STS3215 servo power.
+- Connect the Waveshare controller to the laptop over USB for data/control.
+- Connect one STS3215 servo to the controller for the first ID check/programming test.
+
+Safety checks before connecting a servo:
+
+- Remove the 18650 cells while making the splice or changing power wiring.
+- With no servo connected, switch the pack on and measure at the Waveshare controller input.
+- Confirm the red wire is positive and the black wire is negative.
+- Confirm the controller input reads approximately the current 2S pack voltage, expected around 7.0-8.4V depending on cell charge.
+- Switch the pack off and confirm the controller input drops to 0V.
+- Only connect one servo after the input voltage and polarity are confirmed.
+
+Next:
+
+- Make the switched 7.4V branch for the Waveshare controller.
+- Bench-test the controller with one STS3215 servo from the laptop.
+- Read or assign the first servo ID.
+- Label each servo physically before moving to the next one.
+- Build a servo ID map before final mechanical installation.
+
 ## Entry Template
 
 ```markdown

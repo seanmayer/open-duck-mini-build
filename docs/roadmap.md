@@ -35,6 +35,7 @@ Current progress:
 - Foot micro switches have arrived.
 - Battery charger and 18650 cells have arrived.
 - All 14 Feetech STS3215 main servos have arrived with their cables, horns/discs, and mounting screws. Mechanical dry fitting can begin; servo centring and final horn installation wait for the verified power and controller setup.
+- Two Waveshare serial bus servo driver boards have arrived. One board should be used for the first bench setup; the second can remain as a spare or future second bus.
 - The BNO055 IMU breakout and its header pins have arrived. Keep it unmounted until its orientation, pinout, and I2C wiring are confirmed.
 - SG90 micro servos and 8 x 22 x 7 mm bearings have arrived.
 - Two 2S battery holders, a 5V 5A UBEC, XT30 connectors, DC barrel adapters, and red/black wire have arrived.
@@ -45,6 +46,7 @@ Current progress:
 - The main power switch has been installed in the protected negative rail and tested with continuity and switched output checks.
 - The USB-C charging board and 5V / 5A UBEC are wired. The UBEC produces approximately 5V when switched on and 0V when switched off; USB-C charging still needs a controlled test.
 - The raw 7.4V branch is prepared for the motor-control system, but the pack is not yet connected to the full robot.
+- Next servo plan: splice a switched 7.4V branch before the UBEC, connect it to the Waveshare controller power input, verify voltage and polarity with a multimeter, then connect the controller to a laptop over USB and program/check one STS3215 servo ID at a time.
 - Remaining robot-specific hardware is tracked in [Hardware Sourcing Tracker](hardware-sourcing.md).
 
 ## Phase 3 - Print And Fit Check

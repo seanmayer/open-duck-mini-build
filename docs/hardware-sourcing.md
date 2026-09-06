@@ -7,10 +7,11 @@ This tracker records robot-specific parts as they are ordered, received, checked
 - Printing phase: complete, including optional TPU foot bottoms.
 - Hardware sourcing: in progress, with the main motion hardware and battery-pack electronics now received.
 - First received robot-specific electronics: foot micro switches.
-- Motion hardware now includes all 14 STS3215 serial bus servos and the SG90 micro servos; the BNO055 IMU has also arrived.
+- Motion hardware now includes all 14 STS3215 serial bus servos, two Waveshare serial bus servo driver boards, and the SG90 micro servos; the BNO055 IMU has also arrived.
 - Power hardware now includes the charger, cells, 5V UBEC, BMS boards, main power switch, XT30 connectors, DC adapters, red/black wire, and compact replacement 2S holder.
 - The compact holder, BMS, rocker switch, USB-C charging board, UBEC, switched 5V output, and raw 7.4V branch are now assembled and tested as a power-pack subassembly.
 - The power pack is not yet connected to the full robot; USB-C charging still needs a controlled test before regular use.
+- Next planned electronics task: bench-power one Waveshare servo controller from the switched 7.4V rail, connect it to a laptop by USB, and program/check one STS3215 servo ID at a time.
 
 ## Parts Tracker
 
@@ -18,7 +19,7 @@ This tracker records robot-specific parts as they are ordered, received, checked
 | --- | --- | ---: | --- | --- | --- |
 | Foot sensors | SS-10 style micro switch, pin plunger, SPDT, 10A 250V AC | 4 | Received | 2026-08-19 | Intended for foot contact sensing. Verify COM/NO/NC terminals with a multimeter before wiring. |
 | Motion | Feetech STS3215 serial bus servos, 7.4V, 1:345 | 14 | Received | 2026-08-24 | Main robot servos. Arrival photo confirms 14 units; each came with its cable, horn/disc and mounting screws. Keep each servo's accessories together and do not permanently fit horns until the servos are centred. |
-| Electronics | Serial bus servo driver board | 1 | Ordered / awaiting delivery | 2026-08-19 | Interface between the Raspberry Pi and STS3215 servo bus. |
+| Electronics | Waveshare serial bus servo driver board | 2 | Received / bench setup planned | 2026-09-06 | Interface between a laptop or Raspberry Pi and the STS3215 servo bus. Only one board is needed to program the 14 servos one at a time; the second board is a spare or future second bus. Planned first use is laptop over USB plus switched 7.4V servo power into the controller power input. |
 | Brain | Raspberry Pi Zero 2 W | 1 | To order / confirm | 2026-08-19 | Needed for the stock runtime. Do not substitute a Pico for the main computer. |
 | Storage | 64GB SanDisk microSD card | 1 | Ordered / awaiting delivery | 2026-08-19 | Storage for Raspberry Pi OS and robot runtime. |
 | Sensors | BNO055 IMU breakout | 1 | Received | 2026-08-25 | Orientation sensor received with header pins. Verify pinout and I2C wiring before mounting or soldering headers. |
@@ -66,7 +67,12 @@ This tracker records robot-specific parts as they are ordered, received, checked
 
 - Verify USB-C charging operation in a controlled test before relying on onboard charging.
 - Keep the 18650 cells removed whenever the unfinished robot is not being worked on.
-- Connect the raw 7.4V branch to the motor-control system only when the motor-controller wiring is ready.
+- Splice a new red/black branch from the switched 7.4V rail between the BMS/power switch and the UBEC input for the Waveshare servo controller.
+- Feed that branch into the Waveshare controller power input, preferably the green screw terminal for the first bench test.
+- Verify correct polarity and about 7.0-8.4V at the Waveshare controller input with a multimeter before connecting any servo.
+- Connect the Waveshare controller to a laptop over USB for the first servo ID/programming tests; leave the Raspberry Pi setup for later.
+- Connect only one STS3215 servo at a time for ID checking/programming, then label each servo before moving to the next.
+- Do not use the UBEC 5V output connector to power the STS3215 servos or the servo controller's motor-power rail.
 - Connect the regulated 5V output to the appropriate electronics only after checking polarity and voltage.
 - Bench-test the SG90 servos and test-fit the 8 x 22 x 7 mm bearings.
 - Test-fit the switches in the feet and confirm COM/NO/NC terminals.
