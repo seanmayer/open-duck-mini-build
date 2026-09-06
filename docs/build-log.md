@@ -721,6 +721,136 @@ Next:
 - Verify the holder's 2S series arrangement and the BMS sense-wire connection points before soldering or installing cells.
 - Keep the cells disconnected until the complete protected, switched power path is verified.
 
+## 2026-08-29 - 2S Power Pack Wiring Completed
+
+Status: Power-pack subassembly completed and end-to-end switched output verified.
+
+What changed:
+
+- Assembled the 2S 18650 battery pack in the compact holder.
+- Connected the battery holder to the 2S 20A BMS.
+- Added the cell midpoint connection to the BMS.
+- Mounted the BMS inside the printed battery enclosure.
+- Installed and wired the rocker power switch.
+- Wired the USB-C charging board using its BAT and GND pads.
+- Connected the 5V / 5A UBEC.
+- Created 7.4V power branches for the UBEC and the future motor-controller supply.
+- Completed the main power-pack wiring.
+- Added completion photo: [power-pack-complete-2026-08-29.jpg](../photos/hardware/power-pack-complete-2026-08-29.jpg).
+
+Wiring recorded:
+
+- Battery negative -> BMS 0V.
+- Cell midpoint -> BMS 4.2V.
+- Battery positive -> BMS 8.4V.
+- BMS P+ -> positive 7.4V rail.
+- BMS P- -> rocker switch -> negative 7.4V rail.
+- 7.4V rails branch to the UBEC and motor-controller supply.
+- UBEC converts the battery supply to regulated 5V.
+- USB-C charging board is wired using BAT and GND.
+
+Testing:
+
+- Confirmed each 18650 cell measured approximately 3.5V.
+- Confirmed total series voltage measured approximately 7V.
+- Confirmed the BMS midpoint measured approximately one-cell voltage.
+- Tested rocker switch using multimeter continuity mode.
+- Switch ON -> continuity.
+- Switch OFF -> open circuit.
+- UBEC output with switch ON -> approximately 5V.
+- UBEC output with switch OFF -> 0V.
+- End-to-end switched power operation successfully verified.
+
+Challenges:
+
+- Identifying the correct BMS battery and output connections.
+- Understanding why a 2S BMS requires a midpoint connection.
+- Finding the physical midpoint of the two series-connected cells.
+- Learning how the positive and negative power rails branch to multiple loads.
+- Learning how to make 1-to-2/Y wire splices.
+- Improving wire stripping, tinning, and soldering technique.
+- Determining the correct USB-C charger solder pads.
+- Getting reliable multimeter probe contact on small solder joints.
+- Encountered misleading BMS output voltage readings while probing.
+- Battery-holder contact briefly caused the pack to appear as approximately one-cell voltage until the cell was reseated.
+
+What I learned:
+
+- A 2S battery is two cells connected in series.
+- The BMS monitors the individual cells using the midpoint connection.
+- BMS voltage labels represent the corresponding node voltages at full charge.
+- The BMS provides battery protection rather than voltage regulation.
+- The UBEC converts the variable 2S battery voltage into a stable 5V supply.
+- The UBEC and motor controller are powered in parallel from the 7.4V rails.
+- The rocker switch interrupts the negative power path.
+- Pre-tinning stranded wires can make PCB soldering easier.
+- Soldered Y-splices can create simple power-distribution branches.
+- Functional end-to-end voltage testing is useful alongside individual connection testing.
+
+Safety:
+
+- Removed both 18650 cells before soldering.
+- Avoided soldering directly to the 18650 cells.
+- Checked polarity before connecting components.
+- Used the multimeter to verify voltages before progressing.
+- Avoided bridging adjacent BMS pads with multimeter probes.
+- Continue removing the batteries when the unfinished robot is not being worked on.
+
+Current status:
+
+- Power-pack assembly complete.
+- Battery series configuration verified.
+- BMS wiring complete.
+- Power switch working.
+- USB-C charger board wired.
+- UBEC connected and producing the expected 5V.
+- Switched 5V output successfully tested.
+- Raw 7.4V branch prepared for the motor electronics.
+
+Next:
+
+- Verify USB-C charging operation in a controlled test.
+- Continue assembly of the RoboDuck Mini electronics.
+- Connect the 7.4V supply to the motor-control system when ready.
+- Connect the regulated 5V supply to the appropriate electronics.
+- Continue checking polarity and voltage before connecting each new subsystem.
+
+## 2026-09-06 - Servo Controller Bench Setup Planned
+
+Status: Next electronics step planned; not wired or tested yet.
+
+What changed:
+
+- Confirmed that the Waveshare serial bus servo driver boards are the intended interface for the STS3215 serial bus servos.
+- Recorded that two controller boards are enough for the 14 servos because the STS3215 servos share a serial bus and each servo is addressed by its own ID.
+- Chose a laptop-first approach for initial servo ID programming, rather than starting on the Raspberry Pi, to keep the Pi setup clean and make driver/software testing easier.
+- Confirmed that the UBEC's servo-style output connector is the regulated 5V output and is not the correct power feed for the STS3215 servo motor rail.
+
+Planned wiring:
+
+- Splice a new red/black branch from the switched 7.4V output rail between the BMS/power switch and the UBEC input.
+- Feed this switched 7.4V branch into the Waveshare controller power input, preferably using the green screw terminal for the first bench test.
+- Keep the UBEC branch separate: the UBEC remains for regulated 5V electronics power, not STS3215 servo power.
+- Connect the Waveshare controller to the laptop over USB for data/control.
+- Connect one STS3215 servo to the controller for the first ID check/programming test.
+
+Safety checks before connecting a servo:
+
+- Remove the 18650 cells while making the splice or changing power wiring.
+- With no servo connected, switch the pack on and measure at the Waveshare controller input.
+- Confirm the red wire is positive and the black wire is negative.
+- Confirm the controller input reads approximately the current 2S pack voltage, expected around 7.0-8.4V depending on cell charge.
+- Switch the pack off and confirm the controller input drops to 0V.
+- Only connect one servo after the input voltage and polarity are confirmed.
+
+Next:
+
+- Make the switched 7.4V branch for the Waveshare controller.
+- Bench-test the controller with one STS3215 servo from the laptop.
+- Read or assign the first servo ID.
+- Label each servo physically before moving to the next one.
+- Build a servo ID map before final mechanical installation.
+
 ## Entry Template
 
 ```markdown
