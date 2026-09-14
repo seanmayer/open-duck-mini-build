@@ -26,7 +26,7 @@ The next milestone is the servo-controller bench setup: splice a switched 7.4V b
 
 ## Project Progress
 
-Updated: 2026-09-06
+Updated: 2026-09-14
 
 Progress is tracked as a practical build estimate rather than an exact percentage. Printing progress is counted from the required printed part quantities in [docs/printing-progress.md](docs/printing-progress.md). The optional TPU foot bottoms are complete as an upgrade to the PLA feet.
 
@@ -45,7 +45,7 @@ Printing progress        [##########] 100%  49 / 49 required printed parts + TPU
 | Calibration and first motion | 0% | Not started. |
 | Software and runtime experiments | 0% | Not started. |
 
-Current next step: prepare a safe one-servo bench test. Splice a red/black branch from the switched 7.4V output rail between the BMS/power switch and the UBEC input, connect that branch to the Waveshare controller power input, verify about 7.0-8.4V and correct polarity with a multimeter before attaching a servo, then use a laptop over USB to detect and program one STS3215 at a time. Do not use the UBEC 5V output for STS3215 servo power.
+Current next step: finish the safe one-servo bench-test wiring. The red/black wires for the Waveshare servo-controller 7.4V branch have been stripped and prepared; soldering the branch into the switched 7.4V output rail is planned next. After soldering, verify about 7.0-8.4V and correct polarity with a multimeter before attaching a servo, then use a laptop over USB to detect and program one STS3215 at a time. Do not use the UBEC 5V output for STS3215 servo power.
 
 Progress notes: update this section whenever printing, sourcing, assembly, electronics, calibration, or software progress changes.
 

@@ -851,6 +851,31 @@ Next:
 - Label each servo physically before moving to the next one.
 - Build a servo ID map before final mechanical installation.
 
+## 2026-09-14 - Servo Controller Power Wires Prepared
+
+Status: Wiring preparation started; no soldering or power-on test performed yet.
+
+What changed:
+
+- Started the next electronics step after the completed power pack.
+- Prepared the red/black wires for the Waveshare serial bus servo driver board power connection.
+- The planned connection remains a switched 7.4V branch from the power-pack output rail before the UBEC input.
+- Soldering the branch into the power-pack wiring is planned for the next work session.
+
+Notes:
+
+- Progress was limited today because last week was spent hacking the media wall lights.
+- This is preparation only: the Waveshare controller has not yet been connected to the 7.4V rail.
+- The UBEC 5V output remains separate and should not be used for STS3215 servo motor power.
+
+Next:
+
+- Remove the 18650 cells before soldering the new branch.
+- Solder the red/black branch into the switched 7.4V output rail between the BMS/power switch and the UBEC input.
+- Connect the new branch to the Waveshare controller power input.
+- With no servo connected, use the multimeter to confirm polarity and approximately 7.0-8.4V at the controller input.
+- After the voltage check passes, connect one STS3215 servo and use the laptop over USB for the first ID check/programming test.
+
 ## Entry Template
 
 ```markdown
