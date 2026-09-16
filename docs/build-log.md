@@ -851,6 +851,62 @@ Next:
 - Label each servo physically before moving to the next one.
 - Build a servo ID map before final mechanical installation.
 
+## 2026-09-14 - Servo Controller Power Wires Prepared
+
+Status: Wiring preparation started; no soldering or power-on test performed yet.
+
+What changed:
+
+- Started the next electronics step after the completed power pack.
+- Prepared the red/black wires for the Waveshare serial bus servo driver board power connection.
+- The planned connection remains a switched 7.4V branch from the power-pack output rail before the UBEC input.
+- Soldering the branch into the power-pack wiring is planned for the next work session.
+
+Notes:
+
+- Progress was limited today because last week was spent hacking the media wall lights.
+- This is preparation only: the Waveshare controller has not yet been connected to the 7.4V rail.
+- The UBEC 5V output remains separate and should not be used for STS3215 servo motor power.
+
+Next:
+
+- Remove the 18650 cells before soldering the new branch.
+- Solder the red/black branch into the switched 7.4V output rail between the BMS/power switch and the UBEC input.
+- Connect the new branch to the Waveshare controller power input.
+- With no servo connected, use the multimeter to confirm polarity and approximately 7.0-8.4V at the controller input.
+- After the voltage check passes, connect one STS3215 servo and use the laptop over USB for the first ID check/programming test.
+
+## 2026-09-16 - Servo Controller 7.4V Branch Spliced And Voltage Checked
+
+Status: Switched 7.4V branch for the Waveshare servo controller has been spliced and voltage checked; controller and servo have not been powered from it yet.
+
+What changed:
+
+- Soldered/spliced the new red/black branch intended to feed the Waveshare serial bus servo driver board.
+- The branch comes from the switched 7.4V output rail between the BMS/power switch path and the UBEC input.
+- Checked the branch with a multimeter and confirmed it is carrying voltage correctly.
+- Measured 7.03V across the positive and negative branch wires.
+- Added voltage-check photo: [servo-controller-7v-branch-test-2026-09-16.jpg](../photos/hardware/servo-controller-7v-branch-test-2026-09-16.jpg).
+
+What I learned:
+
+- The new branch is carrying the same partially charged 2S pack voltage expected from the power-pack output.
+- A positive multimeter reading confirms the branch polarity is correct at the free wire ends.
+- This is a good stopping point before introducing the Waveshare controller or any servo load.
+
+Safety:
+
+- Stopped after proving the branch voltage rather than immediately connecting the controller or a servo.
+- The branch still needs to be checked again at the Waveshare controller input after it is connected to the screw terminal.
+- No STS3215 servo should be connected until the controller input voltage and polarity are confirmed with the board powered.
+
+Next:
+
+- Connect the new branch to the Waveshare controller power input.
+- With no servo attached, switch the pack on and verify the controller input reads approximately 7.0-8.4V with correct polarity.
+- Switch the pack off and confirm the controller input drops to 0V.
+- If the controller-side voltage check passes, connect one STS3215 servo and begin the laptop-based ID/programming test.
+
 ## Entry Template
 
 ```markdown

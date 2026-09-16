@@ -26,7 +26,7 @@ The next milestone is the servo-controller bench setup: splice a switched 7.4V b
 
 ## Project Progress
 
-Updated: 2026-09-06
+Updated: 2026-09-16
 
 Progress is tracked as a practical build estimate rather than an exact percentage. Printing progress is counted from the required printed part quantities in [docs/printing-progress.md](docs/printing-progress.md). The optional TPU foot bottoms are complete as an upgrade to the PLA feet.
 
@@ -41,11 +41,11 @@ Printing progress        [##########] 100%  49 / 49 required printed parts + TPU
 | 3D printing and fit checks | 100% | All required STL prints and optional TPU foot bottoms are complete. PLA feet have been dry-fitted. |
 | Hardware sourcing | 75% | STS3215 and SG90 servos, BNO055 IMU, Waveshare serial bus servo driver boards, main power switch, foot switches, cells, charger, bearings, UBEC, BMS boards, connectors, power accessories, GPIO headers, compact battery holder, and power-pack wiring are received/complete. USB-C charging controlled test and Raspberry Pi remain outstanding. |
 | Mechanical assembly | 5% | Early dry fitting has started; final assembly waits on servos, switches, and remaining hardware. |
-| Electronics and power | 30% | 2S battery pack, BMS, switch, USB-C charging board, UBEC, switched 5V output, and raw 7.4V branch are wired and tested as a standalone subassembly. Next planned step is a bench connection from the switched 7.4V rail to the Waveshare servo controller. |
+| Electronics and power | 32% | 2S battery pack, BMS, switch, USB-C charging board, UBEC, switched 5V output, and raw 7.4V branch are wired and tested as a standalone subassembly. The new switched 7.4V branch for the Waveshare servo controller has been spliced and measured at 7.03V; it has not yet powered the controller or a servo. |
 | Calibration and first motion | 0% | Not started. |
 | Software and runtime experiments | 0% | Not started. |
 
-Current next step: prepare a safe one-servo bench test. Splice a red/black branch from the switched 7.4V output rail between the BMS/power switch and the UBEC input, connect that branch to the Waveshare controller power input, verify about 7.0-8.4V and correct polarity with a multimeter before attaching a servo, then use a laptop over USB to detect and program one STS3215 at a time. Do not use the UBEC 5V output for STS3215 servo power.
+Current next step: continue the safe one-servo bench-test setup. The switched 7.4V branch for the Waveshare servo controller has been spliced and checked with a multimeter at 7.03V with correct positive/negative polarity. Next, connect the branch to the Waveshare controller input, verify voltage at the controller with no servo attached, then use a laptop over USB to detect and program one STS3215 at a time. Do not use the UBEC 5V output for STS3215 servo power.
 
 Progress notes: update this section whenever printing, sourcing, assembly, electronics, calibration, or software progress changes.
 
