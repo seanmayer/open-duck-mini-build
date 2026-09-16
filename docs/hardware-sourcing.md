@@ -62,14 +62,14 @@ This tracker records robot-specific parts as they are ordered, received, checked
 | 4K/UHD HDMI cable | [hdmi-cable-4k-2026-08-23.jpeg](../photos/hardware/hdmi-cable-4k-2026-08-23.jpeg) |
 | GeekPi 40-pin header kit | [raspberry-pi-40-pin-header-kit-2026-08-23.jpeg](../photos/hardware/raspberry-pi-40-pin-header-kit-2026-08-23.jpeg) |
 | Completed 2S power-pack subassembly | [power-pack-complete-2026-08-29.jpg](../photos/hardware/power-pack-complete-2026-08-29.jpg) |
+| Servo-controller 7.4V branch voltage test | [servo-controller-7v-branch-test-2026-09-16.jpg](../photos/hardware/servo-controller-7v-branch-test-2026-09-16.jpg) |
 
 ## Next Checks
 
 - Verify USB-C charging operation in a controlled test before relying on onboard charging.
 - Keep the 18650 cells removed whenever the unfinished robot is not being worked on.
-- Splice a new red/black branch from the switched 7.4V rail between the BMS/power switch and the UBEC input for the Waveshare servo controller.
-- Feed that branch into the Waveshare controller power input, preferably the green screw terminal for the first bench test.
-- Verify correct polarity and about 7.0-8.4V at the Waveshare controller input with a multimeter before connecting any servo.
+- Connect the spliced switched 7.4V branch to the Waveshare controller power input, preferably the green screw terminal for the first bench test.
+- Verify correct polarity and about 7.0-8.4V at the Waveshare controller input with a multimeter before connecting any servo. The free branch measured 7.03V on 2026-09-16 before being connected to the controller.
 - Connect the Waveshare controller to a laptop over USB for the first servo ID/programming tests; leave the Raspberry Pi setup for later.
 - Connect only one STS3215 servo at a time for ID checking/programming, then label each servo before moving to the next.
 - Do not use the UBEC 5V output connector to power the STS3215 servos or the servo controller's motor-power rail.
