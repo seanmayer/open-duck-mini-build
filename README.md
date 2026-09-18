@@ -45,7 +45,7 @@ Printing progress        [##########] 100%  49 / 49 required printed parts + TPU
 | Calibration and first motion | 0% | Not started. |
 | Software and runtime experiments | 0% | Not started. |
 
-Current next step: continue the safe one-servo bench-test setup. The switched 7.4V branch for the Waveshare servo controller has been spliced and checked with a multimeter at 7.03V with correct positive/negative polarity. Next, connect the branch to the Waveshare controller input, verify voltage at the controller with no servo attached, then use a laptop over USB to detect and program one STS3215 at a time. Do not use the UBEC 5V output for STS3215 servo power.
+Current next step: continue the safe one-servo bench-test setup. The switched 7.4V branch for the Waveshare servo controller is now connected after being checked at 7.03V with correct positive/negative polarity. Next, verify voltage at the controller with no servo attached, then use a laptop over USB to detect and program one STS3215 at a time. Do not use the UBEC 5V output for STS3215 servo power.
 
 Progress notes: update this section whenever printing, sourcing, assembly, electronics, calibration, or software progress changes.
 

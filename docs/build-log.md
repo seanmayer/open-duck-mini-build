@@ -907,6 +907,26 @@ Next:
 - Switch the pack off and confirm the controller input drops to 0V.
 - If the controller-side voltage check passes, connect one STS3215 servo and begin the laptop-based ID/programming test.
 
+## 2026-09-18 - Waveshare Servo Controller Connected
+
+Status: The Waveshare serial bus servo controller has been connected to the prepared switched 7.4V branch. Servo connection and USB control testing are still outstanding.
+
+What changed:
+
+- Connected the prepared red/black 7.4V branch to the motor-control/servo-controller board.
+- Added a progress photo: [servo-controller-connected-2026-09-18.jpg](../photos/hardware/servo-controller-connected-2026-09-18.jpg).
+
+Safety and verification:
+
+- The branch was previously checked at 7.03V with correct polarity before this connection.
+- Keep the battery pack switched off while changing wiring, and recheck polarity and controller-input voltage before attaching a servo.
+- Do not use the UBEC 5V output to power the STS3215 servo bus.
+
+Next:
+
+- With no servo attached, switch on and verify the voltage at the Waveshare controller input.
+- Connect the laptop by USB and test detection/control with one STS3215 servo at a time.
+
 ## Entry Template
 
 ```markdown
