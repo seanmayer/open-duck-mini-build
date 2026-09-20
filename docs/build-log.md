@@ -927,6 +927,25 @@ Next:
 - With no servo attached, switch on and verify the voltage at the Waveshare controller input.
 - Connect the laptop by USB and test detection/control with one STS3215 servo at a time.
 
+## 2026-09-20 - Raspberry Pi Zero 2 W Received
+
+Status: The Raspberry Pi Zero 2 W has arrived and is now logged as received. Robot runtime setup has not started yet.
+
+What changed:
+
+- Recorded receipt of the Raspberry Pi Zero 2 W for the stock robot runtime.
+- Added arrival photos: [raspberry-pi-zero-2w-arrival-2026-09-20.jpg](../photos/hardware/raspberry-pi-zero-2w-arrival-2026-09-20.jpg) and [raspberry-pi-zero-2w-arrival-2026-09-20-2.jpg](../photos/hardware/raspberry-pi-zero-2w-arrival-2026-09-20-2.jpg).
+
+Notes:
+
+- The laptop remains the preferred host for the first Waveshare servo-controller and STS3215 ID tests.
+- The Pi can be set up after the controller bench test, once the microSD card and required runtime items are confirmed.
+
+Next:
+
+- Confirm the Pi and microSD card contents.
+- Set up Raspberry Pi OS and the robot runtime when ready.
+
 ## Entry Template
 
 ```markdown
