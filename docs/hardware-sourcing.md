@@ -20,7 +20,7 @@ This tracker records robot-specific parts as they are ordered, received, checked
 | Foot sensors | SS-10 style micro switch, pin plunger, SPDT, 10A 250V AC | 4 | Received | 2026-08-19 | Intended for foot contact sensing. Verify COM/NO/NC terminals with a multimeter before wiring. |
 | Motion | Feetech STS3215 serial bus servos, 7.4V, 1:345 | 14 | Received | 2026-08-24 | Main robot servos. Arrival photo confirms 14 units; each came with its cable, horn/disc and mounting screws. Keep each servo's accessories together and do not permanently fit horns until the servos are centred. |
 | Electronics | Waveshare serial bus servo driver board | 2 | Received / bench setup planned | 2026-09-06 | Interface between a laptop or Raspberry Pi and the STS3215 servo bus. Only one board is needed to program the 14 servos one at a time; the second board is a spare or future second bus. Planned first use is laptop over USB plus switched 7.4V servo power into the controller power input. |
-| Brain | Raspberry Pi Zero 2 W | 1 | To order / confirm | 2026-08-19 | Needed for the stock runtime. Do not substitute a Pico for the main computer. |
+| Brain | Raspberry Pi Zero 2 W | 1 | Received | 2026-09-20 | Needed for the stock runtime. Keep the initial servo-ID work on the laptop; set up the Pi after the controller bench test. Do not substitute a Pico for the main computer. |
 | Storage | 64GB SanDisk microSD card | 1 | Ordered / awaiting delivery | 2026-08-19 | Storage for Raspberry Pi OS and robot runtime. |
 | Sensors | BNO055 IMU breakout | 1 | Received | 2026-08-25 | Orientation sensor received with header pins. Verify pinout and I2C wiring before mounting or soldering headers. |
 | Motion | SG90 9g micro servos | 2 required | Received | 2026-08-21 | Multi-pack received with horns and mounting hardware. Bench-test direction and travel before installation. |
@@ -64,6 +64,7 @@ This tracker records robot-specific parts as they are ordered, received, checked
 | Completed 2S power-pack subassembly | [power-pack-complete-2026-08-29.jpg](../photos/hardware/power-pack-complete-2026-08-29.jpg) |
 | Servo-controller 7.4V branch voltage test | [servo-controller-7v-branch-test-2026-09-16.jpg](../photos/hardware/servo-controller-7v-branch-test-2026-09-16.jpg) |
 | Servo controller connected | [servo-controller-connected-2026-09-18.jpg](../photos/hardware/servo-controller-connected-2026-09-18.jpg) |
+| Raspberry Pi Zero 2 W arrival | [raspberry-pi-zero-2w-arrival-2026-09-20.jpg](../photos/hardware/raspberry-pi-zero-2w-arrival-2026-09-20.jpg), [raspberry-pi-zero-2w-arrival-2026-09-20-2.jpg](../photos/hardware/raspberry-pi-zero-2w-arrival-2026-09-20-2.jpg) |
 
 ## Next Checks
 
@@ -72,6 +73,7 @@ This tracker records robot-specific parts as they are ordered, received, checked
 - Connect the spliced switched 7.4V branch to the Waveshare controller power input, preferably the green screw terminal for the first bench test.
 - Verify correct polarity and about 7.0-8.4V at the Waveshare controller input with a multimeter before connecting any servo. The free branch measured 7.03V on 2026-09-16 and is now connected to the controller.
 - Connect the Waveshare controller to a laptop over USB for the first servo ID/programming tests; leave the Raspberry Pi setup for later.
+- Confirm the Raspberry Pi Zero 2 W and microSD card contents, then begin Pi OS/runtime setup after the laptop servo-controller test.
 - Connect only one STS3215 servo at a time for ID checking/programming, then label each servo before moving to the next.
 - Do not use the UBEC 5V output connector to power the STS3215 servos or the servo controller's motor-power rail.
 - Connect the regulated 5V output to the appropriate electronics only after checking polarity and voltage.
