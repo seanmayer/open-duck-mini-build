@@ -22,6 +22,18 @@ python servo_port_check.py /dev/cu.usbmodem5B790149151
 
 This only opens the serial port and closes it again. It does not transmit servo commands or change any settings.
 
+To perform a read-only ping of the default servo ID:
+
+```bash
+python servo_ping.py --port /dev/cu.usbmodem5B790149151 --id 1
+```
+
+To scan IDs 0 through 20 without changing anything:
+
+```bash
+python servo_ping.py --port /dev/cu.usbmodem5B790149151 --scan
+```
+
 ## Bench notes
 
 - Keep one STS3215 servo connected for the first test.

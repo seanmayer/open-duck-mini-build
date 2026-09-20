@@ -946,6 +946,29 @@ Next:
 - Confirm the Pi and microSD card contents.
 - Set up Raspberry Pi OS and the robot runtime when ready.
 
+## 2026-09-20 - First STS3215 Servo Pinged
+
+Status: The first STS3215 servo responded successfully through the Waveshare controller and was confirmed at ID 1. The bench test is paused safely for today.
+
+What changed:
+
+- Added a read-only Python ping tool in `servo-controller-bench/`.
+- Confirmed the Mac can open `/dev/cu.usbmodem5B790149151` at 1,000,000 baud.
+- Pinged the connected servo and received a response from ID 1.
+- No movement or configuration changes were sent.
+
+Notes:
+
+- The servo can be labelled `S01 — ID 1` for now.
+- Power off before disconnecting this servo and connecting the next one.
+- Only one unconfigured servo should be connected at a time because new servos may share the default ID 1.
+
+Next:
+
+- Repeat the read-only ping for each remaining servo, one at a time.
+- Create and test a separate, deliberate ID-writing script before assigning unique IDs to the remaining servos.
+- Record each physical label and final ID in the journal.
+
 ## Entry Template
 
 ```markdown
