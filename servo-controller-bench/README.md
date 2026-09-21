@@ -34,6 +34,14 @@ To scan IDs 0 through 20 without changing anything:
 python servo_ping.py --port /dev/cu.usbmodem5B790149151 --scan
 ```
 
+To change an individual servo ID, connect only that servo and use the explicit confirmation flag:
+
+```bash
+python servo_set_id.py --port /dev/cu.usbmodem5B790149151 --old-id 1 --new-id 2 --yes
+```
+
+The script refuses to write if the old ID does not respond or if the new ID already responds.
+
 ## Bench notes
 
 - Keep one STS3215 servo connected for the first test.
