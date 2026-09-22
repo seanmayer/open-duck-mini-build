@@ -969,6 +969,22 @@ Next:
 - Create and test a separate, deliberate ID-writing script before assigning unique IDs to the remaining servos.
 - Record each physical label and final ID in the journal.
 
+## 2026-09-22 - All Main Servos Labelled
+
+Status: All 14 Feetech STS3215 main servos have been labelled for the ID inventory.
+
+What changed:
+
+- Labelled the main servo set `S01` through `S14`, corresponding to controller IDs 1 through 14.
+- Kept each servo's cable, horn/disc, and mounting hardware with its labelled unit.
+- Added a photo of the labelled servo set: [sts3215-servos-labelled-2026-09-22.jpeg](../photos/hardware/sts3215-servos-labelled-2026-09-22.jpeg).
+
+Next:
+
+- Verify each physical label/ID pair with the read-only ping tool.
+- Dry-fit the servos with horns/discs still removed.
+- Centre each servo electronically before fitting its horn and tightening the final hardware.
+
 ## Entry Template
 
 ```markdown
