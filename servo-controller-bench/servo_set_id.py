@@ -24,11 +24,11 @@ def ping(port: serial.Serial, servo_id: int) -> bool:
     return request(port, bytes([0xFF, 0xFF, *values, checksum(values)]), servo_id)
 
 
-def write_id(port: serial.Serial, old_id: int, new_id: int) -> bool:
-    # Control-table address 5 is the servo ID. WRITE instruction is 0x03.
-    values = [old_id, 0x04, 0x03, 0x05, new_id]
+def write_byte(port: serial.Serial, servo_id: int, address: int, value: int) -> bool:
+    # WRITE instruction is 0x03; values are one-byte control-table entries.
+    values = [servo_id, 0x04, 0x03, address, value]
     packet = bytes([0xFF, 0xFF, *values, checksum(values)])
-    return request(port, packet, old_id)
+    return request(port, packet, servo_id)
 
 
 def main() -> None:
@@ -52,8 +52,14 @@ def main() -> None:
             raise SystemExit(f"No response from servo ID {args.old_id}; nothing changed.")
         if ping(port, args.new_id):
             raise SystemExit(f"Servo ID {args.new_id} already responds; refusing to create a duplicate.")
-        if not write_id(port, args.old_id, args.new_id):
+        # Address 55 is the SRAM EEPROM-lock register: 0 unlocks, 1 locks.
+        # The ID itself is address 5 and is persistent only while unlocked.
+        if not write_byte(port, args.old_id, 55, 0):
+            raise SystemExit("Could not unlock the servo EEPROM.")
+        if not write_byte(port, args.old_id, 5, args.new_id):
             raise SystemExit("The ID write was not acknowledged.")
+        if not write_byte(port, args.new_id, 55, 1):
+            raise SystemExit("The ID changed, but the EEPROM could not be locked again.")
         time.sleep(0.1)
         if not ping(port, args.new_id):
             raise SystemExit("Write sent, but the new ID did not respond; stop and inspect wiring.")
