@@ -40,7 +40,7 @@ To change an individual servo ID, connect only that servo and use the explicit c
 python servo_set_id.py --port /dev/cu.usbmodem5B790149151 --old-id 1 --new-id 2 --yes
 ```
 
-The script refuses to write if the old ID does not respond or if the new ID already responds.
+The script unlocks the servo EEPROM, writes the ID, locks the EEPROM again, and refuses to write if the old ID does not respond or if the new ID already responds. Always power-cycle and ping the new ID before accepting the change.
 
 ## Bench notes
 

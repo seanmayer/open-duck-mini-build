@@ -985,6 +985,48 @@ Next:
 - Dry-fit the servos with horns/discs still removed.
 - Centre each servo electronically before fitting its horn and tightening the final hardware.
 
+## 2026-09-22 - Servo IDs Verified After Power Cycling
+
+Status: All 14 labelled STS3215 servos have been assigned and verified with persistent IDs.
+
+What changed:
+
+- Verified the mapping `S01 → ID 1` through `S14 → ID 14`.
+- Power-cycled each servo and confirmed it still responded at its assigned ID.
+- Corrected the ID-writing tool to unlock EEPROM before writing the ID and lock it again afterward.
+
+Notes:
+
+- The first ID-writing attempt changed the live ID but did not persist through power-off because the EEPROM lock sequence was missing.
+- The corrected script now uses the required unlock/write/lock sequence.
+
+Next:
+
+- Keep the verified ID labels with their servo cables and hardware.
+- Dry-fit the servos into the printed body with horns/discs removed.
+- Centre each servo electronically before fitting horns/discs and tightening final hardware.
+
+## 2026-09-23 - Early Main Assembly Progress
+
+Status: Main mechanical assembly has started now that the servo IDs are mapped and labelled.
+
+What changed:
+
+- Began fitting the labelled STS3215 servos into the printed body and joint assemblies.
+- Added assembly progress photos: [assembly-progress-0918-2026-09-23.jpeg](../photos/assembly/assembly-progress-0918-2026-09-23.jpeg) and [assembly-progress-0920-2026-09-23.jpeg](../photos/assembly/assembly-progress-0920-2026-09-23.jpeg).
+- Confirmed that some joints require the horn/disc to be installed before the surrounding printed parts can be assembled.
+
+Assembly notes:
+
+- Centre each servo electronically before fitting its horn/disc.
+- Use the correct servo orientation from the assembly guide; for the foot assembly, the driver side faces the `foot_top` part.
+- Use a small amount of blue Loctite 243 only on appropriate metal-to-metal threaded fasteners, not screws threading into printed plastic.
+
+Next:
+
+- Continue dry-fitting the main body, leg, foot, and servo assemblies.
+- Keep each labelled servo with its intended joint and leave wiring accessible until fit checks are complete.
+
 ## Entry Template
 
 ```markdown
