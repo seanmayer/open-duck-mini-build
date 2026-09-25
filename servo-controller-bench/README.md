@@ -42,6 +42,14 @@ python servo_set_id.py --port /dev/cu.usbmodem5B790149151 --old-id 1 --new-id 2 
 
 The script unlocks the servo EEPROM, writes the ID, locks the EEPROM again, and refuses to write if the old ID does not respond or if the new ID already responds. Always power-cycle and ping the new ID before accepting the change.
 
+To centre a servo before fitting its horn/disc, keep it unloaded and run:
+
+```bash
+python servo_center.py --port /dev/cu.usbmodem5B790149151 --id 1 --yes
+```
+
+The default midpoint is position 2048 at a cautious speed. This changes position only; it does not change the servo ID.
+
 ## Bench notes
 
 - Keep one STS3215 servo connected for the first test.
