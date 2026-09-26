@@ -50,6 +50,12 @@ python servo_center.py --port /dev/cu.usbmodem5B790149151 --id 1 --yes
 
 The default midpoint is position 2048 at a cautious speed. This changes position only; it does not change the servo ID.
 
+For a read-only diagnostic of torque, position, voltage, and error status:
+
+```bash
+python servo_status.py --port /dev/cu.usbmodem5B790149151 --id 3
+```
+
 ## Bench notes
 
 - Keep one STS3215 servo connected for the first test.
