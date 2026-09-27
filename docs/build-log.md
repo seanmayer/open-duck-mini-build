@@ -1042,6 +1042,20 @@ Testing note:
 - Confirm the pack voltage under the intended load before diagnosing a servo or command as faulty.
 - Do not run repeated servo-motion tests with a nearly empty pack; recharge it normally first and disconnect the charger before powering the servo controller.
 
+## 2026-09-27 - Assembly Progress Photo
+
+Status: Main mechanical assembly is continuing with the labelled servo set.
+
+What changed:
+
+- Added the latest build-progress photo: [assembly-progress-0960-2026-09-27.jpeg](../photos/assembly/assembly-progress-0960-2026-09-27.jpeg).
+- Kept the assembly work focused on fitting the servos, horns/discs, and printed body pieces in the documented orientations.
+
+Next:
+
+- Continue dry-fitting and checking clearances before final tightening.
+- Keep servo cables clear of moving joints and retain the S01–S14 mapping.
+
 ## Entry Template
 
 ```markdown

@@ -12,6 +12,8 @@ Early mechanical assembly is now underway. These photos show the first main body
 
 ![Assembly progress](photos/assembly/assembly-progress-0920-2026-09-23.jpeg)
 
+![Assembly progress](photos/assembly/assembly-progress-0960-2026-09-27.jpeg)
+
 ## Attribution
 
 Open Duck Mini is an open-source robotics project by the original project maintainers at [apirrone/Open_Duck_Mini](https://github.com/apirrone/Open_Duck_Mini). This repository is not a fork of the upstream project and does not duplicate the upstream source files. It is a personal build log, workshop notes, shopping tracker, and place for my own modifications or scripts as the build progresses.
