@@ -1027,6 +1027,35 @@ Next:
 - Continue dry-fitting the main body, leg, foot, and servo assemblies.
 - Keep each labelled servo with its intended joint and leave wiring accessible until fit checks are complete.
 
+## 2026-09-26 - Low Battery Caused Limited Servo Movement
+
+Status: Servo movement testing was initially misleading because the 2S battery pack was nearly empty.
+
+What we learned:
+
+- The STS3215 servos responded to commands, but moved only a small amount while the battery was close to depleted.
+- Serial communication still worked and the servo status did not present an obvious diagnostic fault, so the low-power condition was not clear from the motor data alone.
+- After recognising the battery condition, the servos were treated as healthy and the pack was identified as the first thing to charge/check during future motion tests.
+
+Testing note:
+
+- Confirm the pack voltage under the intended load before diagnosing a servo or command as faulty.
+- Do not run repeated servo-motion tests with a nearly empty pack; recharge it normally first and disconnect the charger before powering the servo controller.
+
+## 2026-09-27 - Assembly Progress Photo
+
+Status: Main mechanical assembly is continuing with the labelled servo set.
+
+What changed:
+
+- Added the latest build-progress photo: [assembly-progress-0960-2026-09-27.jpeg](../photos/assembly/assembly-progress-0960-2026-09-27.jpeg).
+- Kept the assembly work focused on fitting the servos, horns/discs, and printed body pieces in the documented orientations.
+
+Next:
+
+- Continue dry-fitting and checking clearances before final tightening.
+- Keep servo cables clear of moving joints and retain the S01–S14 mapping.
+
 ## Entry Template
 
 ```markdown
