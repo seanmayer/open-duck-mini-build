@@ -14,6 +14,8 @@ Early mechanical assembly is now underway. These photos show the first main body
 
 ![Assembly progress](photos/assembly/assembly-progress-0960-2026-09-27.jpeg)
 
+![Full servo assembly progress](photos/assembly/full-servo-assembly-2026-10-03.jpg)
+
 ## Attribution
 
 Open Duck Mini is an open-source robotics project by the original project maintainers at [apirrone/Open_Duck_Mini](https://github.com/apirrone/Open_Duck_Mini). This repository is not a fork of the upstream project and does not duplicate the upstream source files. It is a personal build log, workshop notes, shopping tracker, and place for my own modifications or scripts as the build progresses.
@@ -36,7 +38,7 @@ The next milestone is the servo-controller bench setup: splice a switched 7.4V b
 
 ## Project Progress
 
-Updated: 2026-09-23
+Updated: 2026-10-03
 
 Progress is tracked as a practical build estimate rather than an exact percentage. Printing progress is counted from the required printed part quantities in [docs/printing-progress.md](docs/printing-progress.md). The optional TPU foot bottoms are complete as an upgrade to the PLA feet.
 
@@ -50,7 +52,7 @@ Printing progress        [##########] 100%  49 / 49 required printed parts + TPU
 | Workshop setup | 100% | Core tools, soldering setup, fasteners, inserts, wire, and consumables are ready. |
 | 3D printing and fit checks | 100% | All required STL prints and optional TPU foot bottoms are complete. PLA feet have been dry-fitted. |
 | Hardware sourcing | 80% | STS3215 and SG90 servos, BNO055 IMU, Waveshare serial bus servo driver boards, main power switch, foot switches, cells, charger, bearings, UBEC, BMS boards, connectors, power accessories, GPIO headers, compact battery holder, power-pack wiring, and Raspberry Pi Zero 2 W are received/complete. USB-C charging controlled test and Raspberry Pi runtime setup remain outstanding. |
-| Mechanical assembly | 15% | Early servo and main-body assembly is underway; horns/discs are being fitted after electronic centring. |
+| Mechanical assembly | 45% | All main servos are assembled into the body, leg, neck, and head structure; wiring and final fit/calibration remain. |
 | Electronics and power | 32% | 2S battery pack, BMS, switch, USB-C charging board, UBEC, switched 5V output, and raw 7.4V branch are wired and tested as a standalone subassembly. The new switched 7.4V branch for the Waveshare servo controller has been spliced and measured at 7.03V; it has not yet powered the controller or a servo. |
 | Calibration and first motion | 0% | Not started. |
 | Software and runtime experiments | 0% | Not started. |
