@@ -1056,6 +1056,28 @@ Next:
 - Continue dry-fitting and checking clearances before final tightening.
 - Keep servo cables clear of moving joints and retain the S01–S14 mapping.
 
+## 2026-10-03 - Main Servo Assembly Complete
+
+Status: The 14 main STS3215 servos have been assembled into the robot structure, including the body, legs, neck, and head.
+
+What changed:
+
+- Completed the main servo mechanical assembly through the neck and head.
+- Added a full assembly progress photo: [full-servo-assembly-2026-10-03.jpg](../photos/assembly/full-servo-assembly-2026-10-03.jpg).
+- Retained the S01–S14 labels while assembling the mapped servos.
+
+Notes:
+
+- Servo wiring is still loose and needs routing, securing, and checking for movement clearance.
+- Mechanical assembly is not yet the same as final calibration; joint centres, directions, limits, and torque behaviour still need to be checked under controlled power.
+
+Next:
+
+- Inspect every joint for free movement and cable pinch points.
+- Secure and route the servo cables without restricting the joints.
+- Complete final servo-centre and direction checks one joint at a time.
+- Continue installing the remaining electronics and prepare for controlled first-motion testing.
+
 ## Entry Template
 
 ```markdown
