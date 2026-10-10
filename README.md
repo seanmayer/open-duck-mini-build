@@ -34,16 +34,16 @@ Printed so far: all required STL prints and optional TPU foot bottoms are comple
 
 Hardware sourcing is well underway. The foot micro switches, main STS3215 servos, SG90 servos, BNO055 IMU, Waveshare serial bus servo driver boards, main power switch, battery charger, 18650 cells, 8 x 22 x 7 mm bearings, 5V UBEC, XT30 connectors, DC barrel adapters, red/black wire, Loctite 243, 2S BMS/protection boards, a DC barrel power adapter, a 4K HDMI cable, Raspberry Pi support parts, and a Raspberry Pi Zero 2 W have arrived. A compact replacement 2S battery holder has also arrived, fits the reprinted rear panel, and is now wired into a completed 2S power-pack subassembly. The BMS, rocker switch, USB-C charging board, UBEC, switched 5V output, and raw 7.4V branch have been tested with a multimeter; USB-C charging still needs a controlled test before regular use.
 
-The next milestone is the servo-controller bench setup: splice a switched 7.4V branch from the power-pack output before the UBEC, feed it into the Waveshare controller power input, verify polarity and voltage with a multimeter, then connect one STS3215 servo from a laptop over USB for ID programming.
+The servo-controller bench milestone is now complete: the switched 7.4 V branch was measured before connection, the Waveshare controller was connected to the laptop, all 14 STS3215 servo IDs were programmed and power-cycle verified, and the complete S01–S14 chain has responded to read-only status checks. The next milestone is controlled per-joint calibration; raw midpoint commands must not be sent to assembled joints because their mechanical zero and travel limits differ.
 
 ## Project Progress
 
-Updated: 2026-10-03
+Updated: 2026-10-10
 
 Progress is tracked as a practical build estimate rather than an exact percentage. Printing progress is counted from the required printed part quantities in [docs/printing-progress.md](docs/printing-progress.md). The optional TPU foot bottoms are complete as an upgrade to the PLA feet.
 
 ```text
-Overall build progress   [######----] 58%
+Overall build progress   [#######---] 63%
 Printing progress        [##########] 100%  49 / 49 required printed parts + TPU feet
 ```
 
@@ -51,13 +51,13 @@ Printing progress        [##########] 100%  49 / 49 required printed parts + TPU
 | --- | ---: | --- |
 | Workshop setup | 100% | Core tools, soldering setup, fasteners, inserts, wire, and consumables are ready. |
 | 3D printing and fit checks | 100% | All required STL prints and optional TPU foot bottoms are complete. PLA feet have been dry-fitted. |
-| Hardware sourcing | 80% | STS3215 and SG90 servos, BNO055 IMU, Waveshare serial bus servo driver boards, main power switch, foot switches, cells, charger, bearings, UBEC, BMS boards, connectors, power accessories, GPIO headers, compact battery holder, power-pack wiring, and Raspberry Pi Zero 2 W are received/complete. USB-C charging controlled test and Raspberry Pi runtime setup remain outstanding. |
-| Mechanical assembly | 45% | All main servos are assembled into the body, leg, neck, and head structure; wiring and final fit/calibration remain. |
-| Electronics and power | 32% | 2S battery pack, BMS, switch, USB-C charging board, UBEC, switched 5V output, and raw 7.4V branch are wired and tested as a standalone subassembly. The new switched 7.4V branch for the Waveshare servo controller has been spliced and measured at 7.03V; it has not yet powered the controller or a servo. |
-| Calibration and first motion | 0% | Not started. |
+| Hardware sourcing | 85% | STS3215 and SG90 servos, BNO055 IMU, Waveshare serial bus servo driver boards, main power switch, foot switches, cells, charger, bearings, UBEC, BMS boards, connectors, power accessories, GPIO headers, compact battery holder, power-pack wiring, and Raspberry Pi Zero 2 W are received/complete. USB-C charging controlled test and Raspberry Pi runtime setup remain outstanding. |
+| Mechanical assembly | 60% | The main body, leg, neck, and head servo assemblies are fitted and the S01–S14 servo chain is routed. Final cable dressing, clearances, joint limits, and calibration remain. |
+| Electronics and power | 55% | The 2S battery pack, BMS, switch, USB-C charging board, UBEC, switched 5V output, raw 7.4V branch, Waveshare controller, and complete servo chain have been connected and checked. The loaded servo supply still needs to be tested only with a fully charged pack and safe mechanical loads. |
+| Calibration and first motion | 5% | IDs are programmed and read-only status checks are working. Per-joint zero offsets, safe limits, torque tests, and coordinated motion have not yet been completed. |
 | Software and runtime experiments | 0% | Not started. |
 
-Current next step: continue the safe one-servo bench-test setup. The switched 7.4V branch for the Waveshare servo controller is now connected after being checked at 7.03V with correct positive/negative polarity. Next, verify voltage at the controller with no servo attached, then use a laptop over USB to detect and program one STS3215 at a time. Do not use the UBEC 5V output for STS3215 servo power.
+Current next step: keep torque disabled, recharge the pack, and perform a final read-only status check across IDs 1–14. Then inspect S09’s hip linkage and define per-joint zero and travel limits. Use the upstream pre-assembly motor-zero procedure as the reference, but do not send a universal `2048` target to an assembled joint. Do not use the UBEC 5V output for STS3215 servo power.
 
 Progress notes: update this section whenever printing, sourcing, assembly, electronics, calibration, or software progress changes.
 

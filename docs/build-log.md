@@ -1078,6 +1078,38 @@ Next:
 - Complete final servo-centre and direction checks one joint at a time.
 - Continue installing the remaining electronics and prepare for controlled first-motion testing.
 
+## 2026-10-10 - Full Servo Chain Check and S09 Mechanical-Limit Test
+
+Status: All 14 labelled STS3215 servos are connected through the Waveshare serial bus controller and responding to read-only status checks. Calibration and powered motion testing remain deliberately incomplete.
+
+What changed:
+
+- Connected the complete S01–S14 servo chain to the Waveshare controller.
+- Ran a read-only status check for every ID; all 14 servos responded at approximately 8.0–8.1 V with torque disabled.
+- Repeated the checks after a power cycle. Earlier transient error flags cleared, including the final S09 flag, which later reported error status `0`.
+- Tested S09 with a raw position target of `2048` while it was installed in the hip assembly. The joint moved inward until it reached its mechanical limit; torque was then disabled to release it.
+- Recorded the loaded S09 reading during that test: position `3747`, voltage `6.5 V`, torque enabled, error status `0`.
+
+What I learned:
+
+- A raw servo midpoint (`2048`) is not automatically the safe mechanical centre of an assembled joint.
+- The servo controller sends numeric targets but does not know the printed linkage geometry or mechanical stops.
+- The upstream project recommends configuring each motor independently before building the robot: move it to its zero position, fit the horn, and compensate small alignment differences later. This is different from sending a generic centre command to an assembled joint.
+- The lower loaded voltage was consistent with the servo being held against a mechanical limit and/or the battery supply sagging under load.
+
+Problems and safety notes:
+
+- S09 is responding and moves normally when released, so this incident does not by itself indicate a failed servo.
+- Keep S09 and the other assembled servos torque-disabled until their safe mechanical ranges and zero offsets are defined.
+- Do not repeat a `2048` centre command on an assembled joint. Inspect for cable pinch, hard stops, and linkage interference before further powered tests.
+
+Next:
+
+- Recharge the battery pack and verify the supply returns to its normal unloaded voltage.
+- Recheck all 14 servos with the read-only status tool and confirm error status `0` with torque disabled.
+- Create a guarded, per-joint calibration procedure based on the Open Duck Mini assembly orientations rather than a single universal midpoint.
+- Test torque and small movements one servo at a time with the robot supported and the joint clear.
+
 ## Entry Template
 
 ```markdown
