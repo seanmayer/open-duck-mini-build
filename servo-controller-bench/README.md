@@ -71,6 +71,8 @@ Do not enable torque on the assembled robot until the joint is supported, clear 
 
 ## Bench notes
 
+Current build status (2026-10-19): the initial bench work is complete. All 14 servos are assembled and daisy chained, with IDs verified, joint locations recorded, horns aligned before fitting, and cable slack confirmed. The next work is Pi GPIO header soldering and runtime setup. The loose-servo centring instructions above are not the next step for this assembled robot. Review runtime mapping and startup movement before powered integration; S09's collision has not established a need to redo alignment or configuration.
+
 - Keep one STS3215 servo connected for the first test.
 - Keep the servo horn/disc off until the ID and centre position are confirmed.
 - Use the laptop for initial ID programming; set up the Raspberry Pi later.

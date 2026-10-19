@@ -1110,6 +1110,32 @@ Next:
 - Create a guarded, per-joint calibration procedure based on the Open Duck Mini assembly orientations rather than a single universal midpoint.
 - Test torque and small movements one servo at a time with the robot supported and the joint clear.
 
+## 2026-10-19 - Raspberry Pi Preparation and Runtime Next Steps
+
+Status: Moving on from the completed servo-chain communication checks to Raspberry Pi preparation. GPIO header soldering and software setup are planned, not yet completed.
+
+Progress confirmed:
+
+- All 14 servos are daisy chained and have responded to status checks.
+- The cables have slack and the physical joint-to-ID mapping is already recorded.
+- The servos were centred and the horns aligned before fitting them to the robot.
+- The Raspberry Pi Zero 2 W still needs its GPIO header pins soldered; this is the first planned task.
+
+Clarification of the previous next steps:
+
+- S09 hit a mechanical stop when commanded toward raw position `2048` in the assembled hip. Torque was disabled to release it.
+- This observation alone does not establish incorrect horn alignment, a configuration fault, or a damaged servo. The earlier suggestion that a reference-position mismatch necessarily needed correcting was premature.
+- Coordinated movement may affect joint clearance, but that has not yet been verified as the explanation for S09. Smaller commands alone do not make an unreachable final target safe.
+- Repeating centre commands or arbitrary individual joint movements is not the next task. The next steps below supersede the motion-test plan in the 2026-10-10 entry.
+
+Next:
+
+1. Solder the Pi GPIO header with all power disconnected and inspect for solder bridges before powering the board.
+2. Prepare an upstream-compatible OS on the microSD card and establish remote access.
+3. Install the [upstream runtime](https://github.com/apirrone/Open_Duck_Mini_Runtime) with servo power off.
+4. Inspect the runtime's joint-ID mapping, reference positions, offsets, limits, and startup behaviour against the recorded build mapping. Determine whether startup enables torque or sends a pose before executing it with servo power on.
+5. Connect the controller for read-only checks, then plan the first supported movement after the startup pose and S09 clearance have been reviewed. No horn realignment or ID changes are assumed necessary at this stage.
+
 ## Entry Template
 
 ```markdown
