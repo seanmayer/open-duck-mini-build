@@ -2,6 +2,10 @@
 
 This roadmap keeps the build phased so purchases and work stay manageable.
 
+## Current Focus - 2026-10-19
+
+All 14 main servos are assembled and daisy chained, their IDs have been verified, and the physical joint mapping is recorded. Horn centring/alignment was completed before fitting and the cables have slack. The next task is soldering the Raspberry Pi Zero 2 W GPIO header, followed by Pi OS and runtime setup. See the [latest build-log entry](build-log.md#2026-10-19---raspberry-pi-preparation-and-runtime-next-steps).
+
 ## Phase 1 - Workshop And Core Tools
 
 Status: Complete enough to move forward.
@@ -34,7 +38,7 @@ Current progress:
 
 - Foot micro switches have arrived.
 - Battery charger and 18650 cells have arrived.
-- All 14 Feetech STS3215 main servos have arrived with their cables, horns/discs, and mounting screws. Mechanical dry fitting can begin; servo centring and final horn installation wait for the verified power and controller setup.
+- All 14 Feetech STS3215 main servos have arrived, been assigned persistent IDs, centred before horn fitting, and assembled into the robot.
 - Two Waveshare serial bus servo driver boards have arrived. One board should be used for the first bench setup; the second can remain as a spare or future second bus.
 - The BNO055 IMU breakout and its header pins have arrived. Keep it unmounted until its orientation, pinout, and I2C wiring are confirmed.
 - SG90 micro servos and 8 x 22 x 7 mm bearings have arrived.
@@ -45,8 +49,8 @@ Current progress:
 - Loctite 243 is ready for final metal fasteners.
 - The main power switch has been installed in the protected negative rail and tested with continuity and switched output checks.
 - The USB-C charging board and 5V / 5A UBEC are wired. The UBEC produces approximately 5V when switched on and 0V when switched off; USB-C charging still needs a controlled test.
-- The raw 7.4V branch is prepared for the motor-control system, but the pack is not yet connected to the full robot.
-- Next servo plan: splice a switched 7.4V branch before the UBEC, connect it to the Waveshare controller power input, verify voltage and polarity with a multimeter, then connect the controller to a laptop over USB and program/check one STS3215 servo ID at a time.
+- The switched raw battery-voltage branch powers the Waveshare controller and complete servo chain; all 14 IDs have responded to laptop status checks.
+- The Raspberry Pi Zero 2 W has arrived; its GPIO header still needs soldering before the planned Pi setup.
 - Remaining robot-specific hardware is tracked in [Hardware Sourcing Tracker](hardware-sourcing.md).
 
 ## Phase 3 - Print And Fit Check
@@ -73,13 +77,21 @@ Planned work:
 - Install Raspberry Pi and controller electronics.
 - Perform power checks before first boot.
 
+Immediate sequence:
+
+1. Solder and inspect the Pi GPIO header with all power disconnected.
+2. Prepare a runtime-compatible OS and remote access.
+3. Install the upstream runtime with servo power off.
+4. Review the recorded joint mapping, runtime reference positions, limits, and any automatic startup movement before enabling servo power for integration.
+
 ## Phase 5 - Calibration And First Motion
 
 Goal: Bring the robot up safely and get repeatable baseline movement.
 
 Planned work:
 
-- Calibrate servos.
+- Verify runtime calibration requirements against the completed pre-assembly horn alignment; do not assume realignment or ID changes are required.
+- Start Pi/controller integration with read-only checks, then review a supported initial pose before commanding movement. S09's earlier collision remains to be explained; do not repeat assembled midpoint commands as a diagnostic.
 - Test IMU readings.
 - Validate contact switches.
 - Run basic pose and balance checks.
