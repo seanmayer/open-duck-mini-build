@@ -9,19 +9,21 @@ This tracker records robot-specific parts as they are ordered, received, checked
 - First received robot-specific electronics: foot micro switches.
 - Motion hardware now includes all 14 STS3215 serial bus servos, two Waveshare serial bus servo driver boards, and the SG90 micro servos; the BNO055 IMU has also arrived.
 - Power hardware now includes the charger, cells, 5V UBEC, BMS boards, main power switch, XT30 connectors, DC adapters, red/black wire, and compact replacement 2S holder.
-- The compact holder, BMS, rocker switch, USB-C charging board, UBEC, switched 5V output, and raw 7.4V branch are now assembled and tested as a power-pack subassembly.
-- The power pack is not yet connected to the full robot; USB-C charging still needs a controlled test before regular use.
-- Next planned electronics task: bench-power one Waveshare servo controller from the switched 7.4V rail, connect it to a laptop by USB, and program/check one STS3215 servo ID at a time.
+- The compact holder, BMS, rocker switch, USB-C charging board, UBEC, switched 5V output, and raw battery-voltage branch are assembled. Pack voltages, switched output, and UBEC output have been checked; USB-C charging still needs a controlled test before regular use.
+- The switched raw battery branch is connected to the Waveshare controller and all 14 main servos have responded to laptop status checks. Loaded supply testing and final Pi/sensor power integration remain outstanding.
+- The replacement Pi Zero 2 W with a pre-soldered GPIO header has arrived. It boots from the existing microSD card and accepts SSH; the existing v2 runtime installation passes its dependency check.
+- Next planned electronics task: consult the wiring diagram, connect the Pi's USB data port to the Waveshare USB-C port using an OTG host adapter/data cable, and enumerate the USB device with servo power off. See the [current checkpoint](build-log.md#2026-11-07---replacement-pi-and-runtime-checkpoint).
 
 ## Parts Tracker
 
 | Group | Item | Qty | Status | Last Updated | Notes |
 | --- | --- | ---: | --- | --- | --- |
 | Foot sensors | SS-10 style micro switch, pin plunger, SPDT, 10A 250V AC | 4 | Received | 2026-08-19 | Intended for foot contact sensing. Verify COM/NO/NC terminals with a multimeter before wiring. |
-| Motion | Feetech STS3215 serial bus servos, 7.4V, 1:345 | 14 | Received | 2026-08-24 | Main robot servos. Arrival photo confirms 14 units; each came with its cable, horn/disc and mounting screws. Keep each servo's accessories together and do not permanently fit horns until the servos are centred. |
-| Electronics | Waveshare serial bus servo driver board | 2 | Received / bench setup planned | 2026-09-06 | Interface between a laptop or Raspberry Pi and the STS3215 servo bus. Only one board is needed to program the 14 servos one at a time; the second board is a spare or future second bus. Planned first use is laptop over USB plus switched 7.4V servo power into the controller power input. |
-| Brain | Raspberry Pi Zero 2 W | 1 | Received | 2026-09-20 | Needed for the stock runtime. Keep the initial servo-ID work on the laptop; set up the Pi after the controller bench test. Do not substitute a Pico for the main computer. |
-| Storage | 64GB SanDisk microSD card | 1 | Ordered / awaiting delivery | 2026-08-19 | Storage for Raspberry Pi OS and robot runtime. |
+| Motion | Feetech STS3215 serial bus servos, 7.4V, 1:345 | 14 | Assembled / IDs verified | 2026-11-07 | S01–S14 have persistent IDs, were centred before horn fitting, and are daisy chained. Laptop read-only chain checks passed; joint limits and coordinated motion are not yet verified. |
+| Electronics | Waveshare serial bus servo driver board | 2 | Received / laptop checks complete | 2026-11-07 | One board connects the full servo chain to the laptop over USB with separate switched battery power. The second remains available as a spare/future bus. Connection to the replacement Pi is still pending. |
+| Brain | Original Raspberry Pi Zero 2 W | 1 | Header damaged / replaced for this build | 2026-11-07 | Originally received 2026-09-20. GPIO header damaged during beginner soldering/desoldering; the board still booted and accepted SSH, but damaged header connections were not validated. |
+| Brain | Replacement Raspberry Pi Zero 2 W with pre-soldered GPIO header | 1 | Received / boot and SSH verified | 2026-11-07 | Reuses the existing microSD installation. Debian 12 (Bookworm), aarch64; existing v2 runtime package and dependency check verified. Pi-to-controller USB connection and integrated operation are pending. |
+| Storage | 64GB SanDisk microSD card | 1 | Installed / boot verified | 2026-11-07 | Existing OS and runtime environment retained on the replacement Pi; no fresh clone or reinstallation was needed for this checkpoint. |
 | Sensors | BNO055 IMU breakout | 1 | Received | 2026-08-25 | Orientation sensor received with header pins. Verify pinout and I2C wiring before mounting or soldering headers. |
 | Motion | SG90 9g micro servos | 2 required | Received | 2026-08-21 | Multi-pack received with horns and mounting hardware. Bench-test direction and travel before installation. |
 | Power | Nitecore Intellicharger NEW i2 battery charger | 1 | Received | 2026-08-19 | External charger for loose cells. Store and charge lithium cells safely. |
@@ -32,7 +34,7 @@ This tracker records robot-specific parts as they are ordered, received, checked
 | Power | 2S BMS/protection boards, labelled 4.2V / 8.4V and 20A | 4 | Installed / tested | 2026-08-29 | One board wired to 0V, 4.2V midpoint, 8.4V positive, and P+/P- output rails. Pack protection is wired; USB-C charging controlled test still pending. Spare boards remain. |
 | Power | Panel-mount ON/OFF main power switch with supplied leads/connectors | 1 | Installed / tested | 2026-08-29 | Installed in the protected negative rail after BMS P-. Continuity verified: ON = continuity, OFF = open circuit. |
 | Bench power | UK mains DC barrel power adapter | 1 | Received | 2026-08-23 | Output label is not visible in the arrival photo. Measure voltage, polarity, connector size, and current capability before connecting it to anything. |
-| Raspberry Pi support | GeekPi 40-pin header kit | 13-piece kit | Received | 2026-08-23 | Includes GPIO header/extension options. Confirm the required orientation and whether soldering is needed once the Raspberry Pi arrives. |
+| Raspberry Pi support | GeekPi 40-pin header kit | 13-piece kit | Received | 2026-11-07 | Previously sourced GPIO header/extension options. The replacement Pi already has its header soldered, so fitting one is no longer required for that board. |
 | Bench setup | 4K/UHD HDMI cable | 1 | Received | 2026-08-23 | Available for Raspberry Pi display and setup work. |
 | Mechanical | 8 x 22 x 7 mm bearings | 20 | Received | 2026-08-21 | Check quantity, free rotation, and fit against the printed parts and official BOM. |
 | Mechanical | Remaining robot-specific hardware | Per BOM | To order / confirm | 2026-08-21 | Check outstanding fasteners and other mechanical parts against the official BOM. |
@@ -66,16 +68,16 @@ This tracker records robot-specific parts as they are ordered, received, checked
 | Servo controller connected | [servo-controller-connected-2026-09-18.jpg](../photos/hardware/servo-controller-connected-2026-09-18.jpg) |
 | STS3215 servos labelled | [sts3215-servos-labelled-2026-09-22.jpeg](../photos/hardware/sts3215-servos-labelled-2026-09-22.jpeg) |
 | Raspberry Pi Zero 2 W arrival | [raspberry-pi-zero-2w-arrival-2026-09-20.jpg](../photos/hardware/raspberry-pi-zero-2w-arrival-2026-09-20.jpg), [raspberry-pi-zero-2w-arrival-2026-09-20-2.jpg](../photos/hardware/raspberry-pi-zero-2w-arrival-2026-09-20-2.jpg) |
+| Replacement Raspberry Pi Zero 2 W with pre-soldered header | [raspberry-pi-zero-2w-presoldered-2026-11-07.jpg](../photos/hardware/raspberry-pi-zero-2w-presoldered-2026-11-07.jpg) |
 
 ## Next Checks
 
 - Verify USB-C charging operation in a controlled test before relying on onboard charging.
 - Keep the 18650 cells removed whenever the unfinished robot is not being worked on.
-- Connect the spliced switched 7.4V branch to the Waveshare controller power input, preferably the green screw terminal for the first bench test.
-- Verify correct polarity and about 7.0-8.4V at the Waveshare controller input with a multimeter before connecting any servo. The free branch measured 7.03V on 2026-09-16 and is now connected to the controller.
-- Connect the Waveshare controller to a laptop over USB for the first servo ID/programming tests; leave the Raspberry Pi setup for later.
-- Confirm the Raspberry Pi Zero 2 W and microSD card contents, then begin Pi OS/runtime setup after the laptop servo-controller test.
-- Connect only one STS3215 servo at a time for ID checking/programming, then label each servo before moving to the next.
+- Confirm the OTG host adapter and USB data cable needed for the Pi-to-Waveshare connection. Shut down and disconnect power before wiring changes.
+- Initially power the Pi separately via PWR IN, leave the servo battery off, and verify USB enumeration before powered servo checks.
+- Recheck supply voltage and polarity after power-wiring changes. The existing switched battery branch is already connected to the controller; it is not a new splice task.
+- Preserve the verified S01–S14 IDs and recorded joint mapping. Review runtime limits/startup behaviour and S09 clearance before any movement; read-only Pi/controller checks come first.
 - Do not use the UBEC 5V output connector to power the STS3215 servos or the servo controller's motor-power rail.
 - Connect the regulated 5V output to the appropriate electronics only after checking polarity and voltage.
 - Bench-test the SG90 servos and test-fit the 8 x 22 x 7 mm bearings.
