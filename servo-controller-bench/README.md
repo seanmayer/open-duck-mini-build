@@ -71,8 +71,12 @@ Do not enable torque on the assembled robot until the joint is supported, clear 
 
 ## Bench notes
 
-Current build status (2026-10-19): the initial bench work is complete. All 14 servos are assembled and daisy chained, with IDs verified, joint locations recorded, horns aligned before fitting, and cable slack confirmed. The next work is Pi GPIO header soldering and runtime setup. The loose-servo centring instructions above are not the next step for this assembled robot. Review runtime mapping and startup movement before powered integration; S09's collision has not established a need to redo alignment or configuration.
+Current build status (2026-11-07): the initial laptop bench work is complete. All 14 servos are assembled and daisy chained, with IDs verified, joint locations recorded, horns aligned before fitting, and cable slack confirmed. The replacement Pi Zero 2 W has a pre-soldered header, working SSH access, and a verified existing runtime installation/dependency check. The Pi-to-Waveshare USB connection is still pending. Next is a wiring-diagram check and USB enumeration with servo power off, followed by reviewed, read-only integration checks. Discover the Pi's actual Linux serial device rather than reusing the Mac port shown above. See the [checkpoint and photo](../docs/build-log.md#2026-11-07---replacement-pi-and-runtime-checkpoint).
+
+The loose-servo centring instructions above are not the next step for this assembled robot. Review runtime mapping and startup movement before powered integration; S09's collision has not established a need to redo alignment or configuration.
+
+For future loose-servo bench work only:
 
 - Keep one STS3215 servo connected for the first test.
 - Keep the servo horn/disc off until the ID and centre position are confirmed.
-- Use the laptop for initial ID programming; set up the Raspberry Pi later.
+- Use the laptop for initial ID programming; do not repeat ID assignment on the already configured chain.

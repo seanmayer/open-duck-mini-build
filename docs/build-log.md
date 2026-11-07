@@ -1136,6 +1136,58 @@ Next:
 4. Inspect the runtime's joint-ID mapping, reference positions, offsets, limits, and startup behaviour against the recorded build mapping. Determine whether startup enables torque or sends a pose before executing it with servo power on.
 5. Connect the controller for read-only checks, then plan the first supported movement after the startup pose and S09 clearance have been reviewed. No horn realignment or ID changes are assumed necessary at this stage.
 
+## 2026-11-07 - Replacement Pi and Runtime Checkpoint
+
+Status: The replacement Raspberry Pi Zero 2 W with a pre-soldered GPIO header has arrived, boots, and is accessible over SSH. The existing runtime installation passes its dependency check. Paused before physically connecting the Pi to the Waveshare controller.
+
+What changed:
+
+- Replaced the build's original Pi with a pre-soldered-header unit after damaging the original GPIO header during soldering/desoldering. The original board still booted and accepted SSH; that did not establish that its damaged header connections were usable.
+- Reused the existing microSD installation on the replacement board and confirmed remote access at `sean@roboduck.local`.
+- Confirmed Debian GNU/Linux 12 (Bookworm), `aarch64`, and kernel `6.12.109+rpt-rpi-v8` from the Pi terminal.
+- Found that `~/Open_Duck_Mini_Runtime` already existed. Checked that installation rather than deleting it or cloning over it: the checkout reports `v2...origin/v2`, with a local `.venv/` directory.
+- Verified `mini-bdx-runtime` version `0.0.1` is installed in editable mode from that checkout, using its Python 3.11 virtual environment. `pip check` reports no broken requirements.
+- Added the replacement-board photo below. It shows the fitted header, microSD card, and power cable in **PWR IN**, with the **USB** data port still unused.
+
+![Replacement Raspberry Pi Zero 2 W with pre-soldered GPIO header, powered with the microSD card installed](../photos/hardware/raspberry-pi-zero-2w-presoldered-2026-11-07.jpg)
+
+Verification recorded from the reported Pi terminal session (not rerun as part of this journal update):
+
+```text
+OS: Debian GNU/Linux 12 (bookworm)
+Architecture: aarch64
+Runtime branch: v2...origin/v2
+Package: mini-bdx-runtime
+Version: 0.0.1
+Editable project location: /home/sean/Open_Duck_Mini_Runtime
+Environment: /home/sean/Open_Duck_Mini_Runtime/.venv (Python 3.11)
+pip check: No broken requirements found.
+```
+
+What I learned:
+
+- Soldering has been one of the harder parts of the build as a beginner. The damaged header and replacement Pi were an expensive mistake, but a useful lesson in when to stop reworking a board and choose a pre-soldered part.
+- A working OS and SSH connection are a useful checkpoint, but do not prove every GPIO connection or peripheral works.
+- The existing SD card retained the software setup, so the replacement did not require starting again. An existing clone and an untracked `.venv/` are not evidence that installation failed; the environment should stay local, not be committed.
+- Installed package metadata and a successful dependency check do not verify imports, hardware access, runtime startup, calibration, or walking.
+
+Current checkpoint:
+
+- All 14 main servos remain assembled, labelled, and daisy chained. The earlier complete-chain status checks were performed from the laptop, not from this Pi.
+- The replacement Pi's GPIO header is already fitted; soldering that header is no longer the next task.
+- The Pi-to-Waveshare USB link has not yet been connected or enumerated. No Pi-driven servo motion is recorded at this checkpoint.
+- USB-C charging verification, loaded servo-supply testing, remaining sensor wiring, joint limits/calibration, and controlled first motion remain outstanding. S09's earlier mechanical-stop incident is not resolved by replacing the Pi.
+
+Next:
+
+1. Pause software bring-up to consult the [upstream v2 wiring diagram](https://github.com/apirrone/Open_Duck_Mini/blob/v2/docs/open_duck_mini_v2_wiring_diagram.png). Shut down the Pi and disconnect power before changing wiring.
+2. Connect the Pi's micro-USB **USB** data port through a suitable OTG host adapter and USB data cable to the Waveshare **USB-C** port. Leave the servo chain connected to the Waveshare; it does not connect directly to Pi GPIO.
+3. For the first USB enumeration check, power the Pi separately through **PWR IN** and leave the servo battery switched off. Record the actual Linux serial device before sending any servo commands. The existing switched nominal 7.4V branch supplies the servo controller; the UBEC's regulated 5V output is for later Pi/electronics power integration, not the servo power rail. Never feed raw 2S battery voltage into the Pi.
+4. Review runtime joint mapping, reference positions, offsets, limits, and startup behaviour before enabling servo power. Use read-only servo checks first; do not launch a motor demo or repeat assembled `2048` centre commands.
+5. Complete the remaining electronics and supply checks, then plan a supported initial pose after S09 clearance and safe joint ranges are understood. No horn realignment or ID changes are assumed necessary.
+
+This checkpoint supersedes the header-soldering and initial installation tasks in the 2026-10-19 plan. It does not mark integrated runtime operation or movement as complete.
+
 ## Entry Template
 
 ```markdown

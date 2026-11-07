@@ -2,9 +2,9 @@
 
 This roadmap keeps the build phased so purchases and work stay manageable.
 
-## Current Focus - 2026-10-19
+## Current Focus - 2026-11-07
 
-All 14 main servos are assembled and daisy chained, their IDs have been verified, and the physical joint mapping is recorded. Horn centring/alignment was completed before fitting and the cables have slack. The next task is soldering the Raspberry Pi Zero 2 W GPIO header, followed by Pi OS and runtime setup. See the [latest build-log entry](build-log.md#2026-10-19---raspberry-pi-preparation-and-runtime-next-steps).
+All 14 main servos are assembled and daisy chained, their IDs have been verified, and the physical joint mapping is recorded. Horn centring/alignment was completed before fitting and the cables have slack. The replacement Raspberry Pi Zero 2 W has a pre-soldered header, boots from the existing microSD card, and accepts SSH on Debian 12 / aarch64. The existing v2 runtime package is installed and its dependency check passes. The next task is reviewing the wiring diagram and connecting the Pi to the Waveshare controller for USB detection, not running a movement test. See the [latest checkpoint and photo](build-log.md#2026-11-07---replacement-pi-and-runtime-checkpoint).
 
 ## Phase 1 - Workshop And Core Tools
 
@@ -50,7 +50,7 @@ Current progress:
 - The main power switch has been installed in the protected negative rail and tested with continuity and switched output checks.
 - The USB-C charging board and 5V / 5A UBEC are wired. The UBEC produces approximately 5V when switched on and 0V when switched off; USB-C charging still needs a controlled test.
 - The switched raw battery-voltage branch powers the Waveshare controller and complete servo chain; all 14 IDs have responded to laptop status checks.
-- The Raspberry Pi Zero 2 W has arrived; its GPIO header still needs soldering before the planned Pi setup.
+- The replacement Raspberry Pi Zero 2 W with a pre-soldered header has arrived after the original header was damaged during soldering/desoldering. The microSD installation, SSH access, and existing runtime dependency check are verified; Pi-to-controller USB connection is still pending.
 - Remaining robot-specific hardware is tracked in [Hardware Sourcing Tracker](hardware-sourcing.md).
 
 ## Phase 3 - Print And Fit Check
@@ -79,10 +79,11 @@ Planned work:
 
 Immediate sequence:
 
-1. Solder and inspect the Pi GPIO header with all power disconnected.
-2. Prepare a runtime-compatible OS and remote access.
-3. Install the upstream runtime with servo power off.
-4. Review the recorded joint mapping, runtime reference positions, limits, and any automatic startup movement before enabling servo power for integration.
+1. Consult the v2 wiring diagram; shut down the Pi and disconnect power before changing wiring. The replacement GPIO header is already fitted.
+2. Connect the Pi's **USB** data port through a micro-USB OTG host adapter and USB data cable to the Waveshare **USB-C** port. Keep the servo chain on the Waveshare.
+3. Power the Pi separately via **PWR IN**, keeping the servo battery switched off for initial USB enumeration. Identify the actual Linux serial device without sending movement commands.
+4. Review the recorded joint mapping, runtime reference positions, limits, and any automatic startup movement before enabling servo power for read-only integration checks. Installed dependencies do not prove hardware operation.
+5. Complete remaining IMU/foot-switch wiring, power integration, and controlled charging checks before first-motion work.
 
 ## Phase 5 - Calibration And First Motion
 
