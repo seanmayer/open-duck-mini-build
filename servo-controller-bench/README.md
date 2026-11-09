@@ -71,7 +71,15 @@ Do not enable torque on the assembled robot until the joint is supported, clear 
 
 ## Bench notes
 
-Current build status (2026-11-07): the initial laptop bench work is complete. All 14 servos are assembled and daisy chained, with IDs verified, joint locations recorded, horns aligned before fitting, and cable slack confirmed. The replacement Pi Zero 2 W has a pre-soldered header, working SSH access, and a verified existing runtime installation/dependency check. The Pi-to-Waveshare USB connection is still pending. Next is a wiring-diagram check and USB enumeration with servo power off, followed by reviewed, read-only integration checks. Discover the Pi's actual Linux serial device rather than reusing the Mac port shown above. See the [checkpoint and photo](../docs/build-log.md#2026-11-07---replacement-pi-and-runtime-checkpoint).
+Current build status (2026-11-09): laptop bench work and Pi-to-servo read-only integration checks are complete. All 14 servos are assembled and daisy chained, with IDs verified, joint locations recorded, horns aligned before fitting, and cable slack confirmed. The replacement Pi has working SSH access and an existing runtime installation with passing dependency checks. The USB OTG link to the Waveshare is now working: all 14 IDs responded to ping/status checks, with torque disabled, error status 0, and 7.9–8.0V reported. The BNO055 is not connected; sensor wiring/testing is the next task. See the [complete baseline and photo](../docs/build-log.md#2026-11-09---pi-to-servo-communication-confirmed).
+
+Pi diagnostic setup recorded at this checkpoint:
+
+- Scripts copied to `/home/sean/servo-controller-bench/servo_ping.py` and `/home/sean/servo-controller-bench/servo_status.py` on the Pi.
+- Interpreter: `/home/sean/Open_Duck_Mini_Runtime/.venv/bin/python` (uses the installed environment without launching the robot runtime).
+- Controller: `/dev/ttyACM0`; stable path `/dev/serial/by-id/usb-1a86_USB_Single_Serial_5B79014915-if00`; baud rate 1,000,000.
+- The serial-port open/close check sent no bytes. The later ping/status tools sent diagnostic requests only, with no position, torque-enable, or configuration writes.
+- These results are not a movement test, loaded supply test, or calibration. Raw position readings are a baseline, not new centre targets.
 
 The loose-servo centring instructions above are not the next step for this assembled robot. Review runtime mapping and startup movement before powered integration; S09's collision has not established a need to redo alignment or configuration.
 

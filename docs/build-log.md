@@ -1188,6 +1188,79 @@ Next:
 
 This checkpoint supersedes the header-soldering and initial installation tasks in the 2026-10-19 plan. It does not mark integrated runtime operation or movement as complete.
 
+## 2026-11-09 - Pi-to-Servo Communication Confirmed
+
+Status: The Raspberry Pi Zero 2 W now communicates with all 14 main servos through the Waveshare USB adapter. USB detection, serial-port access, ping responses, and read-only status checks passed. Stopping at this checkpoint; the BNO055 IMU is not connected yet.
+
+What changed:
+
+- Received the USB OTG adapter and connected the Pi's USB data port to the Waveshare USB-C port using the adapter and a data cable.
+- Initially checked the USB connection with the Pi powered separately and no batteries installed in the servo pack. The Waveshare board lit up from USB; this was not evidence of servo motor power.
+- Confirmed USB enumeration on the Pi: `1a86:55d3 QinHeng Electronics USB Single Serial`.
+- Identified the controller as `/dev/ttyACM0`, with the stable device link `/dev/serial/by-id/usb-1a86_USB_Single_Serial_5B79014915-if00`.
+- Opened and closed that port from the existing runtime virtual environment at 1,000,000 baud without transmitting any bytes.
+- Copied `servo_ping.py` and `servo_status.py` from the Mac build repository into `/home/sean/servo-controller-bench/` on the Pi. The first copy attempt was run inside the Pi SSH session, where the Mac's `/Users/sean/...` source path did not exist; transferring from the Mac resolved it.
+- With the servo battery supply connected, scanned the chain from the Pi. All IDs 1 through 14 responded.
+- Read status from every servo using the same Python environment. Every servo reported torque disabled (`0`), error status `0`, and supply voltage of either 7.9V or 8.0V.
+- Added the bench setup photo showing the Pi, USB adapter/cable, Waveshare controller, open battery pack, and assembled robot on its stand. This is a temporary accessible setup, not final enclosed electronics installation.
+
+![Pi, USB OTG connection, Waveshare controller, and battery pack beside the assembled robot during servo communication checks](../photos/hardware/pi-servo-communication-checkpoint-2026-11-09.jpg)
+
+Evidence recorded from the reported Pi terminal sessions (not rerun during this journal update):
+
+```text
+USB: 1a86:55d3 QinHeng Electronics USB Single Serial
+usb-1a86_USB_Single_Serial_5B79014915-if00 -> ../../ttyACM0
+
+Serial port opened successfully at 1,000,000 baud.
+Closed safely; no bytes were transmitted.
+
+Responding servo ID(s): 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14
+```
+
+Read-only status baseline:
+
+| Servo | ID | Raw position | Voltage (V) | Torque | Error status |
+| --- | ---: | ---: | ---: | --- | ---: |
+| S01 | 1 | 799 | 7.9 | Disabled (0) | 0 |
+| S02 | 2 | 431 | 8.0 | Disabled (0) | 0 |
+| S03 | 3 | 481 | 7.9 | Disabled (0) | 0 |
+| S04 | 4 | 3631 | 7.9 | Disabled (0) | 0 |
+| S05 | 5 | 3600 | 7.9 | Disabled (0) | 0 |
+| S06 | 6 | 4021 | 8.0 | Disabled (0) | 0 |
+| S07 | 7 | 154 | 7.9 | Disabled (0) | 0 |
+| S08 | 8 | 4074 | 8.0 | Disabled (0) | 0 |
+| S09 | 9 | 42 | 8.0 | Disabled (0) | 0 |
+| S10 | 10 | 17 | 7.9 | Disabled (0) | 0 |
+| S11 | 11 | 142 | 8.0 | Disabled (0) | 0 |
+| S12 | 12 | 149 | 8.0 | Disabled (0) | 0 |
+| S13 | 13 | 3278 | 8.0 | Disabled (0) | 0 |
+| S14 | 14 | 29 | 8.0 | Disabled (0) | 0 |
+
+What I learned:
+
+- USB power can light the controller's USB interface without providing the separate supply required by the servo motors. USB detection and powered servo communication are separate checks.
+- The Pi has a Linux serial-device name, not the Mac's `/dev/cu.usbmodem...` path. The `by-id` link identifies this particular adapter even if its numbered device changes.
+- When copying files, check which machine the terminal is on: `sean@roboduck` is the Pi, while the source scripts are on the Mac. SSH working does not make the Mac's local files available on the Pi.
+- Opening the port transmitted no bytes; the later ping/status tools sent diagnostic requests but no position, torque-enable, ID, or other configuration writes.
+- Different raw position readings describe the current shaft positions. They do not, by themselves, establish an alignment fault or justify recentering assembled joints.
+
+Scope and stopping point:
+
+- Pi-to-Waveshare-to-servo communication is verified for all 14 IDs. This is not a loaded power test, movement test, calibration result, or successful launch of the full robot runtime.
+- No movement commands were sent during this checkpoint. S09's earlier mechanical-stop incident still needs to be understood before powered movement.
+- The BNO055 IMU is received but not connected to the Pi. Its wiring, detection, readings, and orientation are the next integration task.
+- Remaining foot-switch/electronics checks, final board mounting and cable dressing, controlled USB-C charging verification, loaded supply checks, joint limits/offsets, and coordinated motion remain outstanding.
+
+Next session:
+
+1. For the pause, switch off servo battery power and shut down the Pi before unplugging it. Keep all power disconnected when making GPIO connections next session.
+2. Confirm the BNO055 breakout's pin labels and intended mounting orientation against the [v2 assembly guide](https://github.com/apirrone/Open_Duck_Mini/blob/v2/docs/assembly_guide.md#mount-the-imu), then wire it with power disconnected.
+3. Enable/check I2C and use sensor-only checks to verify IMU detection, readings, and orientation, keeping servo power off.
+4. Review the runtime's physical joint-to-ID mapping, reference positions, offsets, limits, and startup behaviour before any torque or movement tests. Do not repeat generic `2048` centre commands on assembled joints.
+
+This completes the USB connection and read-only servo checks planned in the 2026-11-07 entry. The earlier OS/runtime installation checkpoint remains valid; IMU integration is now the immediate next task.
+
 ## Entry Template
 
 ```markdown
