@@ -2,9 +2,9 @@
 
 This roadmap keeps the build phased so purchases and work stay manageable.
 
-## Current Focus - 2026-11-07
+## Current Focus - 2026-11-09
 
-All 14 main servos are assembled and daisy chained, their IDs have been verified, and the physical joint mapping is recorded. Horn centring/alignment was completed before fitting and the cables have slack. The replacement Raspberry Pi Zero 2 W has a pre-soldered header, boots from the existing microSD card, and accepts SSH on Debian 12 / aarch64. The existing v2 runtime package is installed and its dependency check passes. The next task is reviewing the wiring diagram and connecting the Pi to the Waveshare controller for USB detection, not running a movement test. See the [latest checkpoint and photo](build-log.md#2026-11-07---replacement-pi-and-runtime-checkpoint).
+All 14 main servos are assembled and daisy chained, their IDs have been verified, and the physical joint mapping is recorded. Horn centring/alignment was completed before fitting and the cables have slack. The replacement Pi has working OS/SSH access and an existing v2 runtime installation with passing dependency checks. The USB OTG connection to the Waveshare is now tested: all 14 IDs responded to Pi ping/status checks, each with torque disabled, error status 0, and 7.9–8.0V reported. Paused at this read-only checkpoint; the BNO055 IMU is not connected and is the next wiring/testing task. See the [latest results and photo](build-log.md#2026-11-09---pi-to-servo-communication-confirmed).
 
 ## Phase 1 - Workshop And Core Tools
 
@@ -40,7 +40,7 @@ Current progress:
 - Battery charger and 18650 cells have arrived.
 - All 14 Feetech STS3215 main servos have arrived, been assigned persistent IDs, centred before horn fitting, and assembled into the robot.
 - Two Waveshare serial bus servo driver boards have arrived. One board should be used for the first bench setup; the second can remain as a spare or future second bus.
-- The BNO055 IMU breakout and its header pins have arrived. Keep it unmounted until its orientation, pinout, and I2C wiring are confirmed.
+- The BNO055 IMU breakout and its header pins have arrived, but it is not connected to the Pi. Confirm orientation, pinout, and I2C wiring before integration.
 - SG90 micro servos and 8 x 22 x 7 mm bearings have arrived.
 - Two 2S battery holders, a 5V 5A UBEC, XT30 connectors, DC barrel adapters, and red/black wire have arrived.
 - The original battery holders did not fit the rear-panel mounting area. A compact replacement holder has arrived, fits the reprinted rear panel, and has now been used in the completed 2S power-pack subassembly.
@@ -49,8 +49,9 @@ Current progress:
 - Loctite 243 is ready for final metal fasteners.
 - The main power switch has been installed in the protected negative rail and tested with continuity and switched output checks.
 - The USB-C charging board and 5V / 5A UBEC are wired. The UBEC produces approximately 5V when switched on and 0V when switched off; USB-C charging still needs a controlled test.
-- The switched raw battery-voltage branch powers the Waveshare controller and complete servo chain; all 14 IDs have responded to laptop status checks.
-- The replacement Raspberry Pi Zero 2 W with a pre-soldered header has arrived after the original header was damaged during soldering/desoldering. The microSD installation, SSH access, and existing runtime dependency check are verified; Pi-to-controller USB connection is still pending.
+- The switched raw battery-voltage branch powers the Waveshare controller and complete servo chain; all 14 IDs have now responded to both laptop and Pi status checks. Loaded supply performance remains unverified.
+- The replacement Raspberry Pi Zero 2 W has a pre-soldered header after the original header was damaged during soldering/desoldering. The microSD installation, SSH access, runtime dependency check, and read-only controller/servo communication are verified.
+- The USB OTG adapter/data cable has arrived and is working between the Pi and Waveshare. The adapter is detected at `/dev/ttyACM0`, with its stable `by-id` path recorded in the build log.
 - Remaining robot-specific hardware is tracked in [Hardware Sourcing Tracker](hardware-sourcing.md).
 
 ## Phase 3 - Print And Fit Check
@@ -79,11 +80,10 @@ Planned work:
 
 Immediate sequence:
 
-1. Consult the v2 wiring diagram; shut down the Pi and disconnect power before changing wiring. The replacement GPIO header is already fitted.
-2. Connect the Pi's **USB** data port through a micro-USB OTG host adapter and USB data cable to the Waveshare **USB-C** port. Keep the servo chain on the Waveshare.
-3. Power the Pi separately via **PWR IN**, keeping the servo battery switched off for initial USB enumeration. Identify the actual Linux serial device without sending movement commands.
-4. Review the recorded joint mapping, runtime reference positions, limits, and any automatic startup movement before enabling servo power for read-only integration checks. Installed dependencies do not prove hardware operation.
-5. Complete remaining IMU/foot-switch wiring, power integration, and controlled charging checks before first-motion work.
+1. Keep servo power off for sensor setup. Consult the v2 wiring diagram and actual BNO055 breakout labels; shut down the Pi and disconnect all power before GPIO wiring changes.
+2. Connect the BNO055 and confirm its mounting orientation. Enable/check I2C and verify sensor detection/readings without starting the motor runtime.
+3. Complete remaining foot-switch wiring, final board mounting, cable dressing, power integration, and controlled charging checks.
+4. Review the recorded joint mapping, runtime reference positions, offsets, limits, and automatic startup behaviour before commanding any movement. The Pi read-only communication checkpoint is already complete.
 
 ## Phase 5 - Calibration And First Motion
 
@@ -92,7 +92,7 @@ Goal: Bring the robot up safely and get repeatable baseline movement.
 Planned work:
 
 - Verify runtime calibration requirements against the completed pre-assembly horn alignment; do not assume realignment or ID changes are required.
-- Start Pi/controller integration with read-only checks, then review a supported initial pose before commanding movement. S09's earlier collision remains to be explained; do not repeat assembled midpoint commands as a diagnostic.
+- Pi/controller read-only checks passed on 2026-11-09. Review a supported initial pose before commanding movement. S09's earlier collision remains to be explained; do not repeat assembled midpoint commands as a diagnostic.
 - Test IMU readings.
 - Validate contact switches.
 - Run basic pose and balance checks.

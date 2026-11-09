@@ -16,9 +16,13 @@ The main body, leg, neck, and head servo assemblies are complete. These photos f
 
 ![Full servo assembly progress](photos/assembly/full-servo-assembly-2026-10-03.jpg)
 
-Latest hardware checkpoint: the replacement Raspberry Pi Zero 2 W with a pre-soldered GPIO header has arrived and is working over SSH. Controller integration is next.
+Replacement Pi checkpoint: the Raspberry Pi Zero 2 W with a pre-soldered GPIO header arrived and was verified over SSH.
 
 ![Replacement Raspberry Pi Zero 2 W with pre-soldered header, microSD card, and power connected](photos/hardware/raspberry-pi-zero-2w-presoldered-2026-11-07.jpg)
+
+Latest checkpoint (2026-11-09): all 14 servos now respond to read-only checks from the Pi through the Waveshare controller. Every servo reported torque disabled, error status 0, and 7.9–8.0V. The BNO055 IMU is not connected yet.
+
+![Pi-to-Waveshare servo communication bench setup beside the assembled robot](photos/hardware/pi-servo-communication-checkpoint-2026-11-09.jpg)
 
 ## Attribution
 
@@ -32,7 +36,7 @@ Useful upstream links:
 
 ## Current Status
 
-Workshop setup and printing are complete enough to move forward. The main servo structure is assembled, laptop servo-chain checks are complete, and the build is now at the Raspberry Pi/controller integration checkpoint.
+Workshop setup and printing are complete enough to move forward. The main servo structure is assembled, and read-only checks of the complete servo chain have passed from both the laptop and the Raspberry Pi. The build is paused before BNO055 IMU wiring and sensor integration.
 
 Printed so far: all required STL prints and optional TPU foot bottoms are complete. The PLA feet have been dry-fitted, and the TPU foot bottoms are ready for final fit checks.
 
@@ -40,11 +44,13 @@ Hardware sourcing is well underway. The foot micro switches, main STS3215 servos
 
 The servo-controller bench milestone is now complete: the switched 7.4 V branch was measured before connection, the Waveshare controller was connected to the laptop, all 14 STS3215 servo IDs were programmed and power-cycle verified, and the complete S01–S14 chain has responded to read-only status checks. The servos were centred and their horns aligned before fitting; the physical joint-to-ID mapping is recorded and the cables have slack. S09's collision during an assembled centre command has not established an alignment or configuration fault; its cause still needs to be understood before further powered movement.
 
-The replacement Pi Zero 2 W with a pre-soldered header is now working over SSH using the existing microSD installation: Debian 12 (Bookworm), `aarch64`. The existing upstream `v2` runtime checkout and Python 3.11 virtual environment were checked: `mini-bdx-runtime` version `0.0.1` is installed in editable mode and `pip check` reports no broken requirements. Soldering/desoldering the original header was a difficult beginner lesson and damaged it; buying a pre-soldered replacement avoids further header repair for this build. These checks confirm the software setup, not robot hardware operation. The Pi is not yet connected to the Waveshare controller. See the [checkpoint and photo](docs/build-log.md#2026-11-07---replacement-pi-and-runtime-checkpoint).
+The replacement Pi Zero 2 W with a pre-soldered header is now working over SSH using the existing microSD installation: Debian 12 (Bookworm), `aarch64`. The existing upstream `v2` runtime checkout and Python 3.11 virtual environment were checked: `mini-bdx-runtime` version `0.0.1` is installed in editable mode and `pip check` reports no broken requirements. Soldering/desoldering the original header was a difficult beginner lesson and damaged it; buying a pre-soldered replacement avoids further header repair for this build.
+
+The Pi is now connected to the Waveshare controller through the USB OTG adapter and data cable. Linux detected `/dev/ttyACM0`, Python opened the serial port at 1,000,000 baud, and all 14 servos passed ping/status checks with torque disabled, error status 0, and 7.9–8.0V reported. These results verify communication, not movement, loaded supply performance, calibration, or full runtime operation. The BNO055 is still unconnected. See the [communication checkpoint, full readings, and photo](docs/build-log.md#2026-11-09---pi-to-servo-communication-confirmed).
 
 ## Project Progress
 
-Updated: 2026-11-07
+Updated: 2026-11-09
 
 Progress is tracked as a practical build estimate rather than an exact percentage. Printing progress is counted from the required printed part quantities in [docs/printing-progress.md](docs/printing-progress.md). The optional TPU foot bottoms are complete as an upgrade to the PLA feet.
 
@@ -57,19 +63,19 @@ Printing progress        [##########] 100%  49 / 49 required printed parts + TPU
 | --- | ---: | --- |
 | Workshop setup | 100% | Core tools, soldering setup, fasteners, inserts, wire, and consumables are ready. |
 | 3D printing and fit checks | 100% | All required STL prints and optional TPU foot bottoms are complete. PLA feet have been dry-fitted. |
-| Hardware sourcing | 85% | Main hardware is received, including the replacement Pi Zero 2 W with a pre-soldered header and the installed microSD card. Confirm the USB OTG adapter/data cable for the Pi-to-Waveshare connection. |
+| Hardware sourcing | 85% | Main hardware is received, including the replacement Pi, installed microSD card, and now-tested USB OTG adapter/data cable. The BNO055 is received but not connected. |
 | Mechanical assembly | 60% | The main body, leg, neck, and head servo assemblies are fitted and the S01–S14 servo chain is routed. Final cable dressing, clearances, joint limits, and calibration remain. |
-| Electronics and power | 55% | The 2S battery pack, BMS, switch, USB-C charging board, UBEC, switched 5V output, raw 7.4V branch, Waveshare controller, and complete servo chain have been connected and checked. The loaded servo supply still needs to be tested only with a fully charged pack and safe mechanical loads. |
+| Electronics and power | 55% | Pack wiring and Pi-to-controller communication are checked; all 14 servos reported 7.9–8.0V with torque disabled. IMU/remaining sensor wiring, final power integration, controlled USB-C charging, and supply behaviour under safe mechanical loads remain unverified. |
 | Calibration and first motion | 5% | IDs are programmed and read-only status checks are working. Per-joint zero offsets, safe limits, torque tests, and coordinated motion have not yet been completed. |
-| Software and runtime experiments | In progress | Replacement Pi boots and accepts SSH on Debian 12 / aarch64. Existing v2 runtime installation and dependency consistency are verified; USB controller detection, hardware integration, and runtime operation remain untested. |
+| Software and runtime experiments | In progress | Pi boot/SSH, existing v2 installation/dependency checks, USB detection, Python serial access, and read-only communication with all 14 servos are verified. IMU integration and full runtime operation remain untested. |
 
 Current next steps:
 
-1. Consult the [v2 wiring diagram](https://github.com/apirrone/Open_Duck_Mini/blob/v2/docs/open_duck_mini_v2_wiring_diagram.png) before making the Pi-to-controller connection. Shut down the Pi and disconnect power before changing wiring.
-2. Connect the Pi's micro-USB **USB** data port through an OTG host adapter and USB data cable to the Waveshare **USB-C** port. Keep the Pi on a separate suitable 5V supply via **PWR IN** and the servo battery switched off for initial USB detection; the servo chain stays on the Waveshare, not the Pi GPIO header.
-3. Identify the controller's actual Linux serial device without sending servo commands. The Mac device name is not the Pi device name.
-4. Review the runtime's S01–S14 joint mapping, reference positions, offsets, limits, and any automatic torque/pose commands. Start powered controller integration with read-only servo checks, not a movement demo.
-5. Complete the remaining electronics checks, including IMU/foot-switch wiring and controlled USB-C charging. Plan supported movement only after the startup pose, supply under load, and S09's clearance are understood; do not repeat bulk centring or arbitrary individual midpoint commands on the assembled robot.
+1. With servo battery power off, prepare BNO055 IMU integration. Consult the [v2 wiring diagram](https://github.com/apirrone/Open_Duck_Mini/blob/v2/docs/open_duck_mini_v2_wiring_diagram.png) and confirm the actual breakout pin labels and mounting orientation. Shut down the Pi and disconnect all power before GPIO wiring changes.
+2. Connect the IMU, enable/check I2C, and verify sensor readings and orientation without starting the motor runtime or powering the servo chain.
+3. Review the runtime's S01–S14 joint mapping, reference positions, offsets, limits, and any automatic torque/pose commands. Read-only communication is now verified; a movement demo is not the next test.
+4. Complete remaining foot-switch/electronics wiring, final board mounting and cable dressing, power integration, and controlled USB-C charging checks. Leave covers accessible while checks are outstanding.
+5. Plan supported movement only after the startup pose, supply under load, and S09's clearance are understood; do not repeat bulk centring or arbitrary individual midpoint commands on the assembled robot.
 
 These are verification steps, not a decision to redo horn alignment or change servo IDs. The Pi itself does not prevent mechanical collisions, and smaller movement increments cannot make an unreachable target safe.
 
