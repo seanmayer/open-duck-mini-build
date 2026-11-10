@@ -1261,6 +1261,30 @@ Next session:
 
 This completes the USB connection and read-only servo checks planned in the 2026-11-07 entry. The earlier OS/runtime installation checkpoint remains valid; IMU integration is now the immediate next task.
 
+## 2026-11-10 - BNO055 IMU Reference Photo
+
+Status: Existing IMU photographed and board variant identified. Still unconnected to the Pi and electrically untested.
+
+What changed:
+
+- Added a dedicated hardware photo from `IMG_1187.HEIC`, converted to a repository-friendly JPEG. The IMU was already logged as received on 2026-08-25, but had no dedicated reference photo.
+- The Adafruit-marked BNO055 board matches the [STEMMA QT/Qwiic version](https://www.adafruit.com/product/4646), with two pre-fitted four-pin cable sockets and four mounting holes.
+- The supplied four-pin and six-pin header strips are loose, not soldered to the board. Visible pad labels include `VIN`, `3V`, `GND`, `SCL`, `SDA`, `RST`, `INT`, `ADR`, `PS0`, and `PS1`.
+
+![BNO055 IMU breakout with two pre-fitted STEMMA QT sockets and loose header strips](../photos/hardware/bno055-imu-breakout-2026-11-10.jpg)
+
+Connection notes:
+
+- Adafruit documents that the original and STEMMA QT boards have different header pin orders. Use the labels on this board rather than copying hole positions from an older-board photo. See the [manufacturer's pinout guide](https://learn.adafruit.com/adafruit-bno055-absolute-orientation-sensor/pinouts).
+- The pre-fitted sockets offer a connection without soldering the IMU headers. A suitable cable type is a [STEMMA QT/Qwiic JST-SH four-pin lead with individual female header sockets](https://www.adafruit.com/product/4397), to connect to the Pi's fitted header. A matching cable has not been confirmed as owned or ordered; the connection method is still to be chosen.
+- This photo identifies the hardware and connector options. It does not verify electrical operation, I2C detection, mounting orientation, or calibration. The successful Pi-to-servo checks from the previous entry remain the latest electrical checkpoint.
+
+Next:
+
+1. Choose the cable or header connection and confirm the board labels, cable pinout, and Pi physical pin numbers before connecting anything. Shut down the Pi and disconnect all power for wiring changes.
+2. Confirm the intended IMU mounting orientation, then connect and check I2C detection and sensor readings with servo battery power off.
+3. Record the actual wiring and test results once completed; leave IMU integration marked as pending until then.
+
 ## Entry Template
 
 ```markdown
