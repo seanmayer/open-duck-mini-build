@@ -13,6 +13,7 @@ This tracker records robot-specific parts as they are ordered, received, checked
 - The switched raw battery branch is connected to the Waveshare controller and all 14 main servos have responded to both laptop and Pi status checks. On 2026-11-09, all reported torque disabled, error status 0, and 7.9–8.0V. Loaded supply testing and final Pi/sensor power integration remain outstanding.
 - The replacement Pi Zero 2 W with a pre-soldered GPIO header has arrived. It boots from the existing microSD card and accepts SSH; the existing v2 runtime installation passes its dependency check.
 - The USB OTG adapter/data cable is received and tested. Pi USB enumeration, Python serial-port access, and read-only servo communication are complete. The BNO055 is still unconnected; its wiring and sensor checks are next. See the [current checkpoint](build-log.md#2026-11-09---pi-to-servo-communication-confirmed).
+- Added a dedicated BNO055 photo on 2026-11-10. The board matches the STEMMA QT/Qwiic version, with two pre-fitted sockets and loose headers. A suitable socket-to-Pi cable could avoid soldering the IMU headers; ownership of that cable is not yet confirmed. See the [photo and connector notes](build-log.md#2026-11-10---bno055-imu-reference-photo).
 
 ## Parts Tracker
 
@@ -24,7 +25,7 @@ This tracker records robot-specific parts as they are ordered, received, checked
 | Brain | Original Raspberry Pi Zero 2 W | 1 | Header damaged / replaced for this build | 2026-11-07 | Originally received 2026-09-20. GPIO header damaged during beginner soldering/desoldering; the board still booted and accepted SSH, but damaged header connections were not validated. |
 | Brain | Replacement Raspberry Pi Zero 2 W with pre-soldered GPIO header | 1 | Boot, SSH, and servo communication verified | 2026-11-09 | Existing Debian 12 / aarch64 installation and v2 runtime dependency check retained. USB serial access at 1,000,000 baud and read-only checks of all 14 servos passed. Sensor integration and full runtime operation are pending. |
 | Storage | 64GB SanDisk microSD card | 1 | Installed / boot verified | 2026-11-07 | Existing OS and runtime environment retained on the replacement Pi; no fresh clone or reinstallation was needed for this checkpoint. |
-| Sensors | BNO055 IMU breakout | 1 | Received / not connected | 2026-11-09 | Confirmed still unconnected at the Pi-to-servo checkpoint. Verify the actual breakout labels, supply requirements, and mounting orientation before wiring; I2C detection and sensor readings are not yet tested. |
+| Sensors | BNO055 IMU breakout, STEMMA QT/Qwiic version | 1 | Received / not connected | 2026-11-10 | Receipt logged 2026-08-25; dedicated photo added today. Adafruit-marked board matches the QT version with two fitted sockets and loose 4-pin/6-pin headers. Choose the connection method and verify actual labels, supply requirements, and mounting orientation before wiring. I2C detection and sensor readings remain untested. |
 | Motion | SG90 9g micro servos | 2 required | Received | 2026-08-21 | Multi-pack received with horns and mounting hardware. Bench-test direction and travel before installation. |
 | Power | Nitecore Intellicharger NEW i2 battery charger | 1 | Received | 2026-08-19 | External charger for loose cells. Store and charge lithium cells safely. |
 | Power | P30B 18650 Li-ion cells, 3000mAh, 30A, 3.7V | 2 | Installed / tested in pack | 2026-08-29 | Main battery cells. Each cell measured approximately 3.5V during pack testing; total series voltage measured approximately 7V. Remove cells when the unfinished robot is not being worked on. |
@@ -71,12 +72,13 @@ This tracker records robot-specific parts as they are ordered, received, checked
 | Raspberry Pi Zero 2 W arrival | [raspberry-pi-zero-2w-arrival-2026-09-20.jpg](../photos/hardware/raspberry-pi-zero-2w-arrival-2026-09-20.jpg), [raspberry-pi-zero-2w-arrival-2026-09-20-2.jpg](../photos/hardware/raspberry-pi-zero-2w-arrival-2026-09-20-2.jpg) |
 | Replacement Raspberry Pi Zero 2 W with pre-soldered header | [raspberry-pi-zero-2w-presoldered-2026-11-07.jpg](../photos/hardware/raspberry-pi-zero-2w-presoldered-2026-11-07.jpg) |
 | Pi-to-Waveshare servo communication setup | [pi-servo-communication-checkpoint-2026-11-09.jpg](../photos/hardware/pi-servo-communication-checkpoint-2026-11-09.jpg) |
+| BNO055 IMU breakout with STEMMA QT sockets and loose headers | [bno055-imu-breakout-2026-11-10.jpg](../photos/hardware/bno055-imu-breakout-2026-11-10.jpg) |
 
 ## Next Checks
 
 - Verify USB-C charging operation in a controlled test before relying on onboard charging.
 - Keep the 18650 cells removed whenever the unfinished robot is not being worked on.
-- Connect and test the BNO055 IMU next, confirming the breakout pinout and orientation first. Shut down the Pi and disconnect all power before GPIO wiring changes.
+- Choose a suitable STEMMA QT-to-female-header cable or soldered-header connection for the BNO055, then confirm its actual pin labels and mounting orientation before wiring. The QT board's header pin order differs from the older version; see the [connector notes](build-log.md#2026-11-10---bno055-imu-reference-photo). Shut down the Pi and disconnect all power before GPIO wiring changes.
 - Keep servo power off during I2C/sensor setup; USB detection and read-only servo communication have already passed.
 - Recheck supply voltage and polarity after power-wiring changes. The existing switched battery branch is already connected to the controller; it is not a new splice task.
 - Preserve the verified S01–S14 IDs and recorded joint mapping. Review runtime limits/startup behaviour and S09 clearance before any movement; successful read-only checks do not establish safe mechanical targets.

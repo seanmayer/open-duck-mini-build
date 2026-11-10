@@ -24,6 +24,8 @@ Latest checkpoint (2026-11-09): all 14 servos now respond to read-only checks fr
 
 ![Pi-to-Waveshare servo communication bench setup beside the assembled robot](photos/hardware/pi-servo-communication-checkpoint-2026-11-09.jpg)
 
+IMU preparation (2026-11-10): added a [BNO055 reference photo and connector notes](docs/build-log.md#2026-11-10---bno055-imu-reference-photo). The board matches the STEMMA QT/Qwiic version, with pre-fitted cable sockets and loose headers; it remains unconnected and untested.
+
 ## Attribution
 
 Open Duck Mini is an open-source robotics project by the original project maintainers at [apirrone/Open_Duck_Mini](https://github.com/apirrone/Open_Duck_Mini). This repository is not a fork of the upstream project and does not duplicate the upstream source files. It is a personal build log, workshop notes, shopping tracker, and place for my own modifications or scripts as the build progresses.
@@ -50,7 +52,7 @@ The Pi is now connected to the Waveshare controller through the USB OTG adapter 
 
 ## Project Progress
 
-Updated: 2026-11-09
+Updated: 2026-11-10
 
 Progress is tracked as a practical build estimate rather than an exact percentage. Printing progress is counted from the required printed part quantities in [docs/printing-progress.md](docs/printing-progress.md). The optional TPU foot bottoms are complete as an upgrade to the PLA feet.
 
@@ -71,7 +73,7 @@ Printing progress        [##########] 100%  49 / 49 required printed parts + TPU
 
 Current next steps:
 
-1. With servo battery power off, prepare BNO055 IMU integration. Consult the [v2 wiring diagram](https://github.com/apirrone/Open_Duck_Mini/blob/v2/docs/open_duck_mini_v2_wiring_diagram.png) and confirm the actual breakout pin labels and mounting orientation. Shut down the Pi and disconnect all power before GPIO wiring changes.
+1. With servo battery power off, prepare BNO055 IMU integration. Review the [actual board and connector options](docs/build-log.md#2026-11-10---bno055-imu-reference-photo), choose a suitable cable or header connection, and confirm its pin labels and mounting orientation against the [v2 wiring diagram](https://github.com/apirrone/Open_Duck_Mini/blob/v2/docs/open_duck_mini_v2_wiring_diagram.png). Shut down the Pi and disconnect all power before GPIO wiring changes.
 2. Connect the IMU, enable/check I2C, and verify sensor readings and orientation without starting the motor runtime or powering the servo chain.
 3. Review the runtime's S01–S14 joint mapping, reference positions, offsets, limits, and any automatic torque/pose commands. Read-only communication is now verified; a movement demo is not the next test.
 4. Complete remaining foot-switch/electronics wiring, final board mounting and cable dressing, power integration, and controlled USB-C charging checks. Leave covers accessible while checks are outstanding.
